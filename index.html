@@ -944,21 +944,24 @@ SEEDS.reverse().forEach(function(s) {
   feed.appendChild(card);
 });
 
-// Live stream — pause when tab is hidden to prevent memory buildup
-var streamTimer = null;
+// Live stream — stops after 40 events, pauses when tab hidden
+var streamCount = 0;
+var MAX_STREAM = 40;
 function scheduleNext() {
-  streamTimer = setTimeout(function() {
+  if (streamCount >= MAX_STREAM) return;
+  setTimeout(function() {
     if (!document.hidden) {
       addEvent(pick(WALLETS), pick(EVENT_DEFS), true);
+      streamCount++;
     }
     scheduleNext();
   }, 4000 + Math.random() * 9000);
 }
 scheduleNext();
 
-// Tick — pause when hidden
+// Tick — pause when hidden, stop after stream ends
 var tickInterval = setInterval(function() {
-  if (document.hidden) return;
+  if (document.hidden || streamCount >= MAX_STREAM) return;
   document.querySelectorAll(".ev-ts[data-ts]").forEach(function(el) {
     el.textContent = relTime(parseInt(el.dataset.ts));
   });
