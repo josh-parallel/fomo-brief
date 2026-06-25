@@ -944,11 +944,18 @@ SEEDS.reverse().forEach(function(s) {
   feed.appendChild(card);
 });
 
-// Live stream — stops after 40 events, pauses when tab hidden
+// All timer IDs so we can kill everything cleanly
 var streamCount = 0;
-var MAX_STREAM = 40;
+var MAX_STREAM = 30;
+var tickId, chipId;
+
+function stopAll() {
+  clearInterval(tickId);
+  clearInterval(chipId);
+}
+
 function scheduleNext() {
-  if (streamCount >= MAX_STREAM) return;
+  if (streamCount >= MAX_STREAM) { stopAll(); return; }
   setTimeout(function() {
     if (!document.hidden) {
       addEvent(pick(WALLETS), pick(EVENT_DEFS), true);
@@ -959,9 +966,8 @@ function scheduleNext() {
 }
 scheduleNext();
 
-// Tick — pause when hidden, stop after stream ends
-var tickInterval = setInterval(function() {
-  if (document.hidden || streamCount >= MAX_STREAM) return;
+tickId = setInterval(function() {
+  if (document.hidden) return;
   document.querySelectorAll(".ev-ts[data-ts]").forEach(function(el) {
     el.textContent = relTime(parseInt(el.dataset.ts));
   });
@@ -971,8 +977,7 @@ var tickInterval = setInterval(function() {
     : "Last event " + Math.floor(s/60) + "m ago";
 }, 3000);
 
-// Chip minute bumper
-setInterval(function() {
+chipId = setInterval(function() {
   if (document.hidden) return;
   document.querySelectorAll(".chip-time[data-base]").forEach(function(el) {
     var base = parseInt(el.dataset.base);
@@ -981,11 +986,4 @@ setInterval(function() {
     el.textContent = (base + off) + "m ago";
   });
 }, 60000);
-
-// Clean up new-flash class after animation to free GPU resources
-document.addEventListener('animationend', function(e) {
-  if (e.target.classList && e.target.classList.contains('new-flash')) {
-    e.target.classList.remove('new-flash');
-  }
-});
 </script>
