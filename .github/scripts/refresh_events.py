@@ -177,7 +177,7 @@ def main():
         print("ERROR: Could not find REAL_EVENTS block in HTML.", file=sys.stderr)
         sys.exit(1)
 
-    updated = re.sub(pattern, new_block, html, count=1)
+    updated = re.sub(pattern, lambda m: new_block, html, count=1)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(updated)
 
