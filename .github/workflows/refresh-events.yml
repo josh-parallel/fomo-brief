@@ -22,12 +22,6 @@ jobs:
       - name: Install parallel-cli
         run: pip install parallel-web-tools
 
-      - name: Authenticate parallel-cli
-        env:
-          PARALLEL_API_KEY: ${{ secrets.PARALLEL_API_KEY }}
-        run: |
-          parallel-cli config set api-key "$PARALLEL_API_KEY"
-
       - name: Fetch monitor events and refresh HTML
         env:
           PARALLEL_API_KEY: ${{ secrets.PARALLEL_API_KEY }}
