@@ -14,13 +14,18 @@ from datetime import datetime, timezone, timedelta
 
 # ── Monitor IDs (all hourly, base processor) ─────────────────────────────────
 MONITORS = [
-    {"id": "monitor_bec9824cc5224034b8321740757c10a9", "label": "DOJ Fraud",          "severity": "high", "walletIdx": 0,  "sources": ["CoinDesk"]},
-    {"id": "monitor_e171d371987048559b68a20af2fd3975", "label": "SEC Charges",         "severity": "high", "walletIdx": 1,  "sources": ["CoinDesk"]},
-    {"id": "monitor_9d18389273d04076b5c48cf05f8c030a", "label": "Whale Liquidation",   "severity": "high", "walletIdx": 2,  "sources": ["Twitter/X"]},
-    {"id": "monitor_a8f3c8707f4d4083b96c8cc0a6e5dd99", "label": "Memecoin Rug Pull",   "severity": "high", "walletIdx": 3,  "sources": ["Twitter/X"]},
-    {"id": "monitor_593ed09b092c4606a2866af39ce5cf05", "label": "DeFi Enforcement",    "severity": "high", "walletIdx": 4,  "sources": ["CFTC.gov"]},
-    {"id": "monitor_c1a5d571fbf740e385b90fdb7aab75d0", "label": "Chain Analytics",     "severity": "med",  "walletIdx": 5,  "sources": ["Chainalysis"]},
-    {"id": "monitor_d016cee4608647a0bd48cab9818c963d", "label": "Exchange Suspension",  "severity": "med",  "walletIdx": 6,  "sources": ["CoinDesk"]},
+    {"id": "monitor_bec9824cc5224034b8321740757c10a9", "label": "DOJ Fraud",            "severity": "high", "walletIdx": 0,  "sources": ["The Block"]},
+    {"id": "monitor_e171d371987048559b68a20af2fd3975", "label": "SEC Charges",           "severity": "high", "walletIdx": 1,  "sources": ["The Block"]},
+    {"id": "monitor_9d18389273d04076b5c48cf05f8c030a", "label": "Whale Liquidation",     "severity": "high", "walletIdx": 2,  "sources": ["Twitter/X"]},
+    {"id": "monitor_a8f3c8707f4d4083b96c8cc0a6e5dd99", "label": "Memecoin Rug Pull",     "severity": "high", "walletIdx": 3,  "sources": ["PeckShield"]},
+    {"id": "monitor_593ed09b092c4606a2866af39ce5cf05", "label": "DeFi Enforcement",      "severity": "high", "walletIdx": 4,  "sources": ["CFTC.gov"]},
+    {"id": "monitor_c1a5d571fbf740e385b90fdb7aab75d0", "label": "Chain Analytics",       "severity": "med",  "walletIdx": 5,  "sources": ["Chainalysis"]},
+    {"id": "monitor_d016cee4608647a0bd48cab9818c963d", "label": "Exchange Suspension",   "severity": "med",  "walletIdx": 6,  "sources": ["The Block"]},
+    # Round 2 — tighter queries for breaking news
+    {"id": "monitor_6498408d8fcc4099809143787729a368", "label": "Trader Arrest",         "severity": "high", "walletIdx": 7,  "sources": ["The Block"]},
+    {"id": "monitor_0f8d3d3bca26406f84ffc6f8cb771d17", "label": "Hyperliquid Alert",     "severity": "high", "walletIdx": 8,  "sources": ["Twitter/X"]},
+    {"id": "monitor_6d50b2221d7d4521a4b6310a213dee43", "label": "Copy Trade Fraud",      "severity": "high", "walletIdx": 9,  "sources": ["The Block"]},
+    {"id": "monitor_726d5e9d3f134a8fa6707b43565590b2", "label": "DeFi Exploit",          "severity": "high", "walletIdx": 10, "sources": ["PeckShield"]},
 ]
 
 CONFIDENCE_RANK = {"high": 3, "medium": 2, "low": 1, None: 0}
