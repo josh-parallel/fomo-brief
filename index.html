@@ -197,7 +197,15 @@ body {
   margin-left: auto; white-space: nowrap; flex-shrink: 0;
 }
 .ev-desc {
-  font-size: 12px; line-height: 1.5; color: var(--text-2);
+  font-size: 11.5px; line-height: 1.5; color: var(--text-2);
+  overflow: hidden; display: -webkit-box;
+  -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.ev-excerpt {
+  font-size: 11px; line-height: 1.45; color: var(--text-3);
+  font-style: italic;
+  border-left: 2px solid var(--border);
+  padding-left: 8px; margin-top: 6px;
   overflow: hidden; display: -webkit-box;
   -webkit-line-clamp: 2; -webkit-box-orient: vertical;
 }
@@ -870,7 +878,7 @@ function resolveUrl(def, overrideUrl) {
   return "https://www.coindesk.com/";
 }
 
-function buildCard(w, def, isNew, sourceUrl) {
+function buildCard(w, def, isNew, sourceUrl, excerpt) {
   const sev = def.severity;
   const url = resolveUrl(def, sourceUrl);
   const el = document.createElement("a");
@@ -880,6 +888,9 @@ function buildCard(w, def, isNew, sourceUrl) {
   el.className = "event-card" + (isNew ? " new-flash" : "");
   el.dataset.ts = String(Date.now());
   const srcDomain = url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+  const excerptHtml = excerpt
+    ? '<div class="ev-excerpt">' + excerpt + '</div>'
+    : '';
   el.innerHTML =
     '<div class="ev-bar sev-' + sev + '"></div>' +
     '<div class="ev-body">' +
@@ -894,6 +905,7 @@ function buildCard(w, def, isNew, sourceUrl) {
         '<span class="ev-collection">' + w.label + '</span>' +
       '</div>' +
       '<div class="ev-desc">' + pick(def.descs) + '</div>' +
+      excerptHtml +
       '<div class="ev-src-row">' +
         '<span class="ev-source">' + pick(def.sources) + '</span>' +
         '<span class="ev-src-link">' + srcDomain + '</span>' +
@@ -906,9 +918,9 @@ const feed = document.getElementById("event-feed");
 const lastLbl = document.getElementById("last-event-label");
 const MAX_CARDS = 12;
 
-function addEvent(w, def, isNew, sourceUrl) {
+function addEvent(w, def, isNew, sourceUrl, excerpt) {
   lastEventMs = Date.now();
-  const card = buildCard(w, def, isNew, sourceUrl);
+  const card = buildCard(w, def, isNew, sourceUrl, excerpt);
   feed.insertBefore(card, feed.firstChild);
   while (feed.children.length > MAX_CARDS) {
     const old = feed.lastChild;
@@ -934,68 +946,77 @@ function addEvent(w, def, isNew, sourceUrl) {
 })();
 
 // Citation-verified events from monitor_2636ec48 — "SEC CFTC crypto enforcement DeFi wallet fraud 2025"
-// All 9 citations from 2 monitor events, each mapped to a portfolio wallet
+// All 9 citations expanded to individual cards, each with real excerpt from source
 var REAL_EVENTS = [
   {
     walletIdx: 6,  // @rodotfun
     def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov"] },
-    desc: "SEC FY2025: Commission prioritized charging individuals for violating federal securities laws. Retail investor fraud a top enforcement priority.",
+    desc: "SEC FY2025: Commission prioritized charging individuals for violating federal securities laws.",
+    excerpt: "Apr 7, 2026 — In fiscal year 2025, the Commission prioritized charging individuals for violating federal securities laws and will continue to do so.",
     url: "https://www.sec.gov/newsroom/press-releases/2026-34",
     secsAgo: 420
   },
   {
     walletIdx: 7,  // @BLUNF
     def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov"] },
-    desc: "SEC charged three crypto trading platforms and four investment clubs for scheme targeting retail investors on social media. Dec 22 2025.",
+    desc: "SEC charged three crypto trading platforms and four investment clubs targeting retail investors on social media.",
+    excerpt: "Dec 22, 2025 — SEC Charges Three Purported Crypto Asset Trading Platforms and Four Investment Clubs with Scheme That Targeted Retail Investors on Social Media.",
     url: "https://www.sec.gov/newsroom/press-releases/2025-144-sec-charges-three-purported-crypto-asset-trading-platforms-four-investment-clubs-scheme-targeted",
     secsAgo: 900
   },
   {
     walletIdx: 2,  // @liukai
     def: { label:"Regulatory Flag", severity:"high", sources:["CFTC.gov"] },
-    desc: "CFTC issued orders against Opyn, ZeroEx, and Deridex for operating unregistered DeFi exchanges. Civil penalties up to $250k each.",
+    desc: "CFTC issued orders against Opyn, ZeroEx, and Deridex for operating unregistered DeFi exchanges.",
+    excerpt: "Sep 7, 2023 — The orders require that Opyn, ZeroEx, and Deridex pay civil monetary penalties of $250,000, $200,000, and $100,000 respectively.",
     url: "https://www.cftc.gov/PressRoom/PressReleases/8774-23",
     secsAgo: 1560
   },
   {
     walletIdx: 3,  // @pingucharts
     def: { label:"Copy Trade Loss Report", severity:"med", sources:["TRM Labs"] },
-    desc: "TRM Labs 2025 Crypto Crime Report: key trends including sanctions evasion, scams, hacks, and ransomware patterns across DeFi protocols.",
+    desc: "TRM Labs 2025 Crypto Crime Report: sanctions, scams, hacks, and ransomware trends across DeFi.",
+    excerpt: "Feb 10, 2025 — Explore key trends in crypto crime from 2024—including sanctions, scams, hacks, and ransomware—in TRM Labs' annual report.",
     url: "https://www.trmlabs.com/reports-and-whitepapers/2025-crypto-crime-report",
     secsAgo: 2100
   },
   {
     walletIdx: 4,  // @_OHT_
     def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov","Cooley LLP"] },
-    desc: "SEC FY2025 enforcement emphasizes securities fraud targeting individuals. Current administration doubling down on retail investor protection.",
+    desc: "SEC FY2025 enforcement doubles down on securities fraud targeting retail investors.",
+    excerpt: "Apr 14, 2026 — The FY2025 enforcement results demonstrate the current SEC administration's focus on securities fraud targeting retail investors.",
     url: "https://investigations.cooley.com/2026/04/14/sec-announces-fy2025-enforcement-results-emphasizing-focus-on-fraud/",
     secsAgo: 2760
   },
   {
     walletIdx: 5,  // @boosted
     def: { label:"Regulatory Flag", severity:"high", sources:["CFTC.gov","Law360"] },
-    desc: "CFTC enforcement shifted toward fraud and manipulation over technical lapses. Division of Enforcement prioritizing DeFi fraud going forward.",
+    desc: "CFTC enforcement shifted toward fraud and manipulation — DeFi fraud now top priority.",
+    excerpt: "Dec 17, 2025 — The Division of Enforcement will likely continue prioritizing fraud and manipulation over technical lapses in the coming year.",
     url: "https://www.mvalaw.com/media/news/15224_Law360_-_How_CFTC_Enforcement_Shifted_In_2025_And_What_27s_Next.pdf",
     secsAgo: 3420
   },
   {
     walletIdx: 8,  // @SillySmall
     def: { label:"Regulatory Flag", severity:"med", sources:["CFTC.gov","JD Supra"] },
-    desc: "CFTC wading into DeFi enforcement again — Sept 2025 compliance update covering DEX operator liability and commodity exchange act exposure.",
+    desc: "CFTC wading back into DeFi enforcement — DEX operator liability expanding under Commodity Exchange Act.",
+    excerpt: "Sep 9, 2025 — CFTC Wades into DeFi Enforcement Again. Daily Compliance News: End of Enforcement Sprint edition.",
     url: "https://www.jdsupra.com/topics/cftc/decentralized-finance-defi/commodity-exchange-act-cea/",
     secsAgo: 4080
   },
   {
     walletIdx: 10, // @farmerchts
     def: { label:"Regulatory Flag", severity:"med", sources:["CFTC.gov","Paul Weiss"] },
-    desc: "CFTC 2025 Year in Review: Crypto Sprint launched per President's Working Group. DeFi and digital asset enforcement ramping up significantly.",
+    desc: "CFTC 2025 Year in Review: Crypto Sprint launched, DeFi and digital asset enforcement ramping up.",
+    excerpt: "Feb 19, 2026 — Chairman Pham launched a 'Crypto Sprint' to implement recommendations from the President's Working Group on Digital Assets.",
     url: "https://www.paulweiss.com/insights/client-memos/cftc-enforcement-2025-year-in-review",
     secsAgo: 4740
   },
   {
     walletIdx: 0,  // @0xg3ro
-    def: { label:"Community Warning", severity:"med", sources:["CreditUnion.org"] },
-    desc: "Documented DeFi scam pattern: fake platform promised 30% weekly returns, vanished with $12M. Phishing and social engineering vectors active.",
+    def: { label:"Community Warning", severity:"med", sources:["ConnectCU"] },
+    desc: "Documented DeFi scam: fake platform promised 30% weekly returns, vanished with $12M investor funds.",
+    excerpt: "2025 — A fake DeFi platform promised 30% weekly returns and vanished with $12 million in investor funds. Phishing and social engineering remain primary vectors.",
     url: "https://www.connectcu.org/index.php/blog/204-crypto-and-defi-investment-scams-in-2025-what-you-need-to-know",
     secsAgo: 5400
   },
@@ -1004,8 +1025,7 @@ var REAL_EVENTS = [
 REAL_EVENTS.slice().reverse().forEach(function(ev) {
   var w = WALLETS[ev.walletIdx];
   var def = ev.def;
-  var desc = ev.desc;
-  var card = buildCard(w, { label: def.label, severity: def.severity, sources: def.sources, descs: [desc] }, false, ev.url);
+  var card = buildCard(w, { label: def.label, severity: def.severity, sources: def.sources, descs: [ev.desc] }, false, ev.url, ev.excerpt);
   var ts = Date.now() - ev.secsAgo * 1000;
   card.dataset.ts = String(ts);
   card.querySelector("[data-ts]").dataset.ts = card.dataset.ts;
