@@ -573,7 +573,7 @@ body {
 
     <!-- LEFT / TOP: FEED PANEL -->
     <aside class="feed-panel" aria-label="Live monitor feed">
-      <div class="feed-panel-header">20 monitors · fomo curated wallets</div>
+      <div class="feed-panel-header">8 monitors · fomo curated wallets</div>
 
       <!-- Monitor chips -->
       <div class="chip-strip" id="chip-strip" aria-label="Active monitors"></div>
@@ -738,7 +738,7 @@ body {
           <span class="section-title">Pilot Plan</span>
           <span class="section-tag">Top 20 wallets</span>
         </div>
-        <p class="card-body" style="margin-bottom:12px">20 Monitor runs at 3 CPM each. Cheap to test, immediate to validate, directly tied to fomo's highest-traffic Insights collections.</p>
+        <p class="card-body" style="margin-bottom:12px">8 monitors running now, 3 CPM per run. Cheap to test, immediate to validate, directly tied to fomo's highest-traffic Insights collections.</p>
 
         <div class="card">
           <div class="step-row">
@@ -774,7 +774,7 @@ body {
 
         <!-- CTA -->
         <div class="cta-section">
-          <div class="cta-eyebrow">20 monitors · 3 CPM each · Start this week</div>
+          <div class="cta-eyebrow">8 monitors live · 3 CPM each · Start this week</div>
           <a href="mailto:josh@parallel.ai" class="cta-btn">Start the pilot →</a>
           <a href="mailto:josh@parallel.ai" class="cta-secondary">Questions? Contact Parallel</a>
           <div class="cta-foot">Parallel Web Systems · Internal · June 24, 2026</div>
@@ -933,43 +933,22 @@ function addEvent(w, def, isNew, sourceUrl) {
   });
 })();
 
-// Real events from Parallel monitors (pre-fetched, with source URLs)
-// monitor_2636ec48da7847b79807c0ca00cc51c1 — "SEC CFTC crypto enforcement action DeFi wallet fraud 2025"
+// High-confidence events from Parallel monitors (citation-verified, real source URLs)
+// Source: monitor_2636ec48da7847b79807c0ca00cc51c1 — "SEC CFTC crypto enforcement DeFi wallet fraud 2025"
 var REAL_EVENTS = [
-  {
-    walletIdx: 6, // @rodotfun
-    def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov","CFTC.gov"] },
-    desc: "SEC FY2025 enforcement results — fraud targeting retail investors cited; CFTC issued orders against three DeFi protocol operators for unregistered trading.",
-    url: "https://www.sec.gov/newsroom/press-releases/2026-34",
-    secsAgo: 341
-  },
   {
     walletIdx: 7, // @BLUNF
     def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov","TRM Labs"] },
     desc: "SEC charged three purported crypto trading platforms and four investment clubs with scheme targeting retail investors on social media. Dec 22 2025.",
     url: "https://www.sec.gov/newsroom/press-releases/2025-144-sec-charges-three-purported-crypto-asset-trading-platforms-four-investment-clubs-scheme-targeted",
-    secsAgo: 512
+    secsAgo: 1380
   },
   {
-    walletIdx: 0, // @0xg3ro
-    def: EVENT_DEFS[0],
-    desc: EVENT_DEFS[0].descs[0],
-    url: null,
-    secsAgo: 118
-  },
-  {
-    walletIdx: 4, // @_OHT_
-    def: EVENT_DEFS[4],
-    desc: EVENT_DEFS[4].descs[2],
-    url: null,
-    secsAgo: 203
-  },
-  {
-    walletIdx: 1, // @0xleo
-    def: EVENT_DEFS[2],
-    desc: EVENT_DEFS[2].descs[0],
-    url: null,
-    secsAgo: 47
+    walletIdx: 6, // @rodotfun
+    def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov","CFTC.gov"] },
+    desc: "SEC FY2025 enforcement results — fraud targeting retail investors cited; CFTC issued orders against three DeFi protocol operators for unregistered trading.",
+    url: "https://www.sec.gov/newsroom/press-releases/2026-34",
+    secsAgo: 660
   },
 ];
 
