@@ -62,10 +62,10 @@ def score_event(raw_event: dict, monitor_meta: dict, now: datetime) -> float:
     if age_hours > CUTOFF_HOURS:
         return -1  # discard
 
-    # Confidence — drop low/unknown entirely
+    # Confidence — high only
     basis = output.get("basis", [{}])
     confidence_str = basis[0].get("confidence") if basis else None
-    if confidence_str not in ("high", "medium"):
+    if confidence_str != "high":
         return -1
     confidence_score = CONFIDENCE_RANK.get(confidence_str, 0)
 
@@ -88,15 +88,38 @@ def extract_best_citation(output: dict) -> tuple[str, str]:
     return "", ""
 
 
-def is_homepage(url: str) -> bool:
-    from urllib.parse import urlparse
+def is_low_signal_url(url: str) -> bool:
+    """Block homepages, section pages, search pages, and anything not a specific article."""
+    from urllib.parse import urlparse, parse_qs
     p = urlparse(url)
-    if p.path.strip("/") == "":
+    path_parts = [x for x in p.path.strip("/").split("/") if x]
+
+    # Reject homepages
+    if not path_parts:
         return True
-    # Block Reuters section/category pages (not specific articles)
-    if "reuters.com" in p.netloc and len(p.path.strip("/").split("/")) <= 2:
+
+    # Reject search/query pages
+    if p.query and any(k in parse_qs(p.query) for k in ("q", "s", "search", "query")):
         return True
+    if "search" in path_parts or "tag" in path_parts or "category" in path_parts:
+        return True
+
+    # Reject shallow section pages on known news/data domains
+    # A real article needs at least 2 meaningful path segments (e.g. /blog/title, /post/123/slug)
+    NEWS_DOMAINS = (
+        "reuters.com", "coindesk.com", "theblock.co", "decrypt.co",
+        "cointelegraph.com", "bloomberg.com", "ft.com", "wsj.com",
+        "forbes.com", "yahoo.com", "businessinsider.com", "cnbc.com",
+        "chainalysis.com", "elliptic.co", "trmlabs.com", "peckshield.com",
+    )
+    if any(d in p.netloc for d in NEWS_DOMAINS) and len(path_parts) < 2:
+        return True
+
     return False
+
+
+# Keep old name as alias so existing call-sites work
+is_homepage = is_low_signal_url
 
 
 def build_excerpt(output: dict, event_date: str, citation_title: str) -> str:
