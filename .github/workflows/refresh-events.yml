@@ -2,7 +2,8 @@ name: Refresh FOMO Events
 
 on:
   schedule:
-    - cron: '5 * * * *'   # 5 minutes past every hour
+    - cron: '5 * * * *'    # 5 minutes past every hour
+    - cron: '0 14 * * *'   # 6am PT daily — morning guarantee with search fallback
   workflow_dispatch:        # allow manual trigger
 
 permissions:
