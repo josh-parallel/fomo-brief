@@ -876,6 +876,8 @@ const SOURCE_URL_MAP = {
   "Reddit":       "https://www.reddit.com/r/CryptoCurrency/search/?q=hyperliquid+whale+fraud",
   "Discord":      "https://www.coindesk.com/search?s=hyperliquid+manipulation",
   "Telegram":     "https://www.coindesk.com/search?s=copy+trade+fraud",
+  "Reuters":      "https://www.reuters.com/technology/cryptocurrency/",
+  "CFTC.gov":     "https://www.cftc.gov/LawRegulation/CourtActions/index.htm",
 };
 
 function resolveUrl(def, overrideUrl) {
@@ -883,7 +885,7 @@ function resolveUrl(def, overrideUrl) {
   for (var i = 0; i < def.sources.length; i++) {
     if (SOURCE_URL_MAP[def.sources[i]]) return SOURCE_URL_MAP[def.sources[i]];
   }
-  return "https://www.coindesk.com/";
+  return "https://www.coindesk.com/search?s=crypto+fraud+manipulation";
 }
 
 function buildCard(w, def, isNew, sourceUrl, excerpt) {
