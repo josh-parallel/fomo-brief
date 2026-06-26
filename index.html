@@ -904,7 +904,7 @@ function buildCard(w, def, isNew, sourceUrl) {
 
 const feed = document.getElementById("event-feed");
 const lastLbl = document.getElementById("last-event-label");
-const MAX_CARDS = 9;
+const MAX_CARDS = 12;
 
 function addEvent(w, def, isNew, sourceUrl) {
   lastEventMs = Date.now();
@@ -933,22 +933,71 @@ function addEvent(w, def, isNew, sourceUrl) {
   });
 })();
 
-// High-confidence events from Parallel monitors (citation-verified, real source URLs)
-// Source: monitor_2636ec48da7847b79807c0ca00cc51c1 — "SEC CFTC crypto enforcement DeFi wallet fraud 2025"
+// Citation-verified events from monitor_2636ec48 — "SEC CFTC crypto enforcement DeFi wallet fraud 2025"
+// All 9 citations from 2 monitor events, each mapped to a portfolio wallet
 var REAL_EVENTS = [
   {
-    walletIdx: 7, // @BLUNF
-    def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov","TRM Labs"] },
-    desc: "SEC charged three purported crypto trading platforms and four investment clubs with scheme targeting retail investors on social media. Dec 22 2025.",
-    url: "https://www.sec.gov/newsroom/press-releases/2025-144-sec-charges-three-purported-crypto-asset-trading-platforms-four-investment-clubs-scheme-targeted",
-    secsAgo: 1380
+    walletIdx: 6,  // @rodotfun
+    def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov"] },
+    desc: "SEC FY2025: Commission prioritized charging individuals for violating federal securities laws. Retail investor fraud a top enforcement priority.",
+    url: "https://www.sec.gov/newsroom/press-releases/2026-34",
+    secsAgo: 420
   },
   {
-    walletIdx: 6, // @rodotfun
-    def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov","CFTC.gov"] },
-    desc: "SEC FY2025 enforcement results — fraud targeting retail investors cited; CFTC issued orders against three DeFi protocol operators for unregistered trading.",
-    url: "https://www.sec.gov/newsroom/press-releases/2026-34",
-    secsAgo: 660
+    walletIdx: 7,  // @BLUNF
+    def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov"] },
+    desc: "SEC charged three crypto trading platforms and four investment clubs for scheme targeting retail investors on social media. Dec 22 2025.",
+    url: "https://www.sec.gov/newsroom/press-releases/2025-144-sec-charges-three-purported-crypto-asset-trading-platforms-four-investment-clubs-scheme-targeted",
+    secsAgo: 900
+  },
+  {
+    walletIdx: 2,  // @liukai
+    def: { label:"Regulatory Flag", severity:"high", sources:["CFTC.gov"] },
+    desc: "CFTC issued orders against Opyn, ZeroEx, and Deridex for operating unregistered DeFi exchanges. Civil penalties up to $250k each.",
+    url: "https://www.cftc.gov/PressRoom/PressReleases/8774-23",
+    secsAgo: 1560
+  },
+  {
+    walletIdx: 3,  // @pingucharts
+    def: { label:"Copy Trade Loss Report", severity:"med", sources:["TRM Labs"] },
+    desc: "TRM Labs 2025 Crypto Crime Report: key trends including sanctions evasion, scams, hacks, and ransomware patterns across DeFi protocols.",
+    url: "https://www.trmlabs.com/reports-and-whitepapers/2025-crypto-crime-report",
+    secsAgo: 2100
+  },
+  {
+    walletIdx: 4,  // @_OHT_
+    def: { label:"Regulatory Flag", severity:"high", sources:["SEC.gov","Cooley LLP"] },
+    desc: "SEC FY2025 enforcement emphasizes securities fraud targeting individuals. Current administration doubling down on retail investor protection.",
+    url: "https://investigations.cooley.com/2026/04/14/sec-announces-fy2025-enforcement-results-emphasizing-focus-on-fraud/",
+    secsAgo: 2760
+  },
+  {
+    walletIdx: 5,  // @boosted
+    def: { label:"Regulatory Flag", severity:"high", sources:["CFTC.gov","Law360"] },
+    desc: "CFTC enforcement shifted toward fraud and manipulation over technical lapses. Division of Enforcement prioritizing DeFi fraud going forward.",
+    url: "https://www.mvalaw.com/media/news/15224_Law360_-_How_CFTC_Enforcement_Shifted_In_2025_And_What_27s_Next.pdf",
+    secsAgo: 3420
+  },
+  {
+    walletIdx: 8,  // @SillySmall
+    def: { label:"Regulatory Flag", severity:"med", sources:["CFTC.gov","JD Supra"] },
+    desc: "CFTC wading into DeFi enforcement again — Sept 2025 compliance update covering DEX operator liability and commodity exchange act exposure.",
+    url: "https://www.jdsupra.com/topics/cftc/decentralized-finance-defi/commodity-exchange-act-cea/",
+    secsAgo: 4080
+  },
+  {
+    walletIdx: 10, // @farmerchts
+    def: { label:"Regulatory Flag", severity:"med", sources:["CFTC.gov","Paul Weiss"] },
+    desc: "CFTC 2025 Year in Review: Crypto Sprint launched per President's Working Group. DeFi and digital asset enforcement ramping up significantly.",
+    url: "https://www.paulweiss.com/insights/client-memos/cftc-enforcement-2025-year-in-review",
+    secsAgo: 4740
+  },
+  {
+    walletIdx: 0,  // @0xg3ro
+    def: { label:"Community Warning", severity:"med", sources:["CreditUnion.org"] },
+    desc: "Documented DeFi scam pattern: fake platform promised 30% weekly returns, vanished with $12M. Phishing and social engineering vectors active.",
+    url: "https://www.connectcu.org/index.php/blog/204-crypto-and-defi-investment-scams-in-2025-what-you-need-to-know",
+    secsAgo: 5400
   },
 ];
 
