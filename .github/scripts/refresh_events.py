@@ -29,7 +29,56 @@ MONITORS = [
 ]
 
 CONFIDENCE_RANK = {"high": 3, "medium": 2, "low": 1, None: 0}
-CUTOFF_HOURS = 48  # only surface events from the last 48 hours
+CUTOFF_HOURS = 48   # monitor event age cutoff
+ARTICLE_MAX_DAYS = 7  # reject articles older than this regardless of when monitor ran
+
+
+def extract_article_date(output: dict, url: str) -> datetime | None:
+    """
+    Try to determine the actual publication date of an article.
+    Checks: (1) URL path for YYYY/MM/DD or YYYY-MM-DD patterns,
+            (2) first sentence of content for a leading date.
+    Returns a tz-aware datetime or None if unknown.
+    """
+    import re
+
+    # 1. URL date pattern: /2026/06/25/ or /2026-06-25/
+    url_date_pattern = re.search(r'[/\-](20\d{2})[/\-](0[1-9]|1[0-2])[/\-](0[1-9]|[12]\d|3[01])', url or "")
+    if url_date_pattern:
+        try:
+            return datetime(int(url_date_pattern.group(1)),
+                            int(url_date_pattern.group(2)),
+                            int(url_date_pattern.group(3)),
+                            tzinfo=timezone.utc)
+        except ValueError:
+            pass
+
+    # 2. Content leading date: "Jun 25, 2026" or "June 25, 2026" or "2026-06-25"
+    content = output.get("content", "")
+    excerpts = []
+    for b in output.get("basis", []):
+        for c in b.get("citations", []):
+            excerpts += c.get("excerpts", [])
+    text = (content + " " + " ".join(excerpts))[:400]
+
+    month_names = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
+                   "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
+    m = re.search(r'\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2}),?\s+(20\d{2})', text, re.I)
+    if m:
+        try:
+            return datetime(int(m.group(3)), month_names[m.group(1).lower()[:3]], int(m.group(2)), tzinfo=timezone.utc)
+        except ValueError:
+            pass
+
+    # ISO date in text
+    m = re.search(r'\b(20\d{2})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\b', text)
+    if m:
+        try:
+            return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=timezone.utc)
+        except ValueError:
+            pass
+
+    return None
 
 
 def run_cli(monitor_id: str, limit: int = 10) -> list:
@@ -51,28 +100,37 @@ def score_event(raw_event: dict, monitor_meta: dict, now: datetime) -> float:
     """Higher is better. Combines recency + confidence."""
     output = raw_event.get("output", {})
 
-    # Recency: prefer events within cutoff
-    event_date_str = raw_event.get("event_date", "")
-    try:
-        event_dt = datetime.fromisoformat(event_date_str).replace(tzinfo=timezone.utc)
-        age_hours = (now - event_dt).total_seconds() / 3600
-    except (ValueError, TypeError):
-        age_hours = 999
-
-    if age_hours > CUTOFF_HOURS:
-        return -1  # discard
-
     # Confidence — high only
     basis = output.get("basis", [{}])
     confidence_str = basis[0].get("confidence") if basis else None
     if confidence_str != "high":
         return -1
+
+    # Get the best citation URL and check article publication date
+    title, url = "", ""
+    for b in output.get("basis", []):
+        for c in b.get("citations", []):
+            u = c.get("url", "").strip()
+            if u and not is_low_signal_url(u):
+                url = u
+                title = c.get("title", "")
+                break
+        if url:
+            break
+
+    # Reject articles older than ARTICLE_MAX_DAYS based on actual publish date
+    article_dt = extract_article_date(output, url)
+    if article_dt:
+        article_age_days = (now - article_dt).total_seconds() / 86400
+        if article_age_days > ARTICLE_MAX_DAYS:
+            return -1
+        recency_score = max(0, 1 - article_age_days / ARTICLE_MAX_DAYS)
+    else:
+        # No date found — allow but score conservatively
+        recency_score = 0.3
+
     confidence_score = CONFIDENCE_RANK.get(confidence_str, 0)
-
-    # Prefer high-severity monitors
     severity_score = 1 if monitor_meta.get("severity") == "high" else 0
-
-    recency_score = max(0, 1 - age_hours / CUTOFF_HOURS)  # 1.0 → 0.0 over 48h
 
     return confidence_score * 10 + severity_score * 5 + recency_score * 3
 
