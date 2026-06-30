@@ -868,15 +868,15 @@ const SOURCE_URL_MAP = {
   "TRM Labs":      "https://www.theblock.co/post/406073/coinex-iran-trm-labs",
   "FinanceFeeds":  "https://financefeeds.com/fake-crypto-influencer-gets-15-months-for-1-4-million-staking-fraud/",
   "Elliptic":      "https://www.elliptic.co/blog/behind-the-fbi-case-against-huione",
-  "Cryptopolitan": "https://www.cryptopolitan.com/q2-2026-crypto-most-hacked-quarter",
+  "Cryptopolitan": "https://www.cryptopolitan.com/",
   "CryptoBreaking":"https://www.cryptobreaking.com/indonesia-introduces-certification-rules-for",
   "Ledger":        "https://www.ledger.com/academy/topics/security/crypto-security-2026-how-to-avoid-scams-and-hacks-in-2026",
   "Yahoo Finance":  "https://finance.yahoo.com/markets/crypto/articles/fartcoin-whale-liquidated-3-million-104353781.html",
   "Reddit":        "https://www.soliduslabs.com/reports/solana-rug-pulls-pump-dumps-crypto-compliance",
-  "Discord":       "https://www.theblock.co/post/406082/south-korea-bithumb-information-penalty",
+  "Discord":       "https://www.elliptic.co/blog/behind-the-fbi-case-against-huione",
   "Telegram":      "https://www.elliptic.co/blog/behind-the-fbi-case-against-huione",
-  "Reuters":       "https://www.theblock.co/post/406082/south-korea-bithumb-information-penalty",
-  "CFTC.gov":      "https://www.cftc.gov/LawRegulation/CourtActions/index.htm",
+  "Reuters":       "https://apnews.com/article/guo-wengui-chinese-businessman-fraud-3deb06c17c5640a5d63f0e2c72286ac8",
+  "CFTC.gov":      "https://www.cftc.gov/ConsumerProtection/FraudAlertsAdvisories/index.htm",
 };
 
 function resolveUrl(def, overrideUrl) {
@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1782841543733;
+var REFRESHED_AT = 1782841655850;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -966,20 +966,12 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "The U.S. Department of Justice's (DOJ) remission program for victims of the OneCoin cryptocurrency fraud scheme has a deadline of June 30, 2026, for submitting",
-    excerpt: "The U.S. Department of Justice's (DOJ) remission program for victims of the OneCoin cryptocurrency fraud scheme has a deadline of June 30, 2026, for submitting",
-    url: "https://www.wikifx.com/en/newsdetail/202606291984321393.html",
-    secsAgo: 960,
-  },
-  {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "As of June 30, 2026, total liquidations across Hyperliquid's HIP-3 markets have reportedly increased to over $3.33 billion, according to data from",
     excerpt: "As of June 30, 2026, total liquidations across Hyperliquid's HIP-3 markets have reportedly increased to over $3.33 billion, according to data from",
     url: "https://www.binance.com/en/square/post/339262595402865",
-    secsAgo: 1560,
+    secsAgo: 960,
   },
   {
     walletIdx: 8,
@@ -987,7 +979,7 @@ var REAL_EVENTS = [
     desc: "On June 30, 2026, a whale added 1.11 million USDC as collateral to Hyperliquid and opened a $13.05 million ETH long position at an entry price of $1,581.9, with a liquidation",
     excerpt: "On June 30, 2026, a whale added 1.11 million USDC as collateral to Hyperliquid and opened a $13.05 million ETH long position at an entry price of $1,581.9, with a liquidation price of",
     url: "https://www.binance.com/en/square/post/339302182546801",
-    secsAgo: 2160,
+    secsAgo: 1560,
   },
   {
     walletIdx: 9,
@@ -995,7 +987,7 @@ var REAL_EVENTS = [
     desc: "The SEC secured a $5.5 million default judgment against NanoBit and five other defendants on June 30, 2026, for operating a fraudulent crypto trading platform that deceived",
     excerpt: "The SEC secured a $5.5 million default judgment against NanoBit and five other defendants on June 30, 2026, for operating a fraudulent crypto trading platform that deceived investors using fake trading dashboards and...",
     url: "https://www.coindesk.com/policy/2026/06/30/sec-wins-usd5-5-million-default-judgment-over-alleged-fake-crypto-platform-nanobit",
-    secsAgo: 2760,
+    secsAgo: 2160,
   },
   {
     walletIdx: 7,
@@ -1003,7 +995,7 @@ var REAL_EVENTS = [
     desc: "On June 30, 2026, Christopher Delgado, who ran a company called Goliath Ventures, is pleading guilty to wire fraud and money laundering charges in connection with a cryptocurrency",
     excerpt: "On June 30, 2026, Christopher Delgado, who ran a company called Goliath Ventures, is pleading guilty to wire fraud and money laundering charges in connection with a cryptocurrency Ponzi scheme that defrauded investors...",
     url: "https://www.wesh.com/article/orange-county-ponzi-scheme-christopher-delgado-plea/71780399",
-    secsAgo: 3360,
+    secsAgo: 2760,
   },
   {
     walletIdx: 7,
@@ -1011,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On June 30, 2026, self-exiled Chinese billionaire Guo Wengui (Miles Guo) was sentenced to 30 years in a U.S. prison for orchestrating a $1 billion fraud scheme that involved the",
     excerpt: "On June 30, 2026, self-exiled Chinese billionaire Guo Wengui (Miles Guo) was sentenced to 30 years in a U.S. prison for orchestrating a $1 billion fraud scheme that involved the use of a fake cryptocurrency coin and the...",
     url: "https://apnews.com/article/guo-wengui-chinese-businessman-fraud-3deb06c17c5640a5d63f0e2c72286ac8",
-    secsAgo: 3960,
+    secsAgo: 3360,
   },
   {
     walletIdx: 7,
@@ -1019,6 +1011,14 @@ var REAL_EVENTS = [
     desc: "On June 30, 2026, Cambodian police raided an illegal cryptocurrency exchange on Diamond Island (Koh Pich) in Phnom Penh. The reports accompanying the raid highlighted that Chen",
     excerpt: "On June 30, 2026, Cambodian police raided an illegal cryptocurrency exchange on Diamond Island (Koh Pich) in Phnom Penh. The reports accompanying the raid highlighted that Chen Zhi, chairman of Prince Holding Group, has...",
     url: "https://www.facebook.com/khmertimes/posts/police-raided-a-building-suspected-of-providing-illegal-cryptocurrency-exchange-/1061618529541393/",
+    secsAgo: 3960,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "Reports on June 30, 2026, describe two documented whale manipulation events for JELLYJELLY on Hyperliquid, including a whale exploit that caused approximately $12M in losses to",
+    excerpt: "Reports on June 30, 2026, describe two documented whale manipulation events for JELLYJELLY on Hyperliquid, including a whale exploit that caused approximately $12M in losses to the community vault, resulting in the...",
+    url: "https://www.binance.com/en/square/post/339645894523441",
     secsAgo: 4560,
   },
 ];

@@ -153,6 +153,20 @@ def extract_best_citation(output: dict) -> tuple[str, str]:
     return "", ""
 
 
+def url_is_reachable(url: str) -> bool:
+    """Return True if URL returns a non-4xx status. Fast HEAD check."""
+    import urllib.request, urllib.error
+    try:
+        req = urllib.request.Request(url, method="HEAD",
+                                     headers={"User-Agent": "Mozilla/5.0"})
+        urllib.request.urlopen(req, timeout=6)
+        return True
+    except urllib.error.HTTPError as e:
+        return e.code < 400
+    except Exception:
+        return True  # network error ≠ dead URL; don't drop
+
+
 def is_low_signal_url(url: str) -> bool:
     """Block homepages, section pages, search pages, and anything not a specific article."""
     from urllib.parse import urlparse, parse_qs
@@ -337,9 +351,18 @@ def main():
         print("No events from monitors or search — keeping existing REAL_EVENTS.", file=sys.stderr)
         sys.exit(0)
 
-    # Sort best first, take up to 8
+    # Sort best first, then drop events whose URL returns 4xx
     quality.sort(key=lambda x: x["score"], reverse=True)
-    best = quality[:8]
+    reachable = []
+    for c in quality:
+        if len(reachable) >= 8:
+            break
+        _, url = extract_best_citation(c["raw"].get("output", {}))
+        if url and not url_is_reachable(url):
+            print(f"  DROP (dead URL): {url}", file=sys.stderr)
+            continue
+        reachable.append(c)
+    best = reachable
 
     # Assign secsAgo: spread events ~10 min apart starting at 6 min ago
     for i, c in enumerate(best):
