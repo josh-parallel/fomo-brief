@@ -5,6 +5,7 @@ and rewrite the REAL_EVENTS block in fomo-brief.html.
 
 Runs inside GitHub Actions; parallel-cli must already be authenticated.
 """
+from __future__ import annotations
 
 import json
 import re
@@ -58,7 +59,7 @@ def extract_article_date(output: dict, url: str) -> datetime | None:
     excerpts = []
     for b in output.get("basis", []):
         for c in b.get("citations", []):
-            excerpts += c.get("excerpts", [])
+            excerpts += c.get("excerpts", []) or []
     text = (content + " " + " ".join(excerpts))[:400]
 
     month_names = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
@@ -108,10 +109,10 @@ def score_event(raw_event: dict, monitor_meta: dict, now: datetime) -> float:
     """Higher is better. Combines recency + confidence."""
     output = raw_event.get("output", {})
 
-    # Confidence — high only
+    # Accept high or medium confidence; reject low/unknown
     basis = output.get("basis", [{}])
     confidence_str = basis[0].get("confidence") if basis else None
-    if confidence_str != "high":
+    if confidence_str not in ("high", "medium"):
         return -1
 
     # Get the best citation URL and check article publication date
@@ -211,8 +212,10 @@ def js_string(s: str) -> str:
     return json.dumps(s)  # proper JSON quoting handles all escaping
 
 
-def build_real_events(candidates: list) -> str:
+def build_real_events(candidates: list, now: datetime) -> str:
+    epoch_ms = int(now.timestamp() * 1000)
     lines = ["// Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)",
+             f"var REFRESHED_AT = {epoch_ms};",
              "var REAL_EVENTS = ["]
     for c in candidates:
         m = c["monitor"]
@@ -346,14 +349,14 @@ def main():
     for c in best:
         print(f"    [{c['score']:.1f}] {c['monitor']['label']} — {c['raw'].get('event_date','?')}", file=sys.stderr)
 
-    new_block = build_real_events(best)
+    new_block = build_real_events(best, now)
 
     # Replace the REAL_EVENTS block in the HTML
     html_path = "fomo-brief.html"
     with open(html_path, "r", encoding="utf-8") as f:
         html = f.read()
 
-    pattern = r"// Real events[^\n]*\nvar REAL_EVENTS = \[[\s\S]*?\];"
+    pattern = r"// Real events[^\n]*\n(?:var REFRESHED_AT[^\n]*\n)?var REAL_EVENTS = \[[\s\S]*?\];"
     if not re.search(pattern, html):
         print("ERROR: Could not find REAL_EVENTS block in HTML.", file=sys.stderr)
         sys.exit(1)
