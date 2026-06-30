@@ -205,7 +205,7 @@ def build_excerpt(output: dict, event_date: str, citation_title: str) -> str:
     if len(content) > 220:
         summary += "..."
 
-    return f"{date_label} — {summary}"
+    return summary
 
 
 def js_string(s: str) -> str:
