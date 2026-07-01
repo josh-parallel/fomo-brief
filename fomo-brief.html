@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1782933307009;
+var REFRESHED_AT = 1782937799776;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -968,10 +968,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 0,
     def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 1, 2026, the Department of Justice announced the arrest and extradition of Peter Stokes, a member of the 'Scattered Spider' hacking group, who is charged with conspiracy",
+    excerpt: "On July 1, 2026, the Department of Justice announced the arrest and extradition of Peter Stokes, a member of the 'Scattered Spider' hacking group, who is charged with conspiracy and fraud. The group is alleged to have...",
+    url: "https://www.justice.gov/opa/pr/alleged-member-criminal-cyber-hacking-group-scattered-spider-arrested-finland-and-extradited",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
     desc: "On July 1, 2026, the U.S. Treasury and Department of Justice announced sanctions and actions against the Brazilian criminal network PCC for utilizing cryptocurrency to move",
     excerpt: "On July 1, 2026, the U.S. Treasury and Department of Justice announced sanctions and actions against the Brazilian criminal network PCC for utilizing cryptocurrency to move illicit funds back to",
     url: "https://home.treasury.gov/news/press-releases/sb0549",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 0,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "A Chinese national pleaded guilty on July 1, 2026, to charges of cocaine trafficking and providing material support to the CJNG cartel, a case that involved the use of",
     excerpt: "A Chinese national pleaded guilty on July 1, 2026, to charges of cocaine trafficking and providing material support to the CJNG cartel, a case that involved the use of cryptocurrency for money movement and",
     url: "https://www.justice.gov/usao-ma/pr/eighteen-individuals-and-entities-charged-international-operation-targeting-widespread",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "Hyperliquid's largest WTI Crude Oil long whale (address 0x007d) was liquidated in two rounds on July 1, 2026, after WTI crude oil fell below $69. A total of 180,000 contracts were",
     excerpt: "Hyperliquid's largest WTI Crude Oil long whale (address 0x007d) was liquidated in two rounds on July 1, 2026, after WTI crude oil fell below $69. A total of 180,000 contracts were force-liquidated at an average price of...",
     url: "https://www.binance.com/en/square/post/340019850789569",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 7,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "Usie Otukpa Osang was arraigned by the EFCC on July 1, 2026, in connection with an alleged cryptocurrency investment scam involving approximately AUD 8.4 million and US 3.6",
     excerpt: "Usie Otukpa Osang was arraigned by the EFCC on July 1, 2026, in connection with an alleged cryptocurrency investment scam involving approximately AUD 8.4 million and US 3.6",
     url: "https://businessday.ng/news/article/efcc-drags-suspected-crypto-fraudster-to-court-over-alleged-aud8-4m-us3-6m-scam/",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 7,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "Christopher Alexander Delgado, the 34-year-old CEO of Goliath Ventures, pleaded guilty on July 1, 2026, to conspiracy to commit wire fraud, wire fraud, and money laundering in",
     excerpt: "Christopher Alexander Delgado, the 34-year-old CEO of Goliath Ventures, pleaded guilty on July 1, 2026, to conspiracy to commit wire fraud, wire fraud, and money laundering in relation to a $250 million cryptocurrency...",
     url: "https://www.kucoin.com/news/flash/goliath-ventures-ceo-pleads-guilty-to-250m-crypto-ponzi-scheme",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 9,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "On July 1, 2026, 1,700 UK investors filed a $200 million lawsuit against Binance and Changpeng Zhao (CZ) regarding the use of unlicensed crypto derivatives that allegedly violated",
     excerpt: "On July 1, 2026, 1,700 UK investors filed a $200 million lawsuit against Binance and Changpeng Zhao (CZ) regarding the use of unlicensed crypto derivatives that allegedly violated FCA",
     url: "https://bitcoinfoundation.org/news/crypto-exchanges-news/binance-uk/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "Christopher Alexander Delgado, former CEO of Goliath Ventures, pleaded guilty on June 30, 2026, to conspiracy to commit wire fraud, wire fraud, and money laundering in connection",
-    excerpt: "Christopher Alexander Delgado, former CEO of Goliath Ventures, pleaded guilty on June 30, 2026, to conspiracy to commit wire fraud, wire fraud, and money laundering in connection with a cryptocurrency Ponzi scheme...",
-    url: "https://www.justice.gov/usao-mdfl/pr/goliath-ventures-ceo-pleads-guilty-cryptocurrency-fraud-scheme-conspiracy",
     secsAgo: 4560,
   },
 ];
