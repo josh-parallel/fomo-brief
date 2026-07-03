@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783032500956;
+var REFRESHED_AT = 1783073534084;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -966,12 +966,20 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
-    walletIdx: 5,
-    def: { label: "Chain Analytics", severity: "med", sources: ["Chainalysis"] },
-    desc: "TRM Labs published a report on July 1, 2026, regarding OFAC's sanctions on 134 ISKP cryptocurrency addresses. The report notes these addresses moved over $2 million and highlights",
-    excerpt: "TRM Labs published a report on July 1, 2026, regarding OFAC's sanctions on 134 ISKP cryptocurrency addresses. The report notes these addresses moved over $2 million and highlights ISKP's reliance on USDT and its shift...",
-    url: "https://www.chainalysis.com/blog/isis-designation-crypto-addresses-july-2026/",
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 3, 2026, reports from Hyperinsight via BlockBeats indicated that a Hyperliquid whale (address starting with 0xa31) is holding 17 short positions in AI and",
+    excerpt: "On July 3, 2026, reports from Hyperinsight via BlockBeats indicated that a Hyperliquid whale (address starting with 0xa31) is holding 17 short positions in AI and semiconductor-related assets (including MU, SMH, SNDK,...",
+    url: "https://www.binance.com/en/square/post/340406505525618",
     secsAgo: 960,
+  },
+  {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "Around July 2, 2026, it was reported that William Koo Ichioka was ordered by Judge Vince Chhabria of the U.S. District Court to pay over $36 million (including $31 million in",
+    excerpt: "Around July 2, 2026, it was reported that William Koo Ichioka was ordered by Judge Vince Chhabria of the U.S. District Court to pay over $36 million (including $31 million in restitution and a $5 million civil penalty)...",
+    url: "https://www.techtimes.com/articles/319507/20260702/crypto-ponzi-ceo-pleads-guilty-after-250m-loss-defi-claims-were-never-chain.htm",
+    secsAgo: 1560,
   },
   {
     walletIdx: 0,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "On July 2, 2026, the FBI announced that Avraham Eisenberg, 28, was sentenced to 24 years in prison for engaging in a manipulative trading scheme on a cryptocurrency exchange that",
     excerpt: "On July 2, 2026, the FBI announced that Avraham Eisenberg, 28, was sentenced to 24 years in prison for engaging in a manipulative trading scheme on a cryptocurrency exchange that defrauded Mango Markets and its...",
     url: "https://www.facebook.com/FBI/posts/case-update-from-fbi-denver-former-trading-firm-executive-sentenced-to-24-years-/1439037558269806/",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -987,14 +995,6 @@ var REAL_EVENTS = [
     desc: "A whale at address 0x8541 liquidated a $2.99 million short position on META on the Hyperliquid platform on July 2, 2026, incurring a loss of approximately",
     excerpt: "A whale at address 0x8541 liquidated a $2.99 million short position on META on the Hyperliquid platform on July 2, 2026, incurring a loss of approximately",
     url: "https://www.kucoin.com/news/flash/sk-hynix-longs-on-hyperliquid-face-massive-losses-as-price-dips",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 2, 2026, Coinglass data revealed a Hyperliquid whale holding $4.69 billion in total positions ($2.28 billion long and $2.42 billion short), with unrealized losses of",
-    excerpt: "On July 2, 2026, Coinglass data revealed a Hyperliquid whale holding $4.69 billion in total positions ($2.28 billion long and $2.42 billion short), with unrealized losses of approximately $96.28 million on long...",
-    url: "https://www.binance.com/en/square/post/340406505525618",
     secsAgo: 2760,
   },
   {
@@ -1006,20 +1006,12 @@ var REAL_EVENTS = [
     secsAgo: 3360,
   },
   {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 1, 2026, the Department of Justice announced the arrest and extradition of Peter Stokes, a member of the 'Scattered Spider' hacking group, who is charged with conspiracy",
-    excerpt: "On July 1, 2026, the Department of Justice announced the arrest and extradition of Peter Stokes, a member of the 'Scattered Spider' hacking group, who is charged with conspiracy and fraud. The group is alleged to have...",
-    url: "https://www.justice.gov/opa/pr/alleged-member-criminal-cyber-hacking-group-scattered-spider-arrested-finland-and-extradited",
+    walletIdx: 6,
+    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
+    desc: "On July 2, 2026, on-chain investigator ZachXBT urged AscendEX users with frozen funds to report the issue to law enforcement and regulatory authorities. This follows suspected",
+    excerpt: "On July 2, 2026, on-chain investigator ZachXBT urged AscendEX users with frozen funds to report the issue to law enforcement and regulatory authorities. This follows suspected liquidity issues and prolonged withdrawal...",
+    url: "https://phemex.com/ko/news/article/zachxbt-urges-ascendex-users-to-report-frozen-funds-to-regulators-91557",
     secsAgo: 3960,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 1, 2026, the U.S. Treasury and Department of Justice announced sanctions and actions against the Brazilian criminal network PCC for utilizing cryptocurrency to move",
-    excerpt: "On July 1, 2026, the U.S. Treasury and Department of Justice announced sanctions and actions against the Brazilian criminal network PCC for utilizing cryptocurrency to move illicit funds back to",
-    url: "https://home.treasury.gov/news/press-releases/sb0549",
-    secsAgo: 4560,
   },
 ];
 
