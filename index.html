@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783111449407;
+var REFRESHED_AT = 1783150356172;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -982,12 +982,20 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "Eli Lavon, 21, was charged in Israel with spying for Iran, allegedly receiving $1,400 in cryptocurrency as",
+    excerpt: "Eli Lavon, 21, was charged in Israel with spying for Iran, allegedly receiving $1,400 in cryptocurrency as",
+    url: "https://www.cnn.com/2026/07/03/middleeast/jewish-american-charged-in-israel-spying-iran-crypto-intl",
+    secsAgo: 2160,
+  },
+  {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 3, 2026, a whale deposited approximately $10.12 million into Hyperliquid and opened a 2x long position on more than 20,000 ZEC (approximately $8.1 million), coinciding",
     excerpt: "On July 3, 2026, a whale deposited approximately $10.12 million into Hyperliquid and opened a 2x long position on more than 20,000 ZEC (approximately $8.1 million), coinciding with a 3.12% surge in Zcash's",
     url: "https://www.kucoin.com/news/flash/whale-bets-70m-on-bitcoin-and-solana-amid-fed-rate-hike-fears",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 8,
@@ -995,31 +1003,15 @@ var REAL_EVENTS = [
     desc: "On July 3, 2026, reports from Hyperinsight via BlockBeats indicated that a Hyperliquid whale (address starting with 0xa31) is holding 17 short positions in AI and",
     excerpt: "On July 3, 2026, reports from Hyperinsight via BlockBeats indicated that a Hyperliquid whale (address starting with 0xa31) is holding 17 short positions in AI and semiconductor-related assets (including MU, SMH, SNDK,...",
     url: "https://www.binance.com/en/square/post/340406505525618",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "Around July 2, 2026, it was reported that William Koo Ichioka was ordered by Judge Vince Chhabria of the U.S. District Court to pay over $36 million (including $31 million in",
-    excerpt: "Around July 2, 2026, it was reported that William Koo Ichioka was ordered by Judge Vince Chhabria of the U.S. District Court to pay over $36 million (including $31 million in restitution and a $5 million civil penalty)...",
-    url: "https://www.techtimes.com/articles/319507/20260702/crypto-ponzi-ceo-pleads-guilty-after-250m-loss-defi-claims-were-never-chain.htm",
     secsAgo: 3360,
   },
   {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 2, 2026, the FBI announced that Avraham Eisenberg, 28, was sentenced to 24 years in prison for engaging in a manipulative trading scheme on a cryptocurrency exchange that",
-    excerpt: "On July 2, 2026, the FBI announced that Avraham Eisenberg, 28, was sentenced to 24 years in prison for engaging in a manipulative trading scheme on a cryptocurrency exchange that defrauded Mango Markets and its...",
-    url: "https://www.facebook.com/FBI/posts/case-update-from-fbi-denver-former-trading-firm-executive-sentenced-to-24-years-/1439037558269806/",
+    walletIdx: 5,
+    def: { label: "Chain Analytics", severity: "med", sources: ["Chainalysis"] },
+    desc: "Elliptic published a blog post titled 'The questions about AI in compliance that nobody can answer yet' on July 3, 2026. The article discusses the friction between AI efficiency",
+    excerpt: "Elliptic published a blog post titled 'The questions about AI in compliance that nobody can answer yet' on July 3, 2026. The article discusses the friction between AI efficiency and regulatory accountability, arguing...",
+    url: "https://www.techtimes.com/articles/319593/20260703/tether-froze-131-isis-k-wallets-hours-three-monero-addresses-remain-untouched.htm",
     secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "A whale at address 0x8541 liquidated a $2.99 million short position on META on the Hyperliquid platform on July 2, 2026, incurring a loss of approximately",
-    excerpt: "A whale at address 0x8541 liquidated a $2.99 million short position on META on the Hyperliquid platform on July 2, 2026, incurring a loss of approximately",
-    url: "https://www.kucoin.com/news/flash/sk-hynix-longs-on-hyperliquid-face-massive-losses-as-price-dips",
-    secsAgo: 4560,
   },
 ];
 
