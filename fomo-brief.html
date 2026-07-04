@@ -955,15 +955,23 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783186808575;
+var REFRESHED_AT = 1783197109269;
 var REAL_EVENTS = [
+  {
+    walletIdx: 6,
+    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
+    desc: "Revolut is delisting USDT for European users to comply with MiCA rules. USDT purchases will stop on July 6, deposits will be suspended after July 30, and the asset will be fully",
+    excerpt: "Revolut is delisting USDT for European users to comply with MiCA rules. USDT purchases will stop on July 6, deposits will be suspended after July 30, and the asset will be fully delisted by August 31,",
+    url: "https://cryptorank.io/news/feed/8c1dc-revolut-to-delist-usdt-for-european-users-as-mica-rules-reshape-stablecoin-access",
+    secsAgo: 360,
+  },
   {
     walletIdx: 7,
     def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
     desc: "Mukesh Prajapati, a 25-year-old man from Bhaktapur, Nepal, was arrested on July 4, 2026, on charges of carrying out illegal cryptocurrency transactions worth more than Rs 14.87",
     excerpt: "Mukesh Prajapati, a 25-year-old man from Bhaktapur, Nepal, was arrested on July 4, 2026, on charges of carrying out illegal cryptocurrency transactions worth more than Rs 14.87 million and converting money allegedly...",
     url: "https://thehimalayantimes.com/ampArticle/1039151",
-    secsAgo: 360,
+    secsAgo: 960,
   },
   {
     walletIdx: 8,
@@ -971,7 +979,7 @@ var REAL_EVENTS = [
     desc: "In the week of July 4, 2026, Hyperliquid launched its dedicated L1 blockchain mainnet to support on-chain perpetual futures with improved",
     excerpt: "In the week of July 4, 2026, Hyperliquid launched its dedicated L1 blockchain mainnet to support on-chain perpetual futures with improved",
     url: "https://www.bitget.com/amp/news/detail/12560605489860",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 8,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "On July 4, 2026, data from Coinglass reported that Hyperliquid whale positions reached $4.9 billion (Longs: $2.402B, Shorts: $2.497B). Notably, whale address 0x082e..88 holds a 5x",
     excerpt: "On July 4, 2026, data from Coinglass reported that Hyperliquid whale positions reached $4.9 billion (Longs: $2.402B, Shorts: $2.497B). Notably, whale address 0x082e..88 holds a 5x long position on HYPE opened at...",
     url: "https://cryptorank.io/news/feed/139bf-2274887",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 10,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "The UXLINK protocol's cross-chain infrastructure was exploited, with a hacker stealing approximately 10.54 million DAI; on July 4, 2026, the stolen funds were converted to 6,001",
     excerpt: "The UXLINK protocol's cross-chain infrastructure was exploited, with a hacker stealing approximately 10.54 million DAI; on July 4, 2026, the stolen funds were converted to 6,001 ETH and moved to Tornado",
     url: "https://thecurrencyanalytics.com/stable-coins/hinkal-loses-820k-in-usdc-after-smart-contract-flaw-hit-on-july-4-272635",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "The single biggest liquidation event on the Hyperliquid platform in the last 24 hours (as of July 3, 2026) was an $18.20 million ETH-USD",
     excerpt: "The single biggest liquidation event on the Hyperliquid platform in the last 24 hours (as of July 3, 2026) was an $18.20 million ETH-USD",
     url: "https://cryptorank.io/news/feed/e3b75-whale-loses-6-7-million-zec-hype-longs",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 4,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 3, 2026, it was reported that the CFTC has launched a new investigation into Polymarket, a prominent prediction market, to assess whether the company is operating within",
     excerpt: "On July 3, 2026, it was reported that the CFTC has launched a new investigation into Polymarket, a prominent prediction market, to assess whether the company is operating within the law. This follows a history of...",
     url: "https://www.jdsupra.com/legalnews/cftc-publishes-notice-of-proposed-4269462/",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 7,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "Eli Lavon, 21, was charged in Israel with spying for Iran, allegedly receiving $1,400 in cryptocurrency as",
     excerpt: "Eli Lavon, 21, was charged in Israel with spying for Iran, allegedly receiving $1,400 in cryptocurrency as",
     url: "https://www.cnn.com/2026/07/03/middleeast/jewish-american-charged-in-israel-spying-iran-crypto-intl",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 3, 2026, a whale deposited approximately $10.12 million into Hyperliquid and opened a 2x long position on more than 20,000 ZEC (approximately $8.1 million), coinciding",
-    excerpt: "On July 3, 2026, a whale deposited approximately $10.12 million into Hyperliquid and opened a 2x long position on more than 20,000 ZEC (approximately $8.1 million), coinciding with a 3.12% surge in Zcash's",
-    url: "https://www.kucoin.com/news/flash/whale-bets-70m-on-bitcoin-and-solana-amid-fed-rate-hike-fears",
     secsAgo: 4560,
   },
 ];
