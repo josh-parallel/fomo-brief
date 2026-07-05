@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783197109269;
+var REFRESHED_AT = 1783240031484;
 var REAL_EVENTS = [
   {
     walletIdx: 6,
@@ -966,12 +966,28 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
+    walletIdx: 1,
+    def: { label: "SEC Charges", severity: "high", sources: ["The Block"] },
+    desc: "A New York judge ordered $5.5 million in remedies on July 4, 2026, regarding a fake cryptocurrency 'relationship-investment' scam conducted through WhatsApp groups. The SEC",
+    excerpt: "A New York judge ordered $5.5 million in remedies on July 4, 2026, regarding a fake cryptocurrency 'relationship-investment' scam conducted through WhatsApp groups. The SEC alleged that at least 18 investors lost nearly...",
+    url: "https://cryptorank.io/news/feed/8bb2a-sec-wins-5-4-million-judgment-against-nanobit-in-crypto-fraud-case",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A whale linked to the USDH deployer unstaked 1.01 million HYPE (~$72.45M) and deposited approximately $15.07 million in HYPE to Coinbase on July 4, 2026, signaling potential",
+    excerpt: "A whale linked to the USDH deployer unstaked 1.01 million HYPE (~$72.45M) and deposited approximately $15.07 million in HYPE to Coinbase on July 4, 2026, signaling potential sell-pressure following the pause of the USDH...",
+    url: "https://cryptorank.io/news/feed/d63c0-og-hyperliquid-trader-loses-3-7m-on-btc-eth",
+    secsAgo: 1560,
+  },
+  {
     walletIdx: 7,
     def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
     desc: "Mukesh Prajapati, a 25-year-old man from Bhaktapur, Nepal, was arrested on July 4, 2026, on charges of carrying out illegal cryptocurrency transactions worth more than Rs 14.87",
     excerpt: "Mukesh Prajapati, a 25-year-old man from Bhaktapur, Nepal, was arrested on July 4, 2026, on charges of carrying out illegal cryptocurrency transactions worth more than Rs 14.87 million and converting money allegedly...",
     url: "https://thehimalayantimes.com/ampArticle/1039151",
-    secsAgo: 960,
+    secsAgo: 2160,
   },
   {
     walletIdx: 8,
@@ -979,7 +995,7 @@ var REAL_EVENTS = [
     desc: "In the week of July 4, 2026, Hyperliquid launched its dedicated L1 blockchain mainnet to support on-chain perpetual futures with improved",
     excerpt: "In the week of July 4, 2026, Hyperliquid launched its dedicated L1 blockchain mainnet to support on-chain perpetual futures with improved",
     url: "https://www.bitget.com/amp/news/detail/12560605489860",
-    secsAgo: 1560,
+    secsAgo: 2760,
   },
   {
     walletIdx: 8,
@@ -987,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On July 4, 2026, data from Coinglass reported that Hyperliquid whale positions reached $4.9 billion (Longs: $2.402B, Shorts: $2.497B). Notably, whale address 0x082e..88 holds a 5x",
     excerpt: "On July 4, 2026, data from Coinglass reported that Hyperliquid whale positions reached $4.9 billion (Longs: $2.402B, Shorts: $2.497B). Notably, whale address 0x082e..88 holds a 5x long position on HYPE opened at...",
     url: "https://cryptorank.io/news/feed/139bf-2274887",
-    secsAgo: 2160,
+    secsAgo: 3360,
   },
   {
     walletIdx: 10,
@@ -995,31 +1011,7 @@ var REAL_EVENTS = [
     desc: "The UXLINK protocol's cross-chain infrastructure was exploited, with a hacker stealing approximately 10.54 million DAI; on July 4, 2026, the stolen funds were converted to 6,001",
     excerpt: "The UXLINK protocol's cross-chain infrastructure was exploited, with a hacker stealing approximately 10.54 million DAI; on July 4, 2026, the stolen funds were converted to 6,001 ETH and moved to Tornado",
     url: "https://thecurrencyanalytics.com/stable-coins/hinkal-loses-820k-in-usdc-after-smart-contract-flaw-hit-on-july-4-272635",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "The single biggest liquidation event on the Hyperliquid platform in the last 24 hours (as of July 3, 2026) was an $18.20 million ETH-USD",
-    excerpt: "The single biggest liquidation event on the Hyperliquid platform in the last 24 hours (as of July 3, 2026) was an $18.20 million ETH-USD",
-    url: "https://cryptorank.io/news/feed/e3b75-whale-loses-6-7-million-zec-hype-longs",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "On July 3, 2026, it was reported that the CFTC has launched a new investigation into Polymarket, a prominent prediction market, to assess whether the company is operating within",
-    excerpt: "On July 3, 2026, it was reported that the CFTC has launched a new investigation into Polymarket, a prominent prediction market, to assess whether the company is operating within the law. This follows a history of...",
-    url: "https://www.jdsupra.com/legalnews/cftc-publishes-notice-of-proposed-4269462/",
     secsAgo: 3960,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Eli Lavon, 21, was charged in Israel with spying for Iran, allegedly receiving $1,400 in cryptocurrency as",
-    excerpt: "Eli Lavon, 21, was charged in Israel with spying for Iran, allegedly receiving $1,400 in cryptocurrency as",
-    url: "https://www.cnn.com/2026/07/03/middleeast/jewish-american-charged-in-israel-spying-iran-crypto-intl",
-    secsAgo: 4560,
   },
 ];
 
