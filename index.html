@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783277308858;
+var REFRESHED_AT = 1783291013992;
 var REAL_EVENTS = [
   {
     walletIdx: 6,
@@ -974,12 +974,20 @@ var REAL_EVENTS = [
     secsAgo: 960,
   },
   {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "Christopher Delgado, the former head of Goliath Ventures in Florida, pleaded guilty on July 5, 2026, to federal conspiracy, wire fraud, and money laundering charges related to a",
+    excerpt: "Christopher Delgado, the former head of Goliath Ventures in Florida, pleaded guilty on July 5, 2026, to federal conspiracy, wire fraud, and money laundering charges related to a Ponzi scheme that defrauded more than...",
+    url: "https://finance.yahoo.com/markets/crypto/articles/florida-crypto-ceo-pleads-guilty-164900775.html",
+    secsAgo: 1560,
+  },
+  {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
     desc: "On-chain data from July 5, 2026, reveals the total whale position on Hyperliquid is $4.877 billion USD with a long-short position ratio of 0.97. Specific whale alerts also noted a",
     excerpt: "On-chain data from July 5, 2026, reveals the total whale position on Hyperliquid is $4.877 billion USD with a long-short position ratio of 0.97. Specific whale alerts also noted a 15x leveraged BTC short position and a...",
     url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 10,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "The UXLINK exploiter was reported on July 5, 2026, to be actively laundering stolen funds, having deposited 14,336.6 ETH into Tornado Cash over the preceding two",
     excerpt: "The UXLINK exploiter was reported on July 5, 2026, to be actively laundering stolen funds, having deposited 14,336.6 ETH into Tornado Cash over the preceding two",
     url: "https://ambcrypto.com/why-the-uxlink-hackers-14336-eth-transfers-raise-fresh-questions-for-defi/",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 10,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "The SecondFi protocol suffered a major exploit with total losses estimated by SlowMist to exceed $20 million; a recovery plan of $2.4 million has been",
     excerpt: "The SecondFi protocol suffered a major exploit with total losses estimated by SlowMist to exceed $20 million; a recovery plan of $2.4 million has been",
     url: "https://criptotendencia.com/2026/07/05/cardano-se-expande-y-leios-toma-forma-mientras-secondfi-sufre-un-millonario-hackeo-2/",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 10,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "The hacker who previously drained Step Finance of roughly 261,933 SOL sold the assets for approximately $21.4 million on July 5, 2026, and moved the funds to",
     excerpt: "The hacker who previously drained Step Finance of roughly 261,933 SOL sold the assets for approximately $21.4 million on July 5, 2026, and moved the funds to",
     url: "https://www.valuethemarkets.com/cryptocurrency/news/step-finance-crypto-heist-key-takeaways-on-security-and-recoveries",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 1,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "A New York judge ordered $5.5 million in remedies on July 4, 2026, regarding a fake cryptocurrency 'relationship-investment' scam conducted through WhatsApp groups. The SEC",
     excerpt: "A New York judge ordered $5.5 million in remedies on July 4, 2026, regarding a fake cryptocurrency 'relationship-investment' scam conducted through WhatsApp groups. The SEC alleged that at least 18 investors lost nearly...",
     url: "https://cryptorank.io/news/feed/8bb2a-sec-wins-5-4-million-judgment-against-nanobit-in-crypto-fraud-case",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "A whale linked to the USDH deployer unstaked 1.01 million HYPE (~$72.45M) and deposited approximately $15.07 million in HYPE to Coinbase on July 4, 2026, signaling potential",
-    excerpt: "A whale linked to the USDH deployer unstaked 1.01 million HYPE (~$72.45M) and deposited approximately $15.07 million in HYPE to Coinbase on July 4, 2026, signaling potential sell-pressure following the pause of the USDH...",
-    url: "https://cryptorank.io/news/feed/d63c0-og-hyperliquid-trader-loses-3-7m-on-btc-eth",
     secsAgo: 4560,
   },
 ];
