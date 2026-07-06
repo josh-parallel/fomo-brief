@@ -955,15 +955,47 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783343027602;
+var REFRESHED_AT = 1783365812030;
 var REAL_EVENTS = [
+  {
+    walletIdx: 5,
+    def: { label: "Chain Analytics", severity: "med", sources: ["Chainalysis"] },
+    desc: "Elliptic published a blog post analyzing the UK's FCA final stablecoin issuance rules (PS26/10) and the resulting two-tier regime for",
+    excerpt: "Elliptic published a blog post analyzing the UK's FCA final stablecoin issuance rules (PS26/10) and the resulting two-tier regime for",
+    url: "https://www.police.gov.sg/Media-Hub/News/2026/07/20260705_third_joint_operation_by_police_and_cryptocurrency_exchanges_detects_over_130_scam_victims",
+    secsAgo: 360,
+  },
+  {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 6, 2026, it was reported that two senior figures of the United Cartels were charged with narco-terrorism, and a network coordinated the laundering of more than $22 million",
+    excerpt: "On July 6, 2026, it was reported that two senior figures of the United Cartels were charged with narco-terrorism, and a network coordinated the laundering of more than $22 million in proceeds from drug sales using...",
+    url: "https://www.justice.gov/archives/opa/pr/man-charged-110-million-cryptocurrency-scheme",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A whale opened a $31.48 million BTC long position (500 BTC) on Hyperliquid and is holding 12,000 ETH spot with an unrealized loss of approximately $3.6 million, reported on",
+    excerpt: "A whale opened a $31.48 million BTC long position (500 BTC) on Hyperliquid and is holding 12,000 ETH spot with an unrealized loss of approximately $3.6 million, reported on",
+    url: "https://www.bitget.com/amp/news/detail/12560605491927",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "HYPE saw $2.20 million in total liquidations over a 24-hour period, with $1.98 million (approx. 90%) resulting from short positions being flushed out, reported on July 6,",
+    excerpt: "HYPE saw $2.20 million in total liquidations over a 24-hour period, with $1.98 million (approx. 90%) resulting from short positions being flushed out, reported on July 6,",
+    url: "https://www.weex.com/news/detail/data-the-current-whale-position-on-the-hyperliquid-platform-is-4994-billion-usd-with-a-long-short-position-ratio-of-096-ag3d33t2ww270gh8jpjjnxu2",
+    secsAgo: 2160,
+  },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "The total whale position on the Hyperliquid platform increased to 4.994 billion USD, with a long-short position ratio of 0.96, as reported on July 6,",
     excerpt: "The total whale position on the Hyperliquid platform increased to 4.994 billion USD, with a long-short position ratio of 0.96, as reported on July 6,",
     url: "https://www.chaincatcher.com/en/article/2274972",
-    secsAgo: 360,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -971,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "A wallet associated with Abraxas Capital deposited $2 million into Hyperliquid on July 6, 2026, and established a large short",
     excerpt: "A wallet associated with Abraxas Capital deposited $2 million into Hyperliquid on July 6, 2026, and established a large short",
     url: "https://polymarket.com/event/hype-updown-5m-1783296600",
-    secsAgo: 960,
+    secsAgo: 3360,
   },
   {
     walletIdx: 4,
@@ -979,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 6, 2026, it was reported that the CFTC requested a judge to vacate a court order requiring Gemini to pay a $5 million penalty. This is cited as part of 'Project Crypto,' a",
     excerpt: "On July 6, 2026, it was reported that the CFTC requested a judge to vacate a court order requiring Gemini to pay a $5 million penalty. This is cited as part of 'Project Crypto,' a joint initiative between the SEC and...",
     url: "https://prospect.org/2026/07/06/project-crypto-scheme/",
-    secsAgo: 1560,
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
@@ -987,38 +1019,6 @@ var REAL_EVENTS = [
     desc: "Blockaid detected an exploit on Summer Finance on July 6, 2026, resulting in approximately $6 million in drained",
     excerpt: "Blockaid detected an exploit on Summer Finance on July 6, 2026, resulting in approximately $6 million in drained",
     url: "https://www.coingabbar.com/en/crypto-currency-news/summer-fi-exploit-news-6m-drained-today",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 1,
-    def: { label: "SEC Charges", severity: "high", sources: ["The Block"] },
-    desc: "On July 5, 2026, it was reported that the SEC dropped cases against crypto trading platforms Coinbase and",
-    excerpt: "On July 5, 2026, it was reported that the SEC dropped cases against crypto trading platforms Coinbase and",
-    url: "https://www.washingtonexaminer.com/news/investigations/4635302/trump-stock-dividends-crypto-trades-sec/",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 3,
-    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
-    desc: "Barstool Sports founder Dave Portnoy was documented as having profited ~$258,000 from a 99% price drop of his 'GREED' token (launched February 2025) on Pump.fun after liquidating",
-    excerpt: "Barstool Sports founder Dave Portnoy was documented as having profited ~$258,000 from a 99% price drop of his 'GREED' token (launched February 2025) on Pump.fun after liquidating a 35.79% supply stake. In a July 5,...",
-    url: "https://www.poloniex.com/feed/article/flash/1576660",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Christopher Delgado, the former head of Goliath Ventures in Florida, pleaded guilty on July 5, 2026, to federal conspiracy, wire fraud, and money laundering charges related to a",
-    excerpt: "Christopher Delgado, the former head of Goliath Ventures in Florida, pleaded guilty on July 5, 2026, to federal conspiracy, wire fraud, and money laundering charges related to a Ponzi scheme that defrauded more than...",
-    url: "https://finance.yahoo.com/markets/crypto/articles/florida-crypto-ceo-pleads-guilty-164900775.html",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "A whale opened a 40x leveraged BTC long position on Hyperliquid, amounting to approximately 12.58 million",
-    excerpt: "A whale opened a 40x leveraged BTC long position on Hyperliquid, amounting to approximately 12.58 million",
-    url: "https://www.chaincatcher.com/en/article/2275013",
     secsAgo: 4560,
   },
 ];
