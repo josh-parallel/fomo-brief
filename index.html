@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783371505395;
+var REFRESHED_AT = 1783381650301;
 var REAL_EVENTS = [
   {
     walletIdx: 5,
@@ -968,10 +968,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 0,
     def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 6, 2026, Samuel D. Marcus, 33, of Oreland, pleaded guilty to laundering money for Nigerian scammers, having served as a 'money mule' and knowingly selling bitcoin to",
+    excerpt: "On July 6, 2026, Samuel D. Marcus, 33, of Oreland, pleaded guilty to laundering money for Nigerian scammers, having served as a 'money mule' and knowingly selling bitcoin to victims of fraudulent",
+    url: "https://www.inquirer.com/crime/nigerian-fraud-money-laundering-extortion-guilty-plea-20260706.html",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
     desc: "On July 6, 2026, it was reported that two senior figures of the United Cartels were charged with narco-terrorism, and a network coordinated the laundering of more than $22 million",
     excerpt: "On July 6, 2026, it was reported that two senior figures of the United Cartels were charged with narco-terrorism, and a network coordinated the laundering of more than $22 million in proceeds from drug sales using...",
     url: "https://www.justice.gov/archives/opa/pr/man-charged-110-million-cryptocurrency-scheme",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 2,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "A whale opened a $31.48 million BTC long position (500 BTC) on Hyperliquid and is holding 12,000 ETH spot with an unrealized loss of approximately $3.6 million, reported on",
     excerpt: "A whale opened a $31.48 million BTC long position (500 BTC) on Hyperliquid and is holding 12,000 ETH spot with an unrealized loss of approximately $3.6 million, reported on",
     url: "https://www.bitget.com/amp/news/detail/12560605491927",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "HYPE saw $2.20 million in total liquidations over a 24-hour period, with $1.98 million (approx. 90%) resulting from short positions being flushed out, reported on July 6,",
     excerpt: "HYPE saw $2.20 million in total liquidations over a 24-hour period, with $1.98 million (approx. 90%) resulting from short positions being flushed out, reported on July 6,",
     url: "https://www.weex.com/news/detail/data-the-current-whale-position-on-the-hyperliquid-platform-is-4994-billion-usd-with-a-long-short-position-ratio-of-096-ag3d33t2ww270gh8jpjjnxu2",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "The total whale position on the Hyperliquid platform increased to 4.994 billion USD, with a long-short position ratio of 0.96, as reported on July 6,",
     excerpt: "The total whale position on the Hyperliquid platform increased to 4.994 billion USD, with a long-short position ratio of 0.96, as reported on July 6,",
     url: "https://www.chaincatcher.com/en/article/2274972",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -1003,22 +1011,14 @@ var REAL_EVENTS = [
     desc: "A wallet associated with Abraxas Capital deposited $2 million into Hyperliquid on July 6, 2026, and established a large short",
     excerpt: "A wallet associated with Abraxas Capital deposited $2 million into Hyperliquid on July 6, 2026, and established a large short",
     url: "https://polymarket.com/event/hype-updown-5m-1783296600",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 4,
     def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "On July 6, 2026, it was reported that the CFTC requested a judge to vacate a court order requiring Gemini to pay a $5 million penalty. This is cited as part of 'Project Crypto,' a",
-    excerpt: "On July 6, 2026, it was reported that the CFTC requested a judge to vacate a court order requiring Gemini to pay a $5 million penalty. This is cited as part of 'Project Crypto,' a joint initiative between the SEC and...",
+    desc: "On July 6, 2026, it was reported that a renegotiated settlement between the CFTC and KuCoin's parent company resulted in a reduced penalty of",
+    excerpt: "On July 6, 2026, it was reported that a renegotiated settlement between the CFTC and KuCoin's parent company resulted in a reduced penalty of",
     url: "https://prospect.org/2026/07/06/project-crypto-scheme/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Christian Elam of Philadelphia was arrested on July 6, 2026, for allegedly using fraudulent cryptocurrency to buy a rare Pok\u00e9mon card valued at $24,200 in the Evesham Township",
-    excerpt: "Christian Elam of Philadelphia was arrested on July 6, 2026, for allegedly using fraudulent cryptocurrency to buy a rare Pok\u00e9mon card valued at $24,200 in the Evesham Township Police Department\u2019s Safe Exchange",
-    url: "https://www.fox29.com/news/philadelphia-man-charged-24k-pokemon-card-theft-evesham-police-hq",
     secsAgo: 4560,
   },
 ];
