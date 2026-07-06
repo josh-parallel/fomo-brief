@@ -955,15 +955,39 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783291013992;
+var REFRESHED_AT = 1783343027602;
 var REAL_EVENTS = [
   {
-    walletIdx: 6,
-    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
-    desc: "Revolut is delisting USDT for European users to comply with MiCA rules. USDT purchases will stop on July 6, deposits will be suspended after July 30, and the asset will be fully",
-    excerpt: "Revolut is delisting USDT for European users to comply with MiCA rules. USDT purchases will stop on July 6, deposits will be suspended after July 30, and the asset will be fully delisted by August 31,",
-    url: "https://cryptorank.io/news/feed/8c1dc-revolut-to-delist-usdt-for-european-users-as-mica-rules-reshape-stablecoin-access",
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "The total whale position on the Hyperliquid platform increased to 4.994 billion USD, with a long-short position ratio of 0.96, as reported on July 6,",
+    excerpt: "The total whale position on the Hyperliquid platform increased to 4.994 billion USD, with a long-short position ratio of 0.96, as reported on July 6,",
+    url: "https://www.chaincatcher.com/en/article/2274972",
     secsAgo: 360,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A wallet associated with Abraxas Capital deposited $2 million into Hyperliquid on July 6, 2026, and established a large short",
+    excerpt: "A wallet associated with Abraxas Capital deposited $2 million into Hyperliquid on July 6, 2026, and established a large short",
+    url: "https://polymarket.com/event/hype-updown-5m-1783296600",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 4,
+    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
+    desc: "On July 6, 2026, it was reported that the CFTC requested a judge to vacate a court order requiring Gemini to pay a $5 million penalty. This is cited as part of 'Project Crypto,' a",
+    excerpt: "On July 6, 2026, it was reported that the CFTC requested a judge to vacate a court order requiring Gemini to pay a $5 million penalty. This is cited as part of 'Project Crypto,' a joint initiative between the SEC and...",
+    url: "https://prospect.org/2026/07/06/project-crypto-scheme/",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "Blockaid detected an exploit on Summer Finance on July 6, 2026, resulting in approximately $6 million in drained",
+    excerpt: "Blockaid detected an exploit on Summer Finance on July 6, 2026, resulting in approximately $6 million in drained",
+    url: "https://www.coingabbar.com/en/crypto-currency-news/summer-fi-exploit-news-6m-drained-today",
+    secsAgo: 2160,
   },
   {
     walletIdx: 1,
@@ -971,7 +995,15 @@ var REAL_EVENTS = [
     desc: "On July 5, 2026, it was reported that the SEC dropped cases against crypto trading platforms Coinbase and",
     excerpt: "On July 5, 2026, it was reported that the SEC dropped cases against crypto trading platforms Coinbase and",
     url: "https://www.washingtonexaminer.com/news/investigations/4635302/trump-stock-dividends-crypto-trades-sec/",
-    secsAgo: 960,
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 3,
+    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
+    desc: "Barstool Sports founder Dave Portnoy was documented as having profited ~$258,000 from a 99% price drop of his 'GREED' token (launched February 2025) on Pump.fun after liquidating",
+    excerpt: "Barstool Sports founder Dave Portnoy was documented as having profited ~$258,000 from a 99% price drop of his 'GREED' token (launched February 2025) on Pump.fun after liquidating a 35.79% supply stake. In a July 5,...",
+    url: "https://www.poloniex.com/feed/article/flash/1576660",
+    secsAgo: 3360,
   },
   {
     walletIdx: 7,
@@ -979,46 +1011,14 @@ var REAL_EVENTS = [
     desc: "Christopher Delgado, the former head of Goliath Ventures in Florida, pleaded guilty on July 5, 2026, to federal conspiracy, wire fraud, and money laundering charges related to a",
     excerpt: "Christopher Delgado, the former head of Goliath Ventures in Florida, pleaded guilty on July 5, 2026, to federal conspiracy, wire fraud, and money laundering charges related to a Ponzi scheme that defrauded more than...",
     url: "https://finance.yahoo.com/markets/crypto/articles/florida-crypto-ceo-pleads-guilty-164900775.html",
-    secsAgo: 1560,
+    secsAgo: 3960,
   },
   {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "On-chain data from July 5, 2026, reveals the total whale position on Hyperliquid is $4.877 billion USD with a long-short position ratio of 0.97. Specific whale alerts also noted a",
-    excerpt: "On-chain data from July 5, 2026, reveals the total whale position on Hyperliquid is $4.877 billion USD with a long-short position ratio of 0.97. Specific whale alerts also noted a 15x leveraged BTC short position and a...",
+    desc: "A whale opened a 40x leveraged BTC long position on Hyperliquid, amounting to approximately 12.58 million",
+    excerpt: "A whale opened a 40x leveraged BTC long position on Hyperliquid, amounting to approximately 12.58 million",
     url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "The UXLINK exploiter was reported on July 5, 2026, to be actively laundering stolen funds, having deposited 14,336.6 ETH into Tornado Cash over the preceding two",
-    excerpt: "The UXLINK exploiter was reported on July 5, 2026, to be actively laundering stolen funds, having deposited 14,336.6 ETH into Tornado Cash over the preceding two",
-    url: "https://ambcrypto.com/why-the-uxlink-hackers-14336-eth-transfers-raise-fresh-questions-for-defi/",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "The SecondFi protocol suffered a major exploit with total losses estimated by SlowMist to exceed $20 million; a recovery plan of $2.4 million has been",
-    excerpt: "The SecondFi protocol suffered a major exploit with total losses estimated by SlowMist to exceed $20 million; a recovery plan of $2.4 million has been",
-    url: "https://criptotendencia.com/2026/07/05/cardano-se-expande-y-leios-toma-forma-mientras-secondfi-sufre-un-millonario-hackeo-2/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "The hacker who previously drained Step Finance of roughly 261,933 SOL sold the assets for approximately $21.4 million on July 5, 2026, and moved the funds to",
-    excerpt: "The hacker who previously drained Step Finance of roughly 261,933 SOL sold the assets for approximately $21.4 million on July 5, 2026, and moved the funds to",
-    url: "https://www.valuethemarkets.com/cryptocurrency/news/step-finance-crypto-heist-key-takeaways-on-security-and-recoveries",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 1,
-    def: { label: "SEC Charges", severity: "high", sources: ["The Block"] },
-    desc: "A New York judge ordered $5.5 million in remedies on July 4, 2026, regarding a fake cryptocurrency 'relationship-investment' scam conducted through WhatsApp groups. The SEC",
-    excerpt: "A New York judge ordered $5.5 million in remedies on July 4, 2026, regarding a fake cryptocurrency 'relationship-investment' scam conducted through WhatsApp groups. The SEC alleged that at least 18 investors lost nearly...",
-    url: "https://cryptorank.io/news/feed/8bb2a-sec-wins-5-4-million-judgment-against-nanobit-in-crypto-fraud-case",
     secsAgo: 4560,
   },
 ];
