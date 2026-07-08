@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783536926492;
+var REFRESHED_AT = 1783543648012;
 var REAL_EVENTS = [
   {
     walletIdx: 5,
@@ -968,10 +968,26 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On 2026-07-08, it was reported that a trader known as pension-usdt.eth is facing a loss of nearly $2 million on an $86.99 million Ethereum (ETH) short position on Hyperliquid,",
+    excerpt: "On 2026-07-08, it was reported that a trader known as pension-usdt.eth is facing a loss of nearly $2 million on an $86.99 million Ethereum (ETH) short position on Hyperliquid, with a liquidation risk if the ETH price...",
+    url: "https://phemex.com/news/article/trader-faces-2-million-loss-on-8699m-eth-short-position-92285",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On 2026-07-08, a whale took the largest long position in SK Hynix (SKHX) on Hyperliquid, with a position valued at $27.75 million and an average entry price of",
+    excerpt: "On 2026-07-08, a whale took the largest long position in SK Hynix (SKHX) on Hyperliquid, with a position valued at $27.75 million and an average entry price of",
+    url: "https://www.kucoin.com/news/flash/whale-becomes-largest-long-position-holder-of-sk-hynix-on-hyperliquid",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "KuCoin reported on 2026-07-08 that a whale deposited $999,200 in USDC on Hyperliquid to open a 4x leveraged long position in CL, involving 49,040 CL tokens valued at approximately",
     excerpt: "KuCoin reported on 2026-07-08 that a whale deposited $999,200 in USDC on Hyperliquid to open a 4x leveraged long position in CL, involving 49,040 CL tokens valued at approximately $3.63",
     url: "https://www.kucoin.com/news/flash/whale-deposits-999-200-usdc-on-hyperliquid-to-open-4x-long-position-in-cl",
-    secsAgo: 960,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -979,7 +995,15 @@ var REAL_EVENTS = [
     desc: "Chaincatcher reported on 2026-07-08 that the current whale positions on the Hyperliquid platform amount to $5.106 billion, with a long-short ratio of",
     excerpt: "Chaincatcher reported on 2026-07-08 that the current whale positions on the Hyperliquid platform amount to $5.106 billion, with a long-short ratio of",
     url: "https://www.bitget.com/amp/news/detail/12560605491927",
-    secsAgo: 1560,
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 3,
+    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
+    desc: "A Pump.fun account was reportedly hacked and used to promote a fake token, as reported by U.Today on July 8,",
+    excerpt: "A Pump.fun account was reportedly hacked and used to promote a fake token, as reported by U.Today on July 8,",
+    url: "https://u.today/meme-cryptocurrencies",
+    secsAgo: 3360,
   },
   {
     walletIdx: 8,
@@ -987,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "As of July 8, 2026, the Hyperliquid team is reported to hold approximately 241 million HYPE tokens, generating about $1 million in daily staking",
     excerpt: "As of July 8, 2026, the Hyperliquid team is reported to hold approximately 241 million HYPE tokens, generating about $1 million in daily staking",
     url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 2160,
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
@@ -995,30 +1019,6 @@ var REAL_EVENTS = [
     desc: "BonkDAO suffered a $20 million loss after an attacker spent $4.4 million to acquire governance control. Subsequent reports indicate the attacker moved $19 million of the loot into",
     excerpt: "BonkDAO suffered a $20 million loss after an attacker spent $4.4 million to acquire governance control. Subsequent reports indicate the attacker moved $19 million of the loot into a newly created shadow DAO branded...",
     url: "https://www.blockhead.co/2026/07/08/bonkdao-loses-20-million-after-attacker-buys-governance-control-for-4-4-million/",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 7, 2026, Noman Saleem, 39, was sentenced to 15 months in federal prison for a wire fraud scheme in which he posed as cryptocurrency 'fin-fluencers' on Telegram to steal",
-    excerpt: "On July 7, 2026, Noman Saleem, 39, was sentenced to 15 months in federal prison for a wire fraud scheme in which he posed as cryptocurrency 'fin-fluencers' on Telegram to steal more than $1.4 million from victims via...",
-    url: "https://www.yahoo.com/news/us/articles/york-man-posed-crypto-fin-190400512.html",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 7, 2026, Christopher Delgado, CEO of Goliath Ventures, pleaded guilty to operating a cryptocurrency Ponzi scheme from January 2023 through January 2026, which obtained",
-    excerpt: "On July 7, 2026, Christopher Delgado, CEO of Goliath Ventures, pleaded guilty to operating a cryptocurrency Ponzi scheme from January 2023 through January 2026, which obtained between $328 million and $400 million from...",
-    url: "https://whitesecuritieslaw.com/goliath-ventures-ponzi-scheme/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "A whale deposited 6.3M USDC into Hyperliquid to open a $49 million HYPE short position (692,200 contracts) entered at $66.02 with a stop-loss at $70.78, currently facing a $3.3",
-    excerpt: "A whale deposited 6.3M USDC into Hyperliquid to open a $49 million HYPE short position (692,200 contracts) entered at $66.02 with a stop-loss at $70.78, currently facing a $3.3 million unrealized loss, reported on...",
-    url: "https://phemex.com/news/article/whale-opens-49-million-hype-short-position-on-hyperliquid-92074",
     secsAgo: 4560,
   },
 ];
