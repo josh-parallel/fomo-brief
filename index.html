@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783503068180;
+var REFRESHED_AT = 1783527547960;
 var REAL_EVENTS = [
   {
     walletIdx: 5,
@@ -968,18 +968,34 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "KuCoin reported on 2026-07-08 that a whale deposited $999,200 in USDC on Hyperliquid to open a 4x leveraged long position in CL, involving 49,040 CL tokens valued at approximately",
+    excerpt: "KuCoin reported on 2026-07-08 that a whale deposited $999,200 in USDC on Hyperliquid to open a 4x leveraged long position in CL, involving 49,040 CL tokens valued at approximately $3.63",
+    url: "https://www.kucoin.com/news/flash/whale-deposits-999-200-usdc-on-hyperliquid-to-open-4x-long-position-in-cl",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "Chaincatcher reported on 2026-07-08 that the current whale positions on the Hyperliquid platform amount to $5.106 billion, with a long-short ratio of",
     excerpt: "Chaincatcher reported on 2026-07-08 that the current whale positions on the Hyperliquid platform amount to $5.106 billion, with a long-short ratio of",
     url: "https://www.bitget.com/amp/news/detail/12560605491927",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 8, 2026, a whale opened a 31 million USD short position on Bitcoin at 40x leverage on Hyperliquid, with an initial unrealized profit of 112,400",
-    excerpt: "On July 8, 2026, a whale opened a 31 million USD short position on Bitcoin at 40x leverage on Hyperliquid, with an initial unrealized profit of 112,400",
+    desc: "As of July 8, 2026, the Hyperliquid team is reported to hold approximately 241 million HYPE tokens, generating about $1 million in daily staking",
+    excerpt: "As of July 8, 2026, the Hyperliquid team is reported to hold approximately 241 million HYPE tokens, generating about $1 million in daily staking",
     url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 1560,
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "BonkDAO suffered a $20 million loss after an attacker spent $4.4 million to acquire governance control. Subsequent reports indicate the attacker moved $19 million of the loot into",
+    excerpt: "BonkDAO suffered a $20 million loss after an attacker spent $4.4 million to acquire governance control. Subsequent reports indicate the attacker moved $19 million of the loot into a newly created shadow DAO branded...",
+    url: "https://www.blockhead.co/2026/07/08/bonkdao-loses-20-million-after-attacker-buys-governance-control-for-4-4-million/",
+    secsAgo: 2760,
   },
   {
     walletIdx: 0,
@@ -987,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On July 7, 2026, Noman Saleem, 39, was sentenced to 15 months in federal prison for a wire fraud scheme in which he posed as cryptocurrency 'fin-fluencers' on Telegram to steal",
     excerpt: "On July 7, 2026, Noman Saleem, 39, was sentenced to 15 months in federal prison for a wire fraud scheme in which he posed as cryptocurrency 'fin-fluencers' on Telegram to steal more than $1.4 million from victims via...",
     url: "https://www.yahoo.com/news/us/articles/york-man-posed-crypto-fin-190400512.html",
-    secsAgo: 2160,
+    secsAgo: 3360,
   },
   {
     walletIdx: 0,
@@ -995,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 7, 2026, Christopher Delgado, CEO of Goliath Ventures, pleaded guilty to operating a cryptocurrency Ponzi scheme from January 2023 through January 2026, which obtained",
     excerpt: "On July 7, 2026, Christopher Delgado, CEO of Goliath Ventures, pleaded guilty to operating a cryptocurrency Ponzi scheme from January 2023 through January 2026, which obtained between $328 million and $400 million from...",
     url: "https://whitesecuritieslaw.com/goliath-ventures-ponzi-scheme/",
-    secsAgo: 2760,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -1003,22 +1019,6 @@ var REAL_EVENTS = [
     desc: "A whale deposited 6.3M USDC into Hyperliquid to open a $49 million HYPE short position (692,200 contracts) entered at $66.02 with a stop-loss at $70.78, currently facing a $3.3",
     excerpt: "A whale deposited 6.3M USDC into Hyperliquid to open a $49 million HYPE short position (692,200 contracts) entered at $66.02 with a stop-loss at $70.78, currently facing a $3.3 million unrealized loss, reported on...",
     url: "https://phemex.com/news/article/whale-opens-49-million-hype-short-position-on-hyperliquid-92074",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "On July 7, 2026, the CFTC filed a complaint against Trevor L. Vernon and Argent Capital Management LLC for operating a fraudulent commodity pool that traded in crypto assets and",
-    excerpt: "On July 7, 2026, the CFTC filed a complaint against Trevor L. Vernon and Argent Capital Management LLC for operating a fraudulent commodity pool that traded in crypto assets and equity index futures, fraudulently...",
-    url: "https://www.cftc.gov/PressRoom/PressReleases/9264-26",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "On July 7, 2026, it was reported that former FTX engineer Nishad Singh paid a $3.7 million fine to the CFTC as part of the enforcement fallout from the FTX",
-    excerpt: "On July 7, 2026, it was reported that former FTX engineer Nishad Singh paid a $3.7 million fine to the CFTC as part of the enforcement fallout from the FTX",
-    url: "https://defirate.com/news/cftcs-first-event-contract-insider-trading-lawsuit-challenged-whether-polymarket-trades-swaps/",
     secsAgo: 4560,
   },
 ];
