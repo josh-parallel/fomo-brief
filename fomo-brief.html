@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783543648012;
+var REFRESHED_AT = 1783587429504;
 var REAL_EVENTS = [
   {
     walletIdx: 5,
@@ -966,20 +966,36 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On 2026-07-08, it was reported that a trader known as pension-usdt.eth is facing a loss of nearly $2 million on an $86.99 million Ethereum (ETH) short position on Hyperliquid,",
-    excerpt: "On 2026-07-08, it was reported that a trader known as pension-usdt.eth is facing a loss of nearly $2 million on an $86.99 million Ethereum (ETH) short position on Hyperliquid, with a liquidation risk if the ETH price...",
-    url: "https://phemex.com/news/article/trader-faces-2-million-loss-on-8699m-eth-short-position-92285",
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 9, 2026, Pantera Capital reported that Hyperliquid's potential addressable market daily trading volume is approximately $100 trillion, identifying regulation as the most",
+    excerpt: "On July 9, 2026, Pantera Capital reported that Hyperliquid's potential addressable market daily trading volume is approximately $100 trillion, identifying regulation as the most significant",
+    url: "https://www.chaincatcher.com/en/article/2275013",
     secsAgo: 960,
   },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On 2026-07-08, a whale took the largest long position in SK Hynix (SKHX) on Hyperliquid, with a position valued at $27.75 million and an average entry price of",
-    excerpt: "On 2026-07-08, a whale took the largest long position in SK Hynix (SKHX) on Hyperliquid, with a position valued at $27.75 million and an average entry price of",
-    url: "https://www.kucoin.com/news/flash/whale-becomes-largest-long-position-holder-of-sk-hynix-on-hyperliquid",
+    desc: "On 2026-07-08, on-chain data showed that investment firm Multicoin Capital deposited approximately 167,000 HYPE tokens (valued at roughly $11.2 million) to Galaxy Digital's OTC",
+    excerpt: "On 2026-07-08, on-chain data showed that investment firm Multicoin Capital deposited approximately 167,000 HYPE tokens (valued at roughly $11.2 million) to Galaxy Digital's OTC trading desk, signaling a potential intent...",
+    url: "https://www.kucoin.com/news/flash/sk-hynix-volatility-continues-as-whale-faces-14-61-loss-on-2-5m-position",
     secsAgo: 1560,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On 2026-07-08, it was reported that a $5.68 million BTC-USD contract was the largest single liquidation recorded on Hyperliquid within a 24-hour period of market",
+    excerpt: "On 2026-07-08, it was reported that a $5.68 million BTC-USD contract was the largest single liquidation recorded on Hyperliquid within a 24-hour period of market",
+    url: "https://www.kucoin.com/news/flash/whale-becomes-largest-long-position-holder-of-sk-hynix-on-hyperliquid",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On 2026-07-08, it was reported that a trader known as pension-usdt.eth is facing a loss of nearly $2 million on an $86.99 million Ethereum (ETH) short position on Hyperliquid,",
+    excerpt: "On 2026-07-08, it was reported that a trader known as pension-usdt.eth is facing a loss of nearly $2 million on an $86.99 million Ethereum (ETH) short position on Hyperliquid, with a liquidation risk if the ETH price...",
+    url: "https://phemex.com/news/article/trader-faces-2-million-loss-on-8699m-eth-short-position-92285",
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -987,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "KuCoin reported on 2026-07-08 that a whale deposited $999,200 in USDC on Hyperliquid to open a 4x leveraged long position in CL, involving 49,040 CL tokens valued at approximately",
     excerpt: "KuCoin reported on 2026-07-08 that a whale deposited $999,200 in USDC on Hyperliquid to open a 4x leveraged long position in CL, involving 49,040 CL tokens valued at approximately $3.63",
     url: "https://www.kucoin.com/news/flash/whale-deposits-999-200-usdc-on-hyperliquid-to-open-4x-long-position-in-cl",
-    secsAgo: 2160,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -995,30 +1011,14 @@ var REAL_EVENTS = [
     desc: "Chaincatcher reported on 2026-07-08 that the current whale positions on the Hyperliquid platform amount to $5.106 billion, with a long-short ratio of",
     excerpt: "Chaincatcher reported on 2026-07-08 that the current whale positions on the Hyperliquid platform amount to $5.106 billion, with a long-short ratio of",
     url: "https://www.bitget.com/amp/news/detail/12560605491927",
-    secsAgo: 2760,
+    secsAgo: 3960,
   },
   {
     walletIdx: 3,
     def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
-    desc: "A Pump.fun account was reportedly hacked and used to promote a fake token, as reported by U.Today on July 8,",
-    excerpt: "A Pump.fun account was reportedly hacked and used to promote a fake token, as reported by U.Today on July 8,",
-    url: "https://u.today/meme-cryptocurrencies",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "As of July 8, 2026, the Hyperliquid team is reported to hold approximately 241 million HYPE tokens, generating about $1 million in daily staking",
-    excerpt: "As of July 8, 2026, the Hyperliquid team is reported to hold approximately 241 million HYPE tokens, generating about $1 million in daily staking",
-    url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "BonkDAO suffered a $20 million loss after an attacker spent $4.4 million to acquire governance control. Subsequent reports indicate the attacker moved $19 million of the loot into",
-    excerpt: "BonkDAO suffered a $20 million loss after an attacker spent $4.4 million to acquire governance control. Subsequent reports indicate the attacker moved $19 million of the loot into a newly created shadow DAO branded...",
-    url: "https://www.blockhead.co/2026/07/08/bonkdao-loses-20-million-after-attacker-buys-governance-control-for-4-4-million/",
+    desc: "Crystal Intelligence published an on-chain analysis on July 8, 2026, documenting a rug pull of the 'Patriotic Bull' ($TOMMY) Pump.fun memecoin promoted by Tommy Robinson. The",
+    excerpt: "Crystal Intelligence published an on-chain analysis on July 8, 2026, documenting a rug pull of the 'Patriotic Bull' ($TOMMY) Pump.fun memecoin promoted by Tommy Robinson. The report found that ten wallets linked to a...",
+    url: "https://crystalintelligence.com/investigations/tommy-robinson-patriotic-bull-memecoin-investigation/",
     secsAgo: 4560,
   },
 ];
