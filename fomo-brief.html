@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783587429504;
+var REFRESHED_AT = 1783617998013;
 var REAL_EVENTS = [
   {
     walletIdx: 5,
@@ -966,12 +966,20 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On 2026-07-09, a trader known as @daidaibtc was reported to have earned approximately $2.67 million in funding from a Bitcoin short position on the Hyperliquid platform, having",
+    excerpt: "On 2026-07-09, a trader known as @daidaibtc was reported to have earned approximately $2.67 million in funding from a Bitcoin short position on the Hyperliquid platform, having opened the short from a price of",
+    url: "https://phemex.com/news/article/trader-gains-267m-in-funding-from-bitcoin-short-on-hyperliquid-92371",
+    secsAgo: 960,
+  },
+  {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 9, 2026, Pantera Capital reported that Hyperliquid's potential addressable market daily trading volume is approximately $100 trillion, identifying regulation as the most",
     excerpt: "On July 9, 2026, Pantera Capital reported that Hyperliquid's potential addressable market daily trading volume is approximately $100 trillion, identifying regulation as the most significant",
     url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 2,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "On 2026-07-08, on-chain data showed that investment firm Multicoin Capital deposited approximately 167,000 HYPE tokens (valued at roughly $11.2 million) to Galaxy Digital's OTC",
     excerpt: "On 2026-07-08, on-chain data showed that investment firm Multicoin Capital deposited approximately 167,000 HYPE tokens (valued at roughly $11.2 million) to Galaxy Digital's OTC trading desk, signaling a potential intent...",
     url: "https://www.kucoin.com/news/flash/sk-hynix-volatility-continues-as-whale-faces-14-61-loss-on-2-5m-position",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "On 2026-07-08, it was reported that a $5.68 million BTC-USD contract was the largest single liquidation recorded on Hyperliquid within a 24-hour period of market",
     excerpt: "On 2026-07-08, it was reported that a $5.68 million BTC-USD contract was the largest single liquidation recorded on Hyperliquid within a 24-hour period of market",
     url: "https://www.kucoin.com/news/flash/whale-becomes-largest-long-position-holder-of-sk-hynix-on-hyperliquid",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On 2026-07-08, it was reported that a trader known as pension-usdt.eth is facing a loss of nearly $2 million on an $86.99 million Ethereum (ETH) short position on Hyperliquid,",
     excerpt: "On 2026-07-08, it was reported that a trader known as pension-usdt.eth is facing a loss of nearly $2 million on an $86.99 million Ethereum (ETH) short position on Hyperliquid, with a liquidation risk if the ETH price...",
     url: "https://phemex.com/news/article/trader-faces-2-million-loss-on-8699m-eth-short-position-92285",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -1003,14 +1011,6 @@ var REAL_EVENTS = [
     desc: "KuCoin reported on 2026-07-08 that a whale deposited $999,200 in USDC on Hyperliquid to open a 4x leveraged long position in CL, involving 49,040 CL tokens valued at approximately",
     excerpt: "KuCoin reported on 2026-07-08 that a whale deposited $999,200 in USDC on Hyperliquid to open a 4x leveraged long position in CL, involving 49,040 CL tokens valued at approximately $3.63",
     url: "https://www.kucoin.com/news/flash/whale-deposits-999-200-usdc-on-hyperliquid-to-open-4x-long-position-in-cl",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Chaincatcher reported on 2026-07-08 that the current whale positions on the Hyperliquid platform amount to $5.106 billion, with a long-short ratio of",
-    excerpt: "Chaincatcher reported on 2026-07-08 that the current whale positions on the Hyperliquid platform amount to $5.106 billion, with a long-short ratio of",
-    url: "https://www.bitget.com/amp/news/detail/12560605491927",
     secsAgo: 3960,
   },
   {
