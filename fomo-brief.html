@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783637524665;
+var REFRESHED_AT = 1783679844346;
 var REAL_EVENTS = [
   {
     walletIdx: 5,
@@ -966,12 +966,36 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Zebpay reported on 2026-07-10 that a Hyperliquid whale is suspected of continuing an Ether sell-off after withdrawing 7,863 ETH, indicating significant large-trader movement on",
+    excerpt: "Zebpay reported on 2026-07-10 that a Hyperliquid whale is suspected of continuing an Ether sell-off after withdrawing 7,863 ETH, indicating significant large-trader movement on the",
+    url: "https://zebpay.com/in/blog/weekly-crypto-report-10th-july-2026",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 4,
+    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
+    desc: "On July 10, 2026, North Carolina passed a bill recognizing the CFTC's preemption over prediction markets, effectively limiting the state's ability to independently regulate these",
+    excerpt: "On July 10, 2026, North Carolina passed a bill recognizing the CFTC's preemption over prediction markets, effectively limiting the state's ability to independently regulate these platforms under state",
+    url: "https://defirate.com/news/",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "ChainCatcher reported that on 2026-07-10 at 15:30, the current whale position on the Hyperliquid platform was 5.069 billion USD, with a long-short position ratio of",
+    excerpt: "ChainCatcher reported that on 2026-07-10 at 15:30, the current whale position on the Hyperliquid platform was 5.069 billion USD, with a long-short position ratio of",
+    url: "https://www.chaincatcher.com/en/article/2275013",
+    secsAgo: 2160,
+  },
+  {
     walletIdx: 0,
     def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
     desc: "On July 9, 2026, Rossen G. Iossifov, a Bulgarian national, was charged in the Eastern District of Kentucky for the theft and laundering of approximately $290,000 in forfeited",
     excerpt: "On July 9, 2026, Rossen G. Iossifov, a Bulgarian national, was charged in the Eastern District of Kentucky for the theft and laundering of approximately $290,000 in forfeited",
     url: "https://www.justice.gov/opa",
-    secsAgo: 960,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -979,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "CryptoSlate reported on 2026-07-09 that Hyperliquid Strategies has a committed equity facility enabling up to $1 billion of HYPE accumulation; the company\u2019s SEC filings warn that",
     excerpt: "CryptoSlate reported on 2026-07-09 that Hyperliquid Strategies has a committed equity facility enabling up to $1 billion of HYPE accumulation; the company\u2019s SEC filings warn that volatile markets could force unfavorable...",
     url: "https://cryptoslate.com/a-1-billion-hype-treasury-trade-is-hitting-public-markets-before-its-liquidity-has-been-tested/",
-    secsAgo: 1560,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -987,15 +1011,7 @@ var REAL_EVENTS = [
     desc: "On 2026-07-09, a trader known as @daidaibtc was reported to have earned approximately $2.67 million in funding from a Bitcoin short position on the Hyperliquid platform, having",
     excerpt: "On 2026-07-09, a trader known as @daidaibtc was reported to have earned approximately $2.67 million in funding from a Bitcoin short position on the Hyperliquid platform, having opened the short from a price of",
     url: "https://phemex.com/news/article/trader-gains-267m-in-funding-from-bitcoin-short-on-hyperliquid-92371",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 9, 2026, Pantera Capital reported that Hyperliquid's potential addressable market daily trading volume is approximately $100 trillion, identifying regulation as the most",
-    excerpt: "On July 9, 2026, Pantera Capital reported that Hyperliquid's potential addressable market daily trading volume is approximately $100 trillion, identifying regulation as the most significant",
-    url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 2760,
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
@@ -1003,22 +1019,6 @@ var REAL_EVENTS = [
     desc: "The hacker behind the Summer.fi exploit began laundering $1.35 million of the stolen DAI through Uniswap and Tornado Cash on July 9,",
     excerpt: "The hacker behind the Summer.fi exploit began laundering $1.35 million of the stolen DAI through Uniswap and Tornado Cash on July 9,",
     url: "https://rekt.news/summer-finance-rekt",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On 2026-07-08, on-chain data showed that investment firm Multicoin Capital deposited approximately 167,000 HYPE tokens (valued at roughly $11.2 million) to Galaxy Digital's OTC",
-    excerpt: "On 2026-07-08, on-chain data showed that investment firm Multicoin Capital deposited approximately 167,000 HYPE tokens (valued at roughly $11.2 million) to Galaxy Digital's OTC trading desk, signaling a potential intent...",
-    url: "https://www.kucoin.com/news/flash/sk-hynix-volatility-continues-as-whale-faces-14-61-loss-on-2-5m-position",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On 2026-07-08, it was reported that a $5.68 million BTC-USD contract was the largest single liquidation recorded on Hyperliquid within a 24-hour period of market",
-    excerpt: "On 2026-07-08, it was reported that a $5.68 million BTC-USD contract was the largest single liquidation recorded on Hyperliquid within a 24-hour period of market",
-    url: "https://www.kucoin.com/news/flash/whale-becomes-largest-long-position-holder-of-sk-hynix-on-hyperliquid",
     secsAgo: 4560,
   },
 ];
