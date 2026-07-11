@@ -955,15 +955,23 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783780738009;
+var REFRESHED_AT = 1783787902767;
 var REAL_EVENTS = [
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Hyperliquid recorded $1.45 million in liquidations on July 11, 2026, with 99.1% of the liquidated positions being",
+    excerpt: "Hyperliquid recorded $1.45 million in liquidations on July 11, 2026, with 99.1% of the liquidated positions being",
+    url: "https://cryptorank.io/news/feed/fd380-f2pool-co-founder-wang-chun-eth-wbtc-purchase",
+    secsAgo: 360,
+  },
   {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
     desc: "ChainCatcher reported that on 2026-07-11 at 20:30, a whale with a total profit of 11.44 million USD went long on 1 million CASHCAT three times on",
     excerpt: "ChainCatcher reported that on 2026-07-11 at 20:30, a whale with a total profit of 11.44 million USD went long on 1 million CASHCAT three times on",
     url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 360,
+    secsAgo: 960,
   },
   {
     walletIdx: 2,
@@ -971,7 +979,7 @@ var REAL_EVENTS = [
     desc: "Zebpay reported on 2026-07-10 that a Hyperliquid whale is suspected of continuing an Ether sell-off after withdrawing 7,863 ETH, indicating significant large-trader movement on",
     excerpt: "Zebpay reported on 2026-07-10 that a Hyperliquid whale is suspected of continuing an Ether sell-off after withdrawing 7,863 ETH, indicating significant large-trader movement on the",
     url: "https://zebpay.com/in/blog/weekly-crypto-report-10th-july-2026",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 3,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "Protos reported on July 10, 2026, that thousands of users lost money while bridging assets from Solana-based Pump.fun to the new Robinhood Chain. The report details that the new",
     excerpt: "Protos reported on July 10, 2026, that thousands of users lost money while bridging assets from Solana-based Pump.fun to the new Robinhood Chain. The report details that the new chain's permissionless architecture...",
     url: "https://protos.com/robinhood-chain-scams-are-already-costing-users-dearly/",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 3,
@@ -987,14 +995,6 @@ var REAL_EVENTS = [
     desc: "Blockchain analyst Specter flagged a suspected $85 million rug pull involving the CodexField project on July 10,",
     excerpt: "Blockchain analyst Specter flagged a suspected $85 million rug pull involving the CodexField project on July 10,",
     url: "https://www.facebook.com/cryptopolitan/posts/analyst-flags-codexfield-over-suspected-85m-rug-pull/1709252834541159/",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "On July 10, 2026, the CFTC filed charges against Trevor Vernon and Argent Capital Management for fraud, misappropriation of investor funds in a Ponzi-like scheme, and failure to",
-    excerpt: "On July 10, 2026, the CFTC filed charges against Trevor Vernon and Argent Capital Management for fraud, misappropriation of investor funds in a Ponzi-like scheme, and failure to register a $14.8 million...",
-    url: "https://kryptoextract.com/blogs/cftc-enforcement-action-signals-a-new-regulatory-era-for-crypto-investment-managers",
     secsAgo: 2760,
   },
   {
