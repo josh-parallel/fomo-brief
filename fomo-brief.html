@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783787902767;
+var REFRESHED_AT = 1783793425261;
 var REAL_EVENTS = [
   {
     walletIdx: 2,
@@ -1000,10 +1000,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 4,
     def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
+    desc: "On July 10, 2026, the CFTC filed charges against Trevor Vernon and Argent Capital Management for fraud, misappropriation of investor funds in a Ponzi-like scheme, and failure to",
+    excerpt: "On July 10, 2026, the CFTC filed charges against Trevor Vernon and Argent Capital Management for fraud, misappropriation of investor funds in a Ponzi-like scheme, and failure to register a $14.8 million...",
+    url: "https://kryptoextract.com/blogs/cftc-enforcement-action-signals-a-new-regulatory-era-for-crypto-investment-managers",
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 4,
+    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
     desc: "On July 10, 2026, Polymarket (via PM Derivatives LLC) filed for a U.S. Futures Commission Merchant (FCM) and swap firm license to launch margin trading for U.S. customers,",
     excerpt: "On July 10, 2026, Polymarket (via PM Derivatives LLC) filed for a U.S. Futures Commission Merchant (FCM) and swap firm license to launch margin trading for U.S. customers, following a CFTC probe and related",
     url: "https://www.coindesk.com/markets/2026/07/10/polymarket-seeks-approval-to-bring-margin-trading-to-u-s-customers",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 4,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "On July 10, 2026, a U.S. federal court rejected Kalshi's core preemption argument, ruling that New York gambling laws can apply to sports event contracts even if they are treated",
     excerpt: "On July 10, 2026, a U.S. federal court rejected Kalshi's core preemption argument, ruling that New York gambling laws can apply to sports event contracts even if they are treated as swaps under federal",
     url: "https://bitcoinke.io/2026/07/kalshi-losses-bid-to-stop-gambling-enforcement/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "On July 10, 2026, North Carolina passed a bill recognizing the CFTC's preemption over prediction markets, effectively limiting the state's ability to independently regulate these",
-    excerpt: "On July 10, 2026, North Carolina passed a bill recognizing the CFTC's preemption over prediction markets, effectively limiting the state's ability to independently regulate these platforms under state",
-    url: "https://defirate.com/news/",
     secsAgo: 4560,
   },
 ];
