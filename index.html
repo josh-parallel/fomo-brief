@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783856769866;
+var REFRESHED_AT = 1783870806422;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -966,12 +966,20 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 12, 2026, the U.S. Department of Justice (DOJ) charged Rossen G. Iossifov, a Bulgarian national and federal inmate, with removing approximately $290,000 in forfeited",
+    excerpt: "On July 12, 2026, the U.S. Department of Justice (DOJ) charged Rossen G. Iossifov, a Bulgarian national and federal inmate, with removing approximately $290,000 in forfeited cryptocurrency to prevent government seizure....",
+    url: "https://www.kucoin.com/news/flash/doj-near-bitclub-dismissal-circle-wins-u-s-bank-charter",
+    secsAgo: 960,
+  },
+  {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
     desc: "On-chain data reported on ChainCatcher indicates that the current whale position on the Hyperliquid platform is 5.118 billion USD, with a long-short position ratio of 0.95 as of",
     excerpt: "On-chain data reported on ChainCatcher indicates that the current whale position on the Hyperliquid platform is 5.118 billion USD, with a long-short position ratio of 0.95 as of 2026-07-12",
     url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 2,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "Hyperliquid recorded $1.45 million in liquidations on July 11, 2026, with 99.1% of the liquidated positions being",
     excerpt: "Hyperliquid recorded $1.45 million in liquidations on July 11, 2026, with 99.1% of the liquidated positions being",
     url: "https://cryptorank.io/news/feed/fd380-f2pool-co-founder-wang-chun-eth-wbtc-purchase",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 3,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "A report published on July 11, 2026, documents the $ANSEM token launched on Pump.fun in mid-June 2026 as a case of potential fraud and manipulation. The token is flagged by",
     excerpt: "A report published on July 11, 2026, documents the $ANSEM token launched on Pump.fun in mid-June 2026 as a case of potential fraud and manipulation. The token is flagged by RugCheck for extreme supply concentration,...",
     url: "https://www.techtimes.com/articles/320175/20260711/pumpfuns-127m-insider-unlock-tests-fair-launch-claims-ico-anniversary.htm",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 8,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "OnchainLens data reveals a whale on Hyperliquid is currently down $491,400 while holding $3.27 million in long",
     excerpt: "OnchainLens data reveals a whale on Hyperliquid is currently down $491,400 while holding $3.27 million in long",
     url: "https://www.kucoin.com/news/flash/top-whale-on-hyperliquid-earns-97-2m-profits-3x-shorts-1-85m-cashcat",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 10,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "DefiLlama reported that Q2 2026 became the most-hacked quarter in cryptocurrency history, with approximately 70 separate exploits resulting in massive drains of",
     excerpt: "DefiLlama reported that Q2 2026 became the most-hacked quarter in cryptocurrency history, with approximately 70 separate exploits resulting in massive drains of",
     url: "https://www.cryptotimes.io/2026/07/11/hederas-biggest-defi-lender-bonzo-lend-hacked-for-9m-5-25m-bridged-to-ethereum/",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 6,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "A report published on July 12, 2026, by Investigations.org alleges that pardoned BitMEX founder Arthur Hayes is facing new exit-liquidity allegations across five tokens while",
     excerpt: "A report published on July 12, 2026, by Investigations.org alleges that pardoned BitMEX founder Arthur Hayes is facing new exit-liquidity allegations across five tokens while raising a $250M fund, with the report citing...",
     url: "https://www.newsnow.co.uk/h/Business+&+Finance/Cryptocurrencies/Worldcoin",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 6,
-    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
-    desc: "A S\u00e3o Paulo state court ruled against Coinbase on July 12, 2026, ordering the exchange to return nearly $100,000 to a user after unauthorized transactions occurred in a",
-    excerpt: "A S\u00e3o Paulo state court ruled against Coinbase on July 12, 2026, ordering the exchange to return nearly $100,000 to a user after unauthorized transactions occurred in a self-custody wallet, setting a potential precedent...",
-    url: "https://news.bitcoin.com/sao-paulo-court-rules-against-coinbase-in-landmark-case-over-100k-self-custody-hack/",
     secsAgo: 4560,
   },
 ];
