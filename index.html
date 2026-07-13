@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783945128527;
+var REFRESHED_AT = 1783968715709;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -968,10 +968,42 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Detailed data reveals that the CASHCAT perpetual flash crash on July 13 resulted in more than $1.3 million in long positions being liquidated in under a",
+    excerpt: "Detailed data reveals that the CASHCAT perpetual flash crash on July 13 resulted in more than $1.3 million in long positions being liquidated in under a",
+    url: "https://www.cryptotimes.io/2026/07/13/cashcat-perps-wick-60-on-hyperliquid-while-spot-price-holds/",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 13, 2026, trader 'yixie' incurred an unrealized loss of approximately $1.8 million on a 2x long position in SK Hynix (SKHX) on Hyperliquid, with a total position size of",
+    excerpt: "On July 13, 2026, trader 'yixie' incurred an unrealized loss of approximately $1.8 million on a 2x long position in SK Hynix (SKHX) on Hyperliquid, with a total position size of $12.85 million and a liquidation price...",
+    url: "https://www.kucoin.com/news/flash/trader-yixie-loses-1-8m-on-sk-hynix-adr-position-on-hyperliquid",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 13, 2026, Hyperliquid's total open interest reached a peak of $11 billion for 2026, with real-world asset (RWA) open interest hitting a new all-time high of $3.6",
+    excerpt: "On July 13, 2026, Hyperliquid's total open interest reached a peak of $11 billion for 2026, with real-world asset (RWA) open interest hitting a new all-time high of $3.6",
+    url: "https://www.mitrade.com/au/insights/news/live-news/article-3-1895092-20260713",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 13, 2026, Hyperliquid platform whales held positions totaling $5.15 billion, with unrealized profit and loss (PnL) of -$39.0339 million for long positions and -$61.1665",
     excerpt: "On July 13, 2026, Hyperliquid platform whales held positions totaling $5.15 billion, with unrealized profit and loss (PnL) of -$39.0339 million for long positions and -$61.1665 million for short",
     url: "https://www.bitget.com/amp/news/detail/12560605501641",
-    secsAgo: 960,
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "Hyperliquid's total open interest reached a 2026 peak of approximately $11.07 billion on July 13,",
+    excerpt: "Hyperliquid's total open interest reached a 2026 peak of approximately $11.07 billion on July 13,",
+    url: "https://www.kucoin.com/news/flash/hyperliquid-hits-11b-in-open-positions-highest-level-of-2026",
+    secsAgo: 3360,
   },
   {
     walletIdx: 8,
@@ -979,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "Hyperliquid RWA open interest reached an all-time high of 3.6 billion USD as of 2026-07-13",
     excerpt: "Hyperliquid RWA open interest reached an all-time high of 3.6 billion USD as of 2026-07-13",
     url: "https://www.chaincatcher.com/en/article/2275013",
-    secsAgo: 1560,
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
@@ -987,38 +1019,6 @@ var REAL_EVENTS = [
     desc: "Attackers hijacked the SpaceXAI and Starlink X accounts to promote a fraudulent meme coin called SCATMAN, resulting in a rug pull that drained approximately $125,000 in Ethereum",
     excerpt: "Attackers hijacked the SpaceXAI and Starlink X accounts to promote a fraudulent meme coin called SCATMAN, resulting in a rug pull that drained approximately $125,000 in Ethereum from",
     url: "https://en.cryptonomist.ch/2026/07/13/spacex-starlink-hack-scatman-scam/",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 12, 2026, the U.S. Department of Justice (DOJ) charged Rossen G. Iossifov, a Bulgarian national and federal inmate, with removing approximately $290,000 in forfeited",
-    excerpt: "On July 12, 2026, the U.S. Department of Justice (DOJ) charged Rossen G. Iossifov, a Bulgarian national and federal inmate, with removing approximately $290,000 in forfeited cryptocurrency to prevent government seizure....",
-    url: "https://www.kucoin.com/news/flash/doj-near-bitclub-dismissal-circle-wins-u-s-bank-charter",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "The CashCat token experienced a 60% flash crash on the Hyperliquid futures platform on July 12, 2026, dropping from $0.19 to $0.08 within a minute due to a liquidation",
-    excerpt: "The CashCat token experienced a 60% flash crash on the Hyperliquid futures platform on July 12, 2026, dropping from $0.19 to $0.08 within a minute due to a liquidation",
-    url: "https://pluang.com/en/news-feed/dari-0-19-ke-0-08-mengapa-token-viral-cashcat-mengalami-kejatuhan-60-persen",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 3,
-    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
-    desc: "On-chain investigator ZachXBT published updated findings on July 12, 2026, linking the 97% price crash of the LAB token to an entity initially funded by the project team,",
-    excerpt: "On-chain investigator ZachXBT published updated findings on July 12, 2026, linking the 97% price crash of the LAB token to an entity initially funded by the project team, documenting a clear case of developer-led token...",
-    url: "https://cryptorank.io/news/feed/83e44-crypto-market-readies-for-237m-in-token-unlocks-next-week",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 6,
-    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
-    desc: "A report published on July 12, 2026, by Investigations.org alleges that pardoned BitMEX founder Arthur Hayes is facing new exit-liquidity allegations across five tokens while",
-    excerpt: "A report published on July 12, 2026, by Investigations.org alleges that pardoned BitMEX founder Arthur Hayes is facing new exit-liquidity allegations across five tokens while raising a $250M fund, with the report citing...",
-    url: "https://www.newsnow.co.uk/h/Business+&+Finance/Cryptocurrencies/Worldcoin",
     secsAgo: 4560,
   },
 ];
