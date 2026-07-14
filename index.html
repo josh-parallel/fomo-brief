@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784033425784;
+var REFRESHED_AT = 1784050680511;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -982,43 +982,43 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 4,
+    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
+    desc: "On July 14, 2026, the CFTC filed a civil enforcement action against Trevor L. Vernon and Argent Capital Management LLC, alleging a $14 million investment fraud. The defendants are",
+    excerpt: "On July 14, 2026, the CFTC filed a civil enforcement action against Trevor L. Vernon and Argent Capital Management LLC, alleging a $14 million investment fraud. The defendants are accused of operating a fraudulent...",
+    url: "https://financefeeds.com/cftc-alleges-14-million-investment-fraud-masked-by-fake-returns-and-ponzi-payments/",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "Benjamin Wiener, founder of Benaiah Holdings, was arrested on July 14, 2026, and faces more than two dozen felony charges for operating a cryptocurrency-related Ponzi scheme that",
+    excerpt: "Benjamin Wiener, founder of Benaiah Holdings, was arrested on July 14, 2026, and faces more than two dozen felony charges for operating a cryptocurrency-related Ponzi scheme that defrauded investors of tens of millions...",
+    url: "https://www.thedakotascout.com/p/alleged-cryptocurrency-conman-released",
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "Hyperliquid's open interest hit a milestone of $11.07 billion, with HIP-3 RWA markets reaching $3.6 billion on July 14,",
+    excerpt: "Hyperliquid's open interest hit a milestone of $11.07 billion, with HIP-3 RWA markets reaching $3.6 billion on July 14,",
+    url: "https://cryptorank.io/news/feed/c47e9-hyperliquid-hype-spot-etf-39m-outflow-july-13",
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "Hyperliquid's SKHX and SKHY contracts saw a sharp surge in trading activity on July 14, 2026, with the SKHX funding rate surging over 130% in one hour and combined 24-hour trading",
+    excerpt: "Hyperliquid's SKHX and SKHY contracts saw a sharp surge in trading activity on July 14, 2026, with the SKHX funding rate surging over 130% in one hour and combined 24-hour trading volume reaching $1.836",
+    url: "https://www.kucoin.com/news/flash/hyperliquid-skhx-funding-rate-surges-over-130-in-one-hour",
+    secsAgo: 3960,
+  },
+  {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
     desc: "A whale deposited 20.32 million USDC into Hyperliquid and opened a 2x leveraged long position in SKHX, totaling approximately $22.5 million, on July 14,",
     excerpt: "A whale deposited 20.32 million USDC into Hyperliquid and opened a 2x leveraged long position in SKHX, totaling approximately $22.5 million, on July 14,",
     url: "https://www.kucoin.com/news/flash/whale-deposits-20-32m-usdc-into-hyperliquid-and-opens-2x-leveraged-position-in-skhx",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "A trader lost $2 million in the week of July 14, 2026, to a same-block exploit, where an attacker copied a transaction to cash in before the original transaction",
-    excerpt: "A trader lost $2 million in the week of July 14, 2026, to a same-block exploit, where an attacker copied a transaction to cash in before the original transaction",
-    url: "https://basedbobr.com/blog/summer.fi-flash-loan-exploit",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "Lumi Finance on Arbitrum was drained of $270,000 due to an ERC-4337 validation flaw in Sodium smart accounts that allowed unauthorized token",
-    excerpt: "Lumi Finance on Arbitrum was drained of $270,000 due to an ERC-4337 validation flaw in Sodium smart accounts that allowed unauthorized token",
-    url: "https://www.cryptotimes.io/2026/07/14/lumi-finance-drained-of-270k-on-arbitrum-via-smart-account-exploit/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "The largest single liquidation on the Hyperliquid platform was recorded at approximately $4.86 million for the XYZ:SKHX-USD pair on July 13, 2026, as part of a global market",
-    excerpt: "The largest single liquidation on the Hyperliquid platform was recorded at approximately $4.86 million for the XYZ:SKHX-USD pair on July 13, 2026, as part of a global market",
-    url: "https://www.kucoin.com/news/flash/global-liquidations-reach-270m-in-24-hours-longs-dominate-with-214m",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Detailed data reveals that the CASHCAT perpetual flash crash on July 13 resulted in more than $1.3 million in long positions being liquidated in under a",
-    excerpt: "Detailed data reveals that the CASHCAT perpetual flash crash on July 13 resulted in more than $1.3 million in long positions being liquidated in under a",
-    url: "https://www.cryptotimes.io/2026/07/13/cashcat-perps-wick-60-on-hyperliquid-while-spot-price-holds/",
     secsAgo: 4560,
   },
 ];
