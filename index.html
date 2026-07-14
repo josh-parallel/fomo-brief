@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784013576824;
+var REFRESHED_AT = 1784033425784;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -968,10 +968,50 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Aggregate liquidation events on Hyperliquid reached $2.93 million on July 14, 2026, with long positions accounting for $2.48 million. During the same period, Futures Open Interest",
+    excerpt: "Aggregate liquidation events on Hyperliquid reached $2.93 million on July 14, 2026, with long positions accounting for $2.48 million. During the same period, Futures Open Interest contracted by over 2% to $2.72",
+    url: "https://blockonomi.com/hyperliquid-hype-tests-critical-support-amid-nine-week-etf-buying-streak-and-100-price-forecast/",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "The total whale position on the Hyperliquid platform was updated to $4.952 billion with a long-short position ratio of 0.95 as of July 14, 2026, 15:30",
+    excerpt: "The total whale position on the Hyperliquid platform was updated to $4.952 billion with a long-short position ratio of 0.95 as of July 14, 2026, 15:30",
+    url: "https://www.chaincatcher.com/en/article/2276140",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "A whale deposited 20.32 million USDC into Hyperliquid and opened a 2x leveraged long position in SKHX, totaling approximately $22.5 million, on July 14,",
+    excerpt: "A whale deposited 20.32 million USDC into Hyperliquid and opened a 2x leveraged long position in SKHX, totaling approximately $22.5 million, on July 14,",
+    url: "https://www.kucoin.com/news/flash/whale-deposits-20-32m-usdc-into-hyperliquid-and-opens-2x-leveraged-position-in-skhx",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "A trader lost $2 million in the week of July 14, 2026, to a same-block exploit, where an attacker copied a transaction to cash in before the original transaction",
+    excerpt: "A trader lost $2 million in the week of July 14, 2026, to a same-block exploit, where an attacker copied a transaction to cash in before the original transaction",
+    url: "https://basedbobr.com/blog/summer.fi-flash-loan-exploit",
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "Lumi Finance on Arbitrum was drained of $270,000 due to an ERC-4337 validation flaw in Sodium smart accounts that allowed unauthorized token",
+    excerpt: "Lumi Finance on Arbitrum was drained of $270,000 due to an ERC-4337 validation flaw in Sodium smart accounts that allowed unauthorized token",
+    url: "https://www.cryptotimes.io/2026/07/14/lumi-finance-drained-of-270k-on-arbitrum-via-smart-account-exploit/",
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "The largest single liquidation on the Hyperliquid platform was recorded at approximately $4.86 million for the XYZ:SKHX-USD pair on July 13, 2026, as part of a global market",
     excerpt: "The largest single liquidation on the Hyperliquid platform was recorded at approximately $4.86 million for the XYZ:SKHX-USD pair on July 13, 2026, as part of a global market",
     url: "https://www.kucoin.com/news/flash/global-liquidations-reach-270m-in-24-hours-longs-dominate-with-214m",
-    secsAgo: 960,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -979,46 +1019,6 @@ var REAL_EVENTS = [
     desc: "Detailed data reveals that the CASHCAT perpetual flash crash on July 13 resulted in more than $1.3 million in long positions being liquidated in under a",
     excerpt: "Detailed data reveals that the CASHCAT perpetual flash crash on July 13 resulted in more than $1.3 million in long positions being liquidated in under a",
     url: "https://www.cryptotimes.io/2026/07/13/cashcat-perps-wick-60-on-hyperliquid-while-spot-price-holds/",
-    secsAgo: 1560,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 13, 2026, trader 'yixie' incurred an unrealized loss of approximately $1.8 million on a 2x long position in SK Hynix (SKHX) on Hyperliquid, with a total position size of",
-    excerpt: "On July 13, 2026, trader 'yixie' incurred an unrealized loss of approximately $1.8 million on a 2x long position in SK Hynix (SKHX) on Hyperliquid, with a total position size of $12.85 million and a liquidation price...",
-    url: "https://www.kucoin.com/news/flash/trader-yixie-loses-1-8m-on-sk-hynix-adr-position-on-hyperliquid",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 13, 2026, Hyperliquid's total open interest reached a peak of $11 billion for 2026, with real-world asset (RWA) open interest hitting a new all-time high of $3.6",
-    excerpt: "On July 13, 2026, Hyperliquid's total open interest reached a peak of $11 billion for 2026, with real-world asset (RWA) open interest hitting a new all-time high of $3.6",
-    url: "https://www.mitrade.com/au/insights/news/live-news/article-3-1895092-20260713",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 13, 2026, Hyperliquid platform whales held positions totaling $5.15 billion, with unrealized profit and loss (PnL) of -$39.0339 million for long positions and -$61.1665",
-    excerpt: "On July 13, 2026, Hyperliquid platform whales held positions totaling $5.15 billion, with unrealized profit and loss (PnL) of -$39.0339 million for long positions and -$61.1665 million for short",
-    url: "https://www.bitget.com/amp/news/detail/12560605501641",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "As of July 13, 2026, reports indicate that the CLARITY Act is facing Senate disputes over developer protections and a 60-vote threshold, with a four-week deadline to advance the",
-    excerpt: "As of July 13, 2026, reports indicate that the CLARITY Act is facing Senate disputes over developer protections and a 60-vote threshold, with a four-week deadline to advance the legislation before the August",
-    url: "https://www.facebook.com/cryptosrus/posts/cftc-chair-selig-says-its-time-for-clarityamerica-must-lead-in-the-race-for-ai-c/1660366896095139/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "Hyperliquid and Phantom collaborated to urge the CFTC to exempt on-chain code from certain regulations on July 13,",
-    excerpt: "Hyperliquid and Phantom collaborated to urge the CFTC to exempt on-chain code from certain regulations on July 13,",
-    url: "https://www.instagram.com/cointelegraph/?hl=en",
     secsAgo: 4560,
   },
 ];
