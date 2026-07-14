@@ -955,15 +955,39 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784051286531;
+var REFRESHED_AT = 1784064841643;
 var REAL_EVENTS = [
+  {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "Three Russian nationals\u2014Alexander Alexandrovich Volosovik, Kirill Andreevich Zatolokin, and Yulia Vladimirovna Pankova\u2014were indicted on July 14, 2026, for their roles in",
+    excerpt: "Three Russian nationals\u2014Alexander Alexandrovich Volosovik, Kirill Andreevich Zatolokin, and Yulia Vladimirovna Pankova\u2014were indicted on July 14, 2026, for their roles in cybercrimes involving the extortion of victims...",
+    url: "https://www.justice.gov/usao-ndoh/pr/three-russian-nationals-indicted-international-cybercrimes-resulting-more-62m-losses",
+    secsAgo: 360,
+  },
   {
     walletIdx: 4,
     def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
     desc: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     excerpt: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-hype-joins-bitwise-10-crypto-index-etf",
-    secsAgo: 360,
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Whale trader 'Loracle' (0x8def9f50456c6c4e37fa5d3d57f108ed23992dae) recorded a loss of approximately $46.46 million from shorting HYPE on Hyperliquid. On July 14, 2026, the trader",
+    excerpt: "Whale trader 'Loracle' (0x8def9f50456c6c4e37fa5d3d57f108ed23992dae) recorded a loss of approximately $46.46 million from shorting HYPE on Hyperliquid. On July 14, 2026, the trader reopened new positions in SKHX (long)...",
+    url: "https://www.kucoin.com/news/flash/whale-shorts-1-11m-cashcat-on-hyperliquid-with-3x-leverage",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A July 14, 2026 snapshot of Hyperliquid whale positioning report from Spottrench reveals several massive unrealized losses, including an ETH long position with -$19.36 million",
+    excerpt: "A July 14, 2026 snapshot of Hyperliquid whale positioning report from Spottrench reveals several massive unrealized losses, including an ETH long position with -$19.36 million unrealized PnL and a BTC long position with...",
+    url: "https://spottrench.xyz/research/hl-cot/",
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -971,7 +995,7 @@ var REAL_EVENTS = [
     desc: "Aggregate liquidation events on Hyperliquid reached $2.93 million on July 14, 2026, with long positions accounting for $2.48 million. During the same period, Futures Open Interest",
     excerpt: "Aggregate liquidation events on Hyperliquid reached $2.93 million on July 14, 2026, with long positions accounting for $2.48 million. During the same period, Futures Open Interest contracted by over 2% to $2.72",
     url: "https://blockonomi.com/hyperliquid-hype-tests-critical-support-amid-nine-week-etf-buying-streak-and-100-price-forecast/",
-    secsAgo: 960,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -979,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "The total whale position on the Hyperliquid platform was updated to $4.952 billion with a long-short position ratio of 0.95 as of July 14, 2026, 15:30",
     excerpt: "The total whale position on the Hyperliquid platform was updated to $4.952 billion with a long-short position ratio of 0.95 as of July 14, 2026, 15:30",
     url: "https://www.chaincatcher.com/en/article/2276140",
-    secsAgo: 1560,
+    secsAgo: 3360,
   },
   {
     walletIdx: 4,
@@ -987,38 +1011,14 @@ var REAL_EVENTS = [
     desc: "On July 14, 2026, the CFTC filed a civil enforcement action against Trevor L. Vernon and Argent Capital Management LLC, alleging a $14 million investment fraud. The defendants are",
     excerpt: "On July 14, 2026, the CFTC filed a civil enforcement action against Trevor L. Vernon and Argent Capital Management LLC, alleging a $14 million investment fraud. The defendants are accused of operating a fraudulent...",
     url: "https://financefeeds.com/cftc-alleges-14-million-investment-fraud-masked-by-fake-returns-and-ponzi-payments/",
-    secsAgo: 2160,
+    secsAgo: 3960,
   },
   {
     walletIdx: 7,
     def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Benjamin Wiener, founder of Benaiah Holdings, was arrested on July 14, 2026, and faces more than two dozen felony charges for operating a cryptocurrency-related Ponzi scheme that",
-    excerpt: "Benjamin Wiener, founder of Benaiah Holdings, was arrested on July 14, 2026, and faces more than two dozen felony charges for operating a cryptocurrency-related Ponzi scheme that defrauded investors of tens of millions...",
-    url: "https://www.thedakotascout.com/p/alleged-cryptocurrency-conman-released",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "Hyperliquid's open interest hit a milestone of $11.07 billion, with HIP-3 RWA markets reaching $3.6 billion on July 14,",
-    excerpt: "Hyperliquid's open interest hit a milestone of $11.07 billion, with HIP-3 RWA markets reaching $3.6 billion on July 14,",
-    url: "https://cryptorank.io/news/feed/c47e9-hyperliquid-hype-spot-etf-39m-outflow-july-13",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "Hyperliquid's SKHX and SKHY contracts saw a sharp surge in trading activity on July 14, 2026, with the SKHX funding rate surging over 130% in one hour and combined 24-hour trading",
-    excerpt: "Hyperliquid's SKHX and SKHY contracts saw a sharp surge in trading activity on July 14, 2026, with the SKHX funding rate surging over 130% in one hour and combined 24-hour trading volume reaching $1.836",
-    url: "https://www.kucoin.com/news/flash/hyperliquid-skhx-funding-rate-surges-over-130-in-one-hour",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "A whale deposited 20.32 million USDC into Hyperliquid and opened a 2x leveraged long position in SKHX, totaling approximately $22.5 million, on July 14,",
-    excerpt: "A whale deposited 20.32 million USDC into Hyperliquid and opened a 2x leveraged long position in SKHX, totaling approximately $22.5 million, on July 14,",
-    url: "https://www.kucoin.com/news/flash/whale-deposits-20-32m-usdc-into-hyperliquid-and-opens-2x-leveraged-position-in-skhx",
+    desc: "The U.S. Department of Justice unsealed an indictment on July 14, 2026, charging Russian nationals Alexander Alexandrovich Volosovik, Kirill Andreevich Zatolokin, and Yulia",
+    excerpt: "The U.S. Department of Justice unsealed an indictment on July 14, 2026, charging Russian nationals Alexander Alexandrovich Volosovik, Kirill Andreevich Zatolokin, and Yulia Vladimirovna Pankova, as well as Media Land,...",
+    url: "https://www.facebook.com/CryptoExplainedMedia/posts/-doj-to-drop-charges-against-alleged-mastermind-of-722m-crypto-schemefederal-pro/1001456222885148/",
     secsAgo: 4560,
   },
 ];
