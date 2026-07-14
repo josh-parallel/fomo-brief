@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1783980903566;
+var REFRESHED_AT = 1784013576824;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -968,10 +968,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "The largest single liquidation on the Hyperliquid platform was recorded at approximately $4.86 million for the XYZ:SKHX-USD pair on July 13, 2026, as part of a global market",
+    excerpt: "The largest single liquidation on the Hyperliquid platform was recorded at approximately $4.86 million for the XYZ:SKHX-USD pair on July 13, 2026, as part of a global market",
+    url: "https://www.kucoin.com/news/flash/global-liquidations-reach-270m-in-24-hours-longs-dominate-with-214m",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "Detailed data reveals that the CASHCAT perpetual flash crash on July 13 resulted in more than $1.3 million in long positions being liquidated in under a",
     excerpt: "Detailed data reveals that the CASHCAT perpetual flash crash on July 13 resulted in more than $1.3 million in long positions being liquidated in under a",
     url: "https://www.cryptotimes.io/2026/07/13/cashcat-perps-wick-60-on-hyperliquid-while-spot-price-holds/",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 2,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "On July 13, 2026, trader 'yixie' incurred an unrealized loss of approximately $1.8 million on a 2x long position in SK Hynix (SKHX) on Hyperliquid, with a total position size of",
     excerpt: "On July 13, 2026, trader 'yixie' incurred an unrealized loss of approximately $1.8 million on a 2x long position in SK Hynix (SKHX) on Hyperliquid, with a total position size of $12.85 million and a liquidation price...",
     url: "https://www.kucoin.com/news/flash/trader-yixie-loses-1-8m-on-sk-hynix-adr-position-on-hyperliquid",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "On July 13, 2026, Hyperliquid's total open interest reached a peak of $11 billion for 2026, with real-world asset (RWA) open interest hitting a new all-time high of $3.6",
     excerpt: "On July 13, 2026, Hyperliquid's total open interest reached a peak of $11 billion for 2026, with real-world asset (RWA) open interest hitting a new all-time high of $3.6",
     url: "https://www.mitrade.com/au/insights/news/live-news/article-3-1895092-20260713",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On July 13, 2026, Hyperliquid platform whales held positions totaling $5.15 billion, with unrealized profit and loss (PnL) of -$39.0339 million for long positions and -$61.1665",
     excerpt: "On July 13, 2026, Hyperliquid platform whales held positions totaling $5.15 billion, with unrealized profit and loss (PnL) of -$39.0339 million for long positions and -$61.1665 million for short",
     url: "https://www.bitget.com/amp/news/detail/12560605501641",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 4,
@@ -1003,22 +1011,14 @@ var REAL_EVENTS = [
     desc: "As of July 13, 2026, reports indicate that the CLARITY Act is facing Senate disputes over developer protections and a 60-vote threshold, with a four-week deadline to advance the",
     excerpt: "As of July 13, 2026, reports indicate that the CLARITY Act is facing Senate disputes over developer protections and a 60-vote threshold, with a four-week deadline to advance the legislation before the August",
     url: "https://www.facebook.com/cryptosrus/posts/cftc-chair-selig-says-its-time-for-clarityamerica-must-lead-in-the-race-for-ai-c/1660366896095139/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "HIP-3 markets on the Hyperliquid platform reached a record value of $3.69 billion on July 13,",
-    excerpt: "HIP-3 markets on the Hyperliquid platform reached a record value of $3.69 billion on July 13,",
-    url: "https://www.facebook.com/cryptopolitan/posts/just-in-hyperliquids-oi-has-surpassed-11-billion-for-the-first-time-in-2026-whil/1712094644256978/",
     secsAgo: 3960,
   },
   {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "Hyperliquid's total open interest reached a 2026 peak of approximately $11.07 billion on July 13,",
-    excerpt: "Hyperliquid's total open interest reached a 2026 peak of approximately $11.07 billion on July 13,",
-    url: "https://www.kucoin.com/news/flash/hyperliquid-hits-11b-in-open-positions-highest-level-of-2026",
+    desc: "Hyperliquid and Phantom collaborated to urge the CFTC to exempt on-chain code from certain regulations on July 13,",
+    excerpt: "Hyperliquid and Phantom collaborated to urge the CFTC to exempt on-chain code from certain regulations on July 13,",
+    url: "https://www.instagram.com/cointelegraph/?hl=en",
     secsAgo: 4560,
   },
 ];
