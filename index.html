@@ -955,22 +955,22 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784138367148;
+var REFRESHED_AT = 1784184022236;
 var REAL_EVENTS = [
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Three Russian nationals\u2014Alexander Alexandrovich Volosovik, Kirill Andreevich Zatolokin, and Yulia Vladimirovna Pankova\u2014were indicted on July 14, 2026, for their roles in",
-    excerpt: "Three Russian nationals\u2014Alexander Alexandrovich Volosovik, Kirill Andreevich Zatolokin, and Yulia Vladimirovna Pankova\u2014were indicted on July 14, 2026, for their roles in cybercrimes involving the extortion of victims...",
-    url: "https://www.justice.gov/usao-ndoh/pr/three-russian-nationals-indicted-international-cybercrimes-resulting-more-62m-losses",
-    secsAgo: 360,
-  },
   {
     walletIdx: 4,
     def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
     desc: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     excerpt: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-hype-joins-bitwise-10-crypto-index-etf",
+    secsAgo: 360,
+  },
+  {
+    walletIdx: 3,
+    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
+    desc: "On July 16, 2026, a report from CoinDesk indicated that the NOXA launchpad on the Robinhood Chain, which had previously suffered a major outage and faced allegations of a 'rug",
+    excerpt: "On July 16, 2026, a report from CoinDesk indicated that the NOXA launchpad on the Robinhood Chain, which had previously suffered a major outage and faced allegations of a 'rug pull' on July 14-15, had 'gave away all its...",
+    url: "https://cryptonews.net/news/altcoins/33151550/",
     secsAgo: 960,
   },
   {
@@ -1006,19 +1006,19 @@ var REAL_EVENTS = [
     secsAgo: 3360,
   },
   {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "Ostium Perp DEX on Arbitrum suffered an oracle manipulation exploit resulting in approximately $18 million USDC being drained from its liquidity vault. The attack involved a",
-    excerpt: "Ostium Perp DEX on Arbitrum suffered an oracle manipulation exploit resulting in approximately $18 million USDC being drained from its liquidity vault. The attack involved a compromised oracle signer private key used to...",
-    url: "https://www.coindesk.com/business/2026/07/15/ostium-suffers-usd18-million-exploit-as-oracle-attack-wave-continues-to-hit-defi",
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "The public Hyperliquid treasury firm Hyperion entered into a new 500k HYPE bond agreement with Skew on July 15,",
+    excerpt: "The public Hyperliquid treasury firm Hyperion entered into a new 500k HYPE bond agreement with Skew on July 15,",
+    url: "https://www.aol.com/articles/bitcoin-etfs-seeing-massive-outflows-100000000.html",
     secsAgo: 3960,
   },
   {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Whale trader 'Loracle' (0x8def9f50456c6c4e37fa5d3d57f108ed23992dae) recorded a loss of approximately $46.46 million from shorting HYPE on Hyperliquid. On July 14, 2026, the trader",
-    excerpt: "Whale trader 'Loracle' (0x8def9f50456c6c4e37fa5d3d57f108ed23992dae) recorded a loss of approximately $46.46 million from shorting HYPE on Hyperliquid. On July 14, 2026, the trader reopened new positions in SKHX (long)...",
-    url: "https://www.kucoin.com/news/flash/whale-shorts-1-11m-cashcat-on-hyperliquid-with-3x-leverage",
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "Glassnode data highlights that whales on Hyperliquid are actively building massive long positions as of July 15, 2026, with aggregate volume exceeding previous observed",
+    excerpt: "Glassnode data highlights that whales on Hyperliquid are actively building massive long positions as of July 15, 2026, with aggregate volume exceeding previous observed",
+    url: "https://investizo.com/markets/analytics/48557-bitcoin-morning-brief-july-15-2026",
     secsAgo: 4560,
   },
 ];
