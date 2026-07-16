@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784224571239;
+var REFRESHED_AT = 1784238458346;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -968,10 +968,26 @@ var REAL_EVENTS = [
   {
     walletIdx: 0,
     def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 16, 2026, the U.S. Attorney's Office for the Eastern District of New York announced charges against Zhuoying Chen (also known as 'Jolene') and Haojie Zhang (also known as",
+    excerpt: "On July 16, 2026, the U.S. Attorney's Office for the Eastern District of New York announced charges against Zhuoying Chen (also known as 'Jolene') and Haojie Zhang (also known as 'Kevin') for conspiracy to launder...",
+    url: "https://www.justice.gov/usao-edny/pr/two-members-chinese-money-laundering-network-charged-laundering-investment-fraud",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
     desc: "On July 16, 2026, the U.S. Attorney's Office for the District of South Dakota announced that Benjamin Paul Wiener, 43, was indicted on 29 counts, including Wire Fraud, Money",
     excerpt: "On July 16, 2026, the U.S. Attorney's Office for the District of South Dakota announced that Benjamin Paul Wiener, 43, was indicted on 29 counts, including Wire Fraud, Money Laundering, Bank Fraud, and Aggravated...",
     url: "https://www.justice.gov/usao-sd/pr/sioux-falls-crypto-investor-indicted-wire-fraud-money-laundering-bank-fraud-and",
-    secsAgo: 960,
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Whale account 'wjqq' on Hyperliquid reported an unrealized loss of over $412,000 on a 10x long position in SK Hynix (SKHX) on July 16,",
+    excerpt: "Whale account 'wjqq' on Hyperliquid reported an unrealized loss of over $412,000 on a 10x long position in SK Hynix (SKHX) on July 16,",
+    url: "https://coinmarketcap.com/academy/article/ventuals-spacex-perps-liquidation-compensation",
+    secsAgo: 2160,
   },
   {
     walletIdx: 3,
@@ -979,7 +995,7 @@ var REAL_EVENTS = [
     desc: "Between July 12 and July 16, 2026, a documented fraud case occurred where attackers compromised SpaceX's verified accounts to execute a pump-and-dump/rug pull scheme on the Solana",
     excerpt: "Between July 12 and July 16, 2026, a documented fraud case occurred where attackers compromised SpaceX's verified accounts to execute a pump-and-dump/rug pull scheme on the Solana network, resulting in a profit of...",
     url: "https://www.facebook.com/coingecko/posts/coingeckos-2026-q2-crypto-industry-report-is-now-live-q2-saw-the-crypto-market-f/1472280341610909/",
-    secsAgo: 1560,
+    secsAgo: 2760,
   },
   {
     walletIdx: 3,
@@ -987,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On July 16, 2026, it was reported that PumpFun unlocked 57 billion PUMP tokens across 121 wallets, making insiders 'liquid,' which is often seen as a precursor to a large-scale",
     excerpt: "On July 16, 2026, it was reported that PumpFun unlocked 57 billion PUMP tokens across 121 wallets, making insiders 'liquid,' which is often seen as a precursor to a large-scale token",
     url: "https://www.youtube.com/watch?v=Q-nf0B219Q4",
-    secsAgo: 2160,
+    secsAgo: 3360,
   },
   {
     walletIdx: 3,
@@ -995,30 +1011,14 @@ var REAL_EVENTS = [
     desc: "On July 16, 2026, a report from CoinDesk indicated that the NOXA launchpad on the Robinhood Chain, which had previously suffered a major outage and faced allegations of a 'rug",
     excerpt: "On July 16, 2026, a report from CoinDesk indicated that the NOXA launchpad on the Robinhood Chain, which had previously suffered a major outage and faced allegations of a 'rug pull' on July 14-15, had 'gave away all its...",
     url: "https://cryptonews.net/news/altcoins/33151550/",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "The DOJ unsealed federal indictments on July 16, 2026, charging Russian nationals Alexander Alexandrovich Volosovik, Kirill Andreevich Zatolokin, and Yulia Vladimirovna Pankova",
-    excerpt: "The DOJ unsealed federal indictments on July 16, 2026, charging Russian nationals Alexander Alexandrovich Volosovik, Kirill Andreevich Zatolokin, and Yulia Vladimirovna Pankova with conspiracy to commit computer fraud,...",
-    url: "https://crytix10.com/goliath-ventures-fraud-explained/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Nicholas Aguilar (44) and Jessica Marcolina (37), both of Los Angeles, were indicted by a federal grand jury in the Southern District of Florida on July 16, 2026, for conspiracy",
-    excerpt: "Nicholas Aguilar (44) and Jessica Marcolina (37), both of Los Angeles, were indicted by a federal grand jury in the Southern District of Florida on July 16, 2026, for conspiracy to distribute controlled substances and...",
-    url: "https://www.cryptotimes.io/2026/07/16/indias-ed-finds-seed-phrases-seizes-inr-3-35-cr-crypto-in-19-raid-crackdown/",
     secsAgo: 3960,
   },
   {
     walletIdx: 7,
     def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Three men\u2014Anthony Ikenwe (sentenced to 6 years), Hamza Bashir (sentenced to 3 years 9 months), and Kevin Nwamma (sentenced to 6 years)\u2014were sentenced at Southwark Crown Court on",
-    excerpt: "Three men\u2014Anthony Ikenwe (sentenced to 6 years), Hamza Bashir (sentenced to 3 years 9 months), and Kevin Nwamma (sentenced to 6 years)\u2014were sentenced at Southwark Crown Court on July 16, 2026, for conspiracy to commit...",
-    url: "https://news.met.police.uk/news/men-who-stole-more-than-4-pounds-million-of-crypto-are-jailed-511271",
+    desc: "The FBI Boston Division announced on July 16, 2026, the arrests of Bill Ying Li (California) and Bing Xun Gong (Illinois), and the pending extradition of Sabir Magdeev from",
+    excerpt: "The FBI Boston Division announced on July 16, 2026, the arrests of Bill Ying Li (California) and Bing Xun Gong (Illinois), and the pending extradition of Sabir Magdeev from Cyprus. The three are indicted on one count of...",
+    url: "https://www.instagram.com/p/Da3Z3hzmkRJ/",
     secsAgo: 4560,
   },
 ];
