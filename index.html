@@ -955,15 +955,23 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784310280386;
+var REFRESHED_AT = 1784320151702;
 var REAL_EVENTS = [
+  {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 17, 2026, the FBI arrested 21-year-old Zyaire Wilkins of North Lauderdale, Florida, and charged him with conspiracy to obtain money through false pretenses. Wilkins is",
+    excerpt: "On July 17, 2026, the FBI arrested 21-year-old Zyaire Wilkins of North Lauderdale, Florida, and charged him with conspiracy to obtain money through false pretenses. Wilkins is accused of publishing several fake video...",
+    url: "https://finance.yahoo.com/markets/crypto/articles/doj-plans-drop-722m-bitclub-170200647.html",
+    secsAgo: 360,
+  },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 17, 2026, the HYPE token broke the $60 support level, trading between $59.50 and $59.93 as leveraged long positions",
     excerpt: "On July 17, 2026, the HYPE token broke the $60 support level, trading between $59.50 and $59.93 as leveraged long positions",
     url: "https://news.bitcoin.com/a16z-whale-dumps-28-million-hype/",
-    secsAgo: 360,
+    secsAgo: 960,
   },
   {
     walletIdx: 2,
@@ -971,7 +979,15 @@ var REAL_EVENTS = [
     desc: "On July 17, 2026, an a16z-linked whale began offloading HYPE, with two connected wallets moving approximately $59 million worth of HYPE to exchanges (including OKX, Bybit, and",
     excerpt: "On July 17, 2026, an a16z-linked whale began offloading HYPE, with two connected wallets moving approximately $59 million worth of HYPE to exchanges (including OKX, Bybit, and Gate) over a two-day",
     url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-hype-support-test-whale-selloff",
-    secsAgo: 960,
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 3,
+    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
+    desc: "A comprehensive report on July 17, 2026, detailed a widespread fraud ecosystem on the Robinhood Chain, where scammers utilized a 'branding gap' to deploy fake official tokens and",
+    excerpt: "A comprehensive report on July 17, 2026, detailed a widespread fraud ecosystem on the Robinhood Chain, where scammers utilized a 'branding gap' to deploy fake official tokens and fraudulent airdrop claims. This activity...",
+    url: "https://www.kucoin.com/news/flash/ansem-analyzes-hype-and-pump-valuation-gap-trust-not-buybacks-drives-market-confidence",
+    secsAgo: 2160,
   },
   {
     walletIdx: 4,
@@ -979,7 +995,7 @@ var REAL_EVENTS = [
     desc: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     excerpt: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-hype-joins-bitwise-10-crypto-index-etf",
-    secsAgo: 1560,
+    secsAgo: 2760,
   },
   {
     walletIdx: 7,
@@ -987,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On July 17, 2026, U.S. federal agents arrested a 21-year-old Florida man named Sokolovsky. He is charged with computer fraud, wire fraud, money laundering, and identity theft, and",
     excerpt: "On July 17, 2026, U.S. federal agents arrested a 21-year-old Florida man named Sokolovsky. He is charged with computer fraud, wire fraud, money laundering, and identity theft, and faces up to 20 years in prison if...",
     url: "https://www.facebook.com/CoinMarketCap/posts/latest-us-federal-agents-arrested-a-21-year-old-florida-man-over-a-scheme-that-h/1454322703391785/",
-    secsAgo: 2160,
+    secsAgo: 3360,
   },
   {
     walletIdx: 8,
@@ -995,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "A cryptocurrency whale resumed accumulation of HYPE on July 17, 2026, purchasing 20,000 tokens valued at $1.18 million after a four-week",
     excerpt: "A cryptocurrency whale resumed accumulation of HYPE on July 17, 2026, purchasing 20,000 tokens valued at $1.18 million after a four-week",
     url: "https://www.facebook.com/cointelegraph/posts/-latest-an-a16z-linked-whale-has-begun-offloading-hype-moving-437000-tokens-wort/1346662847640540/",
-    secsAgo: 2760,
+    secsAgo: 3960,
   },
   {
     walletIdx: 8,
@@ -1003,22 +1019,6 @@ var REAL_EVENTS = [
     desc: "A whale placed $20 million in limit orders for HYPE tokens between $20 and $40 on July 17, 2026, as the token price experienced a 10% drop to approximately",
     excerpt: "A whale placed $20 million in limit orders for HYPE tokens between $20 and $40 on July 17, 2026, as the token price experienced a 10% drop to approximately",
     url: "https://www.kucoin.com/news/flash/whale-buys-20m-in-hype-below-40-amid-10-price-drop",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "FCOW, a token deployed on the BNB Smart Chain (BSC), suffered an exploit on July 17, 2026, resulting in an estimated loss of $61,300. The incident was first reported by Web3",
-    excerpt: "FCOW, a token deployed on the BNB Smart Chain (BSC), suffered an exploit on July 17, 2026, resulting in an estimated loss of $61,300. The incident was first reported by Web3 security firm",
-    url: "https://www.coingabbar.com/en/crypto-currency-news/latest-crypto-hack-news-defituna-exploit-drains-dollar580k",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "The attacker responsible for the Resolv Labs exploit in March 2026 resumed activity on July 17, 2026, moving 580 ETH (approximately $1.09 million) and utilizing cryptocurrency",
-    excerpt: "The attacker responsible for the Resolv Labs exploit in March 2026 resumed activity on July 17, 2026, moving 580 ETH (approximately $1.09 million) and utilizing cryptocurrency mixing services to channel the",
-    url: "https://ambcrypto.com/median-hack-size-declines-despite-3-defi-exploits-in-24-hours-heres-why/",
     secsAgo: 4560,
   },
 ];
