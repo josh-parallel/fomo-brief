@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784306307522;
+var REFRESHED_AT = 1784310280386;
 var REAL_EVENTS = [
   {
     walletIdx: 2,
@@ -992,10 +992,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "A cryptocurrency whale resumed accumulation of HYPE on July 17, 2026, purchasing 20,000 tokens valued at $1.18 million after a four-week",
+    excerpt: "A cryptocurrency whale resumed accumulation of HYPE on July 17, 2026, purchasing 20,000 tokens valued at $1.18 million after a four-week",
+    url: "https://www.facebook.com/cointelegraph/posts/-latest-an-a16z-linked-whale-has-begun-offloading-hype-moving-437000-tokens-wort/1346662847640540/",
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
     desc: "A whale placed $20 million in limit orders for HYPE tokens between $20 and $40 on July 17, 2026, as the token price experienced a 10% drop to approximately",
     excerpt: "A whale placed $20 million in limit orders for HYPE tokens between $20 and $40 on July 17, 2026, as the token price experienced a 10% drop to approximately",
     url: "https://www.kucoin.com/news/flash/whale-buys-20m-in-hype-below-40-amid-10-price-drop",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 10,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "FCOW, a token deployed on the BNB Smart Chain (BSC), suffered an exploit on July 17, 2026, resulting in an estimated loss of $61,300. The incident was first reported by Web3",
     excerpt: "FCOW, a token deployed on the BNB Smart Chain (BSC), suffered an exploit on July 17, 2026, resulting in an estimated loss of $61,300. The incident was first reported by Web3 security firm",
     url: "https://www.coingabbar.com/en/crypto-currency-news/latest-crypto-hack-news-defituna-exploit-drains-dollar580k",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "The attacker responsible for the Resolv Labs exploit in March 2026 resumed activity on July 17, 2026, moving 580 ETH (approximately $1.09 million) and utilizing cryptocurrency",
     excerpt: "The attacker responsible for the Resolv Labs exploit in March 2026 resumed activity on July 17, 2026, moving 580 ETH (approximately $1.09 million) and utilizing cryptocurrency mixing services to channel the",
     url: "https://ambcrypto.com/median-hack-size-declines-despite-3-defi-exploits-in-24-hours-heres-why/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 16, 2026, the U.S. Attorney's Office for the District of New Hampshire announced that Bill Ying Li, Bing Xun Gong, and Sabir Magdeev were indicted for conspiracy to",
-    excerpt: "On July 16, 2026, the U.S. Attorney's Office for the District of New Hampshire announced that Bill Ying Li, Bing Xun Gong, and Sabir Magdeev were indicted for conspiracy to launder more than $3 million in fraud...",
-    url: "https://www.justice.gov/usao-ma/pr/founder-cryptocurrency-financial-services-firm-gotbit-extradited-united-states-face",
     secsAgo: 4560,
   },
 ];
