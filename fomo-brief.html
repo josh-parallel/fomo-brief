@@ -955,15 +955,31 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784269862850;
+var REFRESHED_AT = 1784289318483;
 var REAL_EVENTS = [
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 17, 2026, an a16z-linked whale began offloading HYPE, with two connected wallets moving approximately $59 million worth of HYPE to exchanges (including OKX, Bybit, and",
+    excerpt: "On July 17, 2026, an a16z-linked whale began offloading HYPE, with two connected wallets moving approximately $59 million worth of HYPE to exchanges (including OKX, Bybit, and Gate) over a two-day",
+    url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-hype-support-test-whale-selloff",
+    secsAgo: 360,
+  },
   {
     walletIdx: 4,
     def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
     desc: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     excerpt: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-hype-joins-bitwise-10-crypto-index-etf",
-    secsAgo: 360,
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "On July 17, 2026, U.S. federal agents arrested a 21-year-old Florida man named Sokolovsky. He is charged with computer fraud, wire fraud, money laundering, and identity theft, and",
+    excerpt: "On July 17, 2026, U.S. federal agents arrested a 21-year-old Florida man named Sokolovsky. He is charged with computer fraud, wire fraud, money laundering, and identity theft, and faces up to 20 years in prison if...",
+    url: "https://www.facebook.com/CoinMarketCap/posts/latest-us-federal-agents-arrested-a-21-year-old-florida-man-over-a-scheme-that-h/1454322703391785/",
+    secsAgo: 1560,
   },
   {
     walletIdx: 0,
@@ -971,7 +987,7 @@ var REAL_EVENTS = [
     desc: "On July 16, 2026, the U.S. Attorney's Office for the District of New Hampshire announced that Bill Ying Li, Bing Xun Gong, and Sabir Magdeev were indicted for conspiracy to",
     excerpt: "On July 16, 2026, the U.S. Attorney's Office for the District of New Hampshire announced that Bill Ying Li, Bing Xun Gong, and Sabir Magdeev were indicted for conspiracy to launder more than $3 million in fraud...",
     url: "https://www.justice.gov/usao-ma/pr/founder-cryptocurrency-financial-services-firm-gotbit-extradited-united-states-face",
-    secsAgo: 960,
+    secsAgo: 2160,
   },
   {
     walletIdx: 0,
@@ -979,7 +995,7 @@ var REAL_EVENTS = [
     desc: "On July 16, 2026, the U.S. Attorney's Office for the Eastern District of New York announced charges against Zhuoying Chen (also known as 'Jolene') and Haojie Zhang (also known as",
     excerpt: "On July 16, 2026, the U.S. Attorney's Office for the Eastern District of New York announced charges against Zhuoying Chen (also known as 'Jolene') and Haojie Zhang (also known as 'Kevin') for conspiracy to launder...",
     url: "https://www.justice.gov/usao-edny/pr/two-members-chinese-money-laundering-network-charged-laundering-investment-fraud",
-    secsAgo: 1560,
+    secsAgo: 2760,
   },
   {
     walletIdx: 0,
@@ -987,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On July 16, 2026, the U.S. Attorney's Office for the District of South Dakota announced that Benjamin Paul Wiener, 43, was indicted on 29 counts, including Wire Fraud, Money",
     excerpt: "On July 16, 2026, the U.S. Attorney's Office for the District of South Dakota announced that Benjamin Paul Wiener, 43, was indicted on 29 counts, including Wire Fraud, Money Laundering, Bank Fraud, and Aggravated...",
     url: "https://www.justice.gov/usao-sd/pr/sioux-falls-crypto-investor-indicted-wire-fraud-money-laundering-bank-fraud-and",
-    secsAgo: 2160,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -995,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "Hyperliquid trader James Wynn faced a full liquidation of a 40x BTC short position on July 16, 2026, which reduced his account balance to",
     excerpt: "Hyperliquid trader James Wynn faced a full liquidation of a 40x BTC short position on July 16, 2026, which reduced his account balance to",
     url: "https://www.kucoin.com/news/flash/hyperliquid-trader-james-wynn-faces-full-liquidation-of-40x-btc-short-position",
-    secsAgo: 2760,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -1003,22 +1019,6 @@ var REAL_EVENTS = [
     desc: "Whale account 'wjqq' on Hyperliquid reported an unrealized loss of over $412,000 on a 10x long position in SK Hynix (SKHX) on July 16,",
     excerpt: "Whale account 'wjqq' on Hyperliquid reported an unrealized loss of over $412,000 on a 10x long position in SK Hynix (SKHX) on July 16,",
     url: "https://coinmarketcap.com/academy/article/ventuals-spacex-perps-liquidation-compensation",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 3,
-    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
-    desc: "Between July 12 and July 16, 2026, a documented fraud case occurred where attackers compromised SpaceX's verified accounts to execute a pump-and-dump/rug pull scheme on the Solana",
-    excerpt: "Between July 12 and July 16, 2026, a documented fraud case occurred where attackers compromised SpaceX's verified accounts to execute a pump-and-dump/rug pull scheme on the Solana network, resulting in a profit of...",
-    url: "https://www.facebook.com/coingecko/posts/coingeckos-2026-q2-crypto-industry-report-is-now-live-q2-saw-the-crypto-market-f/1472280341610909/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 3,
-    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
-    desc: "On July 16, 2026, it was reported that PumpFun unlocked 57 billion PUMP tokens across 121 wallets, making insiders 'liquid,' which is often seen as a precursor to a large-scale",
-    excerpt: "On July 16, 2026, it was reported that PumpFun unlocked 57 billion PUMP tokens across 121 wallets, making insiders 'liquid,' which is often seen as a precursor to a large-scale token",
-    url: "https://www.youtube.com/watch?v=Q-nf0B219Q4",
     secsAgo: 4560,
   },
 ];
