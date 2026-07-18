@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784358903888;
+var REFRESHED_AT = 1784374351679;
 var REAL_EVENTS = [
   {
     walletIdx: 2,
@@ -966,12 +966,20 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "A suspected a16z-affiliated whale sold an additional 421,800 HYPE tokens, valued at approximately $25.3 million, on July 18,",
+    excerpt: "A suspected a16z-affiliated whale sold an additional 421,800 HYPE tokens, valued at approximately $25.3 million, on July 18,",
+    url: "https://www.chaincatcher.com/en/article/2277090",
+    secsAgo: 960,
+  },
+  {
     walletIdx: 0,
     def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
     desc: "On July 17, 2026, the FBI arrested 21-year-old Zyaire Wilkins of North Lauderdale, Florida, and charged him with conspiracy to obtain money through false pretenses. Wilkins is",
     excerpt: "On July 17, 2026, the FBI arrested 21-year-old Zyaire Wilkins of North Lauderdale, Florida, and charged him with conspiracy to obtain money through false pretenses. Wilkins is accused of publishing several fake video...",
     url: "https://finance.yahoo.com/markets/crypto/articles/doj-plans-drop-722m-bitclub-170200647.html",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 2,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "On July 17, 2026, the HYPE token broke the $60 support level, trading between $59.50 and $59.93 as leveraged long positions",
     excerpt: "On July 17, 2026, the HYPE token broke the $60 support level, trading between $59.50 and $59.93 as leveraged long positions",
     url: "https://news.bitcoin.com/a16z-whale-dumps-28-million-hype/",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "On July 17, 2026, an a16z-linked whale began offloading HYPE, with two connected wallets moving approximately $59 million worth of HYPE to exchanges (including OKX, Bybit, and",
     excerpt: "On July 17, 2026, an a16z-linked whale began offloading HYPE, with two connected wallets moving approximately $59 million worth of HYPE to exchanges (including OKX, Bybit, and Gate) over a two-day",
     url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-hype-support-test-whale-selloff",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 3,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "KuCoin reported on July 17, 2026, the emergence of unauthorized $YAMAL tokens on Solana, which are flagged as potential rug pulls. The report emphasizes that the frictionless",
     excerpt: "KuCoin reported on July 17, 2026, the emergence of unauthorized $YAMAL tokens on Solana, which are flagged as potential rug pulls. The report emphasizes that the frictionless infrastructure for launching tokens on...",
     url: "https://www.kucoin.com/news/flash/unauthorized-yamal-tokens-emerge-on-solana-amid-lamine-yamal-s-world-cup-final-run",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 3,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "A comprehensive report on July 17, 2026, detailed a widespread fraud ecosystem on the Robinhood Chain, where scammers utilized a 'branding gap' to deploy fake official tokens and",
     excerpt: "A comprehensive report on July 17, 2026, detailed a widespread fraud ecosystem on the Robinhood Chain, where scammers utilized a 'branding gap' to deploy fake official tokens and fraudulent airdrop claims. This activity...",
     url: "https://www.kucoin.com/news/flash/ansem-analyzes-hype-and-pump-valuation-gap-trust-not-buybacks-drives-market-confidence",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 4,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     excerpt: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-hype-joins-bitwise-10-crypto-index-etf",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "On July 17, 2026, U.S. federal agents arrested a 21-year-old Florida man named Sokolovsky. He is charged with computer fraud, wire fraud, money laundering, and identity theft, and",
-    excerpt: "On July 17, 2026, U.S. federal agents arrested a 21-year-old Florida man named Sokolovsky. He is charged with computer fraud, wire fraud, money laundering, and identity theft, and faces up to 20 years in prison if...",
-    url: "https://www.facebook.com/CoinMarketCap/posts/latest-us-federal-agents-arrested-a-21-year-old-florida-man-over-a-scheme-that-h/1454322703391785/",
     secsAgo: 4560,
   },
 ];
