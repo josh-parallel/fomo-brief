@@ -955,15 +955,23 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784388768980;
+var REFRESHED_AT = 1784392796996;
 var REAL_EVENTS = [
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Bitget news: headline claims 'Hyperliquid (HYPE) Faces Fresh $25M Whale Sell-Off', reporting large whale sell pressure / sell-off tied to HYPE price",
+    excerpt: "Bitget news: headline claims 'Hyperliquid (HYPE) Faces Fresh $25M Whale Sell-Off', reporting large whale sell pressure / sell-off tied to HYPE price",
+    url: "https://www.bitget.com/amp/news/detail/12560605516429",
+    secsAgo: 360,
+  },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "24-hour Hyperliquid liquidations reported at ~$1.63M (longs ~$1.37M; shorts ~$253.5K) in a CoinGabbar market report covering July 18,",
     excerpt: "24-hour Hyperliquid liquidations reported at ~$1.63M (longs ~$1.37M; shorts ~$253.5K) in a CoinGabbar market report covering July 18,",
     url: "https://techbullion.com/liquidwhales-goes-live-the-first-hyperliquid-whale-tracker-that-grades-every-wallet-net-of-fees-and-lets-you-copy-the-winners-in-one-click/",
-    secsAgo: 360,
+    secsAgo: 960,
   },
   {
     walletIdx: 2,
@@ -971,7 +979,7 @@ var REAL_EVENTS = [
     desc: "WOOFUN.AI reported on 2026-07-18 that Hyperliquid\u2019s USDC monthly transfer volume doubled in June to $45.58 billion, indicating very large on-chain flows through the Hyperliquid",
     excerpt: "WOOFUN.AI reported on 2026-07-18 that Hyperliquid\u2019s USDC monthly transfer volume doubled in June to $45.58 billion, indicating very large on-chain flows through the Hyperliquid platform (context for whale/trader...",
     url: "https://www.woofun.ai/en/news",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 7,
@@ -979,14 +987,6 @@ var REAL_EVENTS = [
     desc: "On July 18, 2026, the Parklands Crypto Traders appeared in the Cape Town Magistrate's Court in South Africa following a law enforcement operation; they were reportedly remanded to",
     excerpt: "On July 18, 2026, the Parklands Crypto Traders appeared in the Cape Town Magistrate's Court in South Africa following a law enforcement operation; they were reportedly remanded to Pollsmoor",
     url: "https://blueprint.ng/uk-court-jails-2-nigerians-1-other-for-5m-crypto-scam/",
-    secsAgo: 1560,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "ChainCatcher /news added a 2026-07-18 15:30 UTC data item reporting that a Hyperliquid whale sold approximately $5.81M worth of HYPE and that the platform whale-position metric",
-    excerpt: "ChainCatcher /news added a 2026-07-18 15:30 UTC data item reporting that a Hyperliquid whale sold approximately $5.81M worth of HYPE and that the platform whale-position metric was updated to $5.451B (long-short ratio...",
-    url: "https://www.bitget.com/amp/news/detail/12560605516429",
     secsAgo: 2160,
   },
   {
