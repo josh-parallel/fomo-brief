@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784320151702;
+var REFRESHED_AT = 1784333557161;
 var REAL_EVENTS = [
   {
     walletIdx: 0,
@@ -984,10 +984,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 3,
     def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
+    desc: "KuCoin reported on July 17, 2026, the emergence of unauthorized $YAMAL tokens on Solana, which are flagged as potential rug pulls. The report emphasizes that the frictionless",
+    excerpt: "KuCoin reported on July 17, 2026, the emergence of unauthorized $YAMAL tokens on Solana, which are flagged as potential rug pulls. The report emphasizes that the frictionless infrastructure for launching tokens on...",
+    url: "https://www.kucoin.com/news/flash/unauthorized-yamal-tokens-emerge-on-solana-amid-lamine-yamal-s-world-cup-final-run",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 3,
+    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
     desc: "A comprehensive report on July 17, 2026, detailed a widespread fraud ecosystem on the Robinhood Chain, where scammers utilized a 'branding gap' to deploy fake official tokens and",
     excerpt: "A comprehensive report on July 17, 2026, detailed a widespread fraud ecosystem on the Robinhood Chain, where scammers utilized a 'branding gap' to deploy fake official tokens and fraudulent airdrop claims. This activity...",
     url: "https://www.kucoin.com/news/flash/ansem-analyzes-hype-and-pump-valuation-gap-trust-not-buybacks-drives-market-confidence",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 4,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     excerpt: "The U.S. House of Representatives has scheduled a hearing on the CLARITY Act for July 17, 2026, which aims to define the roles of the SEC and CFTC in overseeing digital",
     url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-hype-joins-bitwise-10-crypto-index-etf",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 7,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 17, 2026, U.S. federal agents arrested a 21-year-old Florida man named Sokolovsky. He is charged with computer fraud, wire fraud, money laundering, and identity theft, and",
     excerpt: "On July 17, 2026, U.S. federal agents arrested a 21-year-old Florida man named Sokolovsky. He is charged with computer fraud, wire fraud, money laundering, and identity theft, and faces up to 20 years in prison if...",
     url: "https://www.facebook.com/CoinMarketCap/posts/latest-us-federal-agents-arrested-a-21-year-old-florida-man-over-a-scheme-that-h/1454322703391785/",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 8,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "A cryptocurrency whale resumed accumulation of HYPE on July 17, 2026, purchasing 20,000 tokens valued at $1.18 million after a four-week",
     excerpt: "A cryptocurrency whale resumed accumulation of HYPE on July 17, 2026, purchasing 20,000 tokens valued at $1.18 million after a four-week",
     url: "https://www.facebook.com/cointelegraph/posts/-latest-an-a16z-linked-whale-has-begun-offloading-hype-moving-437000-tokens-wort/1346662847640540/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "A whale placed $20 million in limit orders for HYPE tokens between $20 and $40 on July 17, 2026, as the token price experienced a 10% drop to approximately",
-    excerpt: "A whale placed $20 million in limit orders for HYPE tokens between $20 and $40 on July 17, 2026, as the token price experienced a 10% drop to approximately",
-    url: "https://www.kucoin.com/news/flash/whale-buys-20m-in-hype-below-40-amid-10-price-drop",
     secsAgo: 4560,
   },
 ];
