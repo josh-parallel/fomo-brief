@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784446738903;
+var REFRESHED_AT = 1784461329594;
 var REAL_EVENTS = [
   {
     walletIdx: 8,
@@ -1008,10 +1008,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 5,
     def: { label: "Chain Analytics", severity: "med", sources: ["Chainalysis"] },
-    desc: "According to the Chainalysis 2026 Crypto Crime Report, stablecoins now account for 84% of illicit on-chain volume as criminals shift away from the permanent and publicly",
-    excerpt: "According to the Chainalysis 2026 Crypto Crime Report, stablecoins now account for 84% of illicit on-chain volume as criminals shift away from the permanent and publicly searchable Bitcoin",
-    url: "https://www.fool.com/investing/2026/07/18/billionaire-investor-jeremy-grantham-calls-bitcoin/",
+    desc: "A UK-based cryptocurrency holder lost approximately $172 million after their Trezor seed phrase was captured by a home security",
+    excerpt: "A UK-based cryptocurrency holder lost approximately $172 million after their Trezor seed phrase was captured by a home security",
+    url: "https://www.coindesk.com/tech/2026/07/19/bitcoin-s-quantum-problem-gets-a-recovery-tool-but-not-for-satoshi-s-1-1-million-coin",
     secsAgo: 3960,
+  },
+  {
+    walletIdx: 5,
+    def: { label: "Chain Analytics", severity: "med", sources: ["Chainalysis"] },
+    desc: "Elliptic reported that North Korea-linked hackers stole over $2 billion in cryptocurrency assets during",
+    excerpt: "Elliptic reported that North Korea-linked hackers stole over $2 billion in cryptocurrency assets during",
+    url: "https://incrypted.com/en/consensys-accidentally-hired-a-north-korea-linked-developer-for-metamask-team/",
+    secsAgo: 4560,
   },
 ];
 
