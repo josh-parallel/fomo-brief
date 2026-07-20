@@ -955,15 +955,39 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784491811506;
+var REFRESHED_AT = 1784535873995;
 var REAL_EVENTS = [
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 20, 2026, three whales on Hyperliquid held long positions in SK Hynix (SKHX) totaling approximately $14.036 million that became underwater following a price crash. The",
+    excerpt: "On July 20, 2026, three whales on Hyperliquid held long positions in SK Hynix (SKHX) totaling approximately $14.036 million that became underwater following a price crash. The whale starting with 0xf4b was closest to...",
+    url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-today-hip-4-testnet-outcome-markets-soon",
+    secsAgo: 360,
+  },
+  {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "Colin Wade Harris, 26, of Hilliard, Florida, was arrested on July 20, 2026, for orchestrating a large-scale fraud scheme involving stolen identities and forged checks, during",
+    excerpt: "Colin Wade Harris, 26, of Hilliard, Florida, was arrested on July 20, 2026, for orchestrating a large-scale fraud scheme involving stolen identities and forged checks, during which he allegedly used Bitcoin to purchase...",
+    url: "https://www.instagram.com/p/Da_LLn5iKn5/",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "Allbridge Core / Allbridge Solana was exploited for approximately $1.65 million on July 20, 2026. The attacker used a $1.12 million USDC flash loan to manipulate stablecoin",
+    excerpt: "Allbridge Core / Allbridge Solana was exploited for approximately $1.65 million on July 20, 2026. The attacker used a $1.12 million USDC flash loan to manipulate stablecoin liquidity pools, leading to the drain of",
+    url: "https://bitcoinke.io/2026/07/the-allbridge-exploit/",
+    secsAgo: 1560,
+  },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "Hyperliquid claimed the title of the fourth-largest crypto futures open interest globally on July 19, 2026, reaching $1.45 billion and overtaking XRP's $1.12",
     excerpt: "Hyperliquid claimed the title of the fourth-largest crypto futures open interest globally on July 19, 2026, reaching $1.45 billion and overtaking XRP's $1.12",
     url: "https://hive.blog/hive-167922/@leofinance/daily-leo-2026-07-19",
-    secsAgo: 360,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -971,7 +995,15 @@ var REAL_EVENTS = [
     desc: "Buildix reported on July 19, 2026, that Hyperliquid reached a 2026 record of $11.07 billion in open interest, coinciding with waves of HYPE perpetual long liquidations. The report",
     excerpt: "Buildix reported on July 19, 2026, that Hyperliquid reached a 2026 record of $11.07 billion in open interest, coinciding with waves of HYPE perpetual long liquidations. The report also identified a whale selling 91,100...",
     url: "https://www.buildix.trade/blog/hype-below-60-record-open-interest-2026",
-    secsAgo: 960,
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "An indictment was unsealed on July 19, 2026, in the Northern District of Ohio charging Russian national Kirill Andreevich Zatolokin with conspiracy to commit computer fraud, wire",
+    excerpt: "An indictment was unsealed on July 19, 2026, in the Northern District of Ohio charging Russian national Kirill Andreevich Zatolokin with conspiracy to commit computer fraud, wire fraud, and money laundering related to...",
+    url: "https://www.instagram.com/p/Da-4O1CGtJ8/",
+    secsAgo: 3360,
   },
   {
     walletIdx: 7,
@@ -979,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "Benjamin Paul Wiener, a resident of Sioux Falls, was charged with wire fraud, money laundering, bank fraud, and aggravated identity theft in connection with an alleged $20 million",
     excerpt: "Benjamin Paul Wiener, a resident of Sioux Falls, was charged with wire fraud, money laundering, bank fraud, and aggravated identity theft in connection with an alleged $20 million cryptocurrency investment fraud",
     url: "https://dailyhodl.com/2026/07/19/sioux-falls-man-allegedly-masterminds-20000000-crypto-investment-fraud-scheme-splurges-funds-on-personal-expenses/",
-    secsAgo: 1560,
+    secsAgo: 3960,
   },
   {
     walletIdx: 8,
@@ -987,38 +1019,6 @@ var REAL_EVENTS = [
     desc: "ChainCatcher reported on 2026-07-19 at 22:28 (UTC+8) that a certain smart money entity opened 50 BTC long positions on Hyperliquid, amounting to approximately 3.22 million",
     excerpt: "ChainCatcher reported on 2026-07-19 at 22:28 (UTC+8) that a certain smart money entity opened 50 BTC long positions on Hyperliquid, amounting to approximately 3.22 million",
     url: "https://www.chaincatcher.com/en/news",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Bitget news: headline claims 'Hyperliquid (HYPE) Faces Fresh $25M Whale Sell-Off', reporting large whale sell pressure / sell-off tied to HYPE price",
-    excerpt: "Bitget news: headline claims 'Hyperliquid (HYPE) Faces Fresh $25M Whale Sell-Off', reporting large whale sell pressure / sell-off tied to HYPE price",
-    url: "https://www.bitget.com/amp/news/detail/12560605516429",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "24-hour Hyperliquid liquidations reported at ~$1.63M (longs ~$1.37M; shorts ~$253.5K) in a CoinGabbar market report covering July 18,",
-    excerpt: "24-hour Hyperliquid liquidations reported at ~$1.63M (longs ~$1.37M; shorts ~$253.5K) in a CoinGabbar market report covering July 18,",
-    url: "https://techbullion.com/liquidwhales-goes-live-the-first-hyperliquid-whale-tracker-that-grades-every-wallet-net-of-fees-and-lets-you-copy-the-winners-in-one-click/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "WOOFUN.AI reported on 2026-07-18 that Hyperliquid\u2019s USDC monthly transfer volume doubled in June to $45.58 billion, indicating very large on-chain flows through the Hyperliquid",
-    excerpt: "WOOFUN.AI reported on 2026-07-18 that Hyperliquid\u2019s USDC monthly transfer volume doubled in June to $45.58 billion, indicating very large on-chain flows through the Hyperliquid platform (context for whale/trader...",
-    url: "https://www.woofun.ai/en/news",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "On July 18, 2026, the Parklands Crypto Traders appeared in the Cape Town Magistrate's Court in South Africa following a law enforcement operation; they were reportedly remanded to",
-    excerpt: "On July 18, 2026, the Parklands Crypto Traders appeared in the Cape Town Magistrate's Court in South Africa following a law enforcement operation; they were reportedly remanded to Pollsmoor",
-    url: "https://blueprint.ng/uk-court-jails-2-nigerians-1-other-for-5m-crypto-scam/",
     secsAgo: 4560,
   },
 ];
