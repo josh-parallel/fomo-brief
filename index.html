@@ -955,15 +955,23 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784563242938;
+var REFRESHED_AT = 1784575075623;
 var REAL_EVENTS = [
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 20, 2026, a Hyperliquid whale earned $1 million in a single day after staking 115,000 HYPE",
+    excerpt: "On July 20, 2026, a Hyperliquid whale earned $1 million in a single day after staking 115,000 HYPE",
+    url: "https://www.kucoin.com/news/flash/whale-adds-8m-usdc-to-btc-long-position-on-hyperliquid-total-exposure-hits-25-7m",
+    secsAgo: 360,
+  },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 20, 2026, a Hyperliquid whale fully exited a 40x Bitcoin long position of approximately 1,897.74 BTC, totaling about $122 million. The exit occurred in two stages, with",
     excerpt: "On July 20, 2026, a Hyperliquid whale fully exited a 40x Bitcoin long position of approximately 1,897.74 BTC, totaling about $122 million. The exit occurred in two stages, with the final trades closing at 06:33 UTC,...",
     url: "https://cryptoslate.com/bitcoin-whale-dumps-122-million-40x-long-before-liquidation-can-strike/",
-    secsAgo: 360,
+    secsAgo: 960,
   },
   {
     walletIdx: 2,
@@ -971,7 +979,7 @@ var REAL_EVENTS = [
     desc: "On July 20, 2026, three whales on Hyperliquid held long positions in SK Hynix (SKHX) totaling approximately $14.036 million that became underwater following a price crash. The",
     excerpt: "On July 20, 2026, three whales on Hyperliquid held long positions in SK Hynix (SKHX) totaling approximately $14.036 million that became underwater following a price crash. The whale starting with 0xf4b was closest to...",
     url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-today-hip-4-testnet-outcome-markets-soon",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 7,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "Colin Wade Harris, 26, of Hilliard, Florida, was arrested on July 20, 2026, for orchestrating a large-scale fraud scheme involving stolen identities and forged checks, during",
     excerpt: "Colin Wade Harris, 26, of Hilliard, Florida, was arrested on July 20, 2026, for orchestrating a large-scale fraud scheme involving stolen identities and forged checks, during which he allegedly used Bitcoin to purchase...",
     url: "https://www.instagram.com/p/Da_LLn5iKn5/",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 8,
@@ -987,38 +995,30 @@ var REAL_EVENTS = [
     desc: "Three whales on Hyperliquid established long positions in SK Hynix (SKHX) totaling approximately $14.036 million on 2026-07-20, coinciding with a sharp price surge of 8.7% and a",
     excerpt: "Three whales on Hyperliquid established long positions in SK Hynix (SKHX) totaling approximately $14.036 million on 2026-07-20, coinciding with a sharp price surge of 8.7% and a subsequent 6.7% crash. The positions...",
     url: "https://www.kucoin.com/news/flash/sk-hynix-skhx-surges-and-plummets-on-hyperliquid-whale-positions-near-liquidation",
-    secsAgo: 2160,
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 9,
+    def: { label: "Copy Trade Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 20, 2026, the Ontario Securities Commission (OSC) issued an investor alert for AngelBTC (BTC North Corp), operating at angelbtc.com, stating that the entity is not",
+    excerpt: "On July 20, 2026, the Ontario Securities Commission (OSC) issued an investor alert for AngelBTC (BTC North Corp), operating at angelbtc.com, stating that the entity is not registered in Ontario to engage in the business...",
+    url: "https://www.securities-administrators.ca/investor-alerts/morizon-ltd/",
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 9,
+    def: { label: "Copy Trade Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 20, 2026, the Ontario Securities Commission (OSC) issued an investor alert for Gerard McMann Trading and Investments, stating that the entity, operating at",
+    excerpt: "On July 20, 2026, the Ontario Securities Commission (OSC) issued an investor alert for Gerard McMann Trading and Investments, stating that the entity, operating at www.gerardmcmann.com, is not registered in Ontario to...",
+    url: "https://www.securities-administrators.ca/investor-alerts/gerard-mcmann-trading-and-investments/",
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
     def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "Allbridge Core / Allbridge Solana was exploited for approximately $1.65 million on July 20, 2026. The attacker used a $1.12 million USDC flash loan to manipulate stablecoin",
-    excerpt: "Allbridge Core / Allbridge Solana was exploited for approximately $1.65 million on July 20, 2026. The attacker used a $1.12 million USDC flash loan to manipulate stablecoin liquidity pools, leading to the drain of",
-    url: "https://bitcoinke.io/2026/07/the-allbridge-exploit/",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Hyperliquid claimed the title of the fourth-largest crypto futures open interest globally on July 19, 2026, reaching $1.45 billion and overtaking XRP's $1.12",
-    excerpt: "Hyperliquid claimed the title of the fourth-largest crypto futures open interest globally on July 19, 2026, reaching $1.45 billion and overtaking XRP's $1.12",
-    url: "https://hive.blog/hive-167922/@leofinance/daily-leo-2026-07-19",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Buildix reported on July 19, 2026, that Hyperliquid reached a 2026 record of $11.07 billion in open interest, coinciding with waves of HYPE perpetual long liquidations. The report",
-    excerpt: "Buildix reported on July 19, 2026, that Hyperliquid reached a 2026 record of $11.07 billion in open interest, coinciding with waves of HYPE perpetual long liquidations. The report also identified a whale selling 91,100...",
-    url: "https://www.buildix.trade/blog/hype-below-60-record-open-interest-2026",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "An indictment was unsealed on July 19, 2026, in the Northern District of Ohio charging Russian national Kirill Andreevich Zatolokin with conspiracy to commit computer fraud, wire",
-    excerpt: "An indictment was unsealed on July 19, 2026, in the Northern District of Ohio charging Russian national Kirill Andreevich Zatolokin with conspiracy to commit computer fraud, wire fraud, and money laundering related to...",
-    url: "https://www.instagram.com/p/Da-4O1CGtJ8/",
+    desc: "The DeFi protocol CrossCurve suffered a smart contract exploit resulting in a $3 million loss, reported on July 20,",
+    excerpt: "The DeFi protocol CrossCurve suffered a smart contract exploit resulting in a $3 million loss, reported on July 20,",
+    url: "https://www.coindesk.com/business/2026/07/20/cross-chain-protocol-allbridge-halts-after-usd1-65-million-flash-loan-exploit",
     secsAgo: 4560,
   },
 ];
