@@ -955,15 +955,47 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784592952364;
+var REFRESHED_AT = 1784628513032;
 var REAL_EVENTS = [
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 21, 2026, liquidation heatmaps reported that HYPE liquidations totaled $569.18K over the previous 24",
+    excerpt: "On July 21, 2026, liquidation heatmaps reported that HYPE liquidations totaled $569.18K over the previous 24",
+    url: "https://bitcoinke.io/2026/07/bitcoin-whale-exits-40x-leverage-on-hyperliquid/",
+    secsAgo: 360,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 21, 2026, a Hyperliquid whale staked 249,000 HYPE (approximately $15.5 million). The address's lifetime cumulative profit and loss is reported as $2.37",
+    excerpt: "On July 21, 2026, a Hyperliquid whale staked 249,000 HYPE (approximately $15.5 million). The address's lifetime cumulative profit and loss is reported as $2.37",
+    url: "https://www.binance.com/en/square/post/346775657003633",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "Celsius co-founders Shlomi Daniel Leon and Hanoch \u201cNuke\u201d Goldstein settled FTC fraud charges on July 21, 2026. Leon agreed to pay $4.1 million and Goldstein agreed to pay $2.4",
+    excerpt: "Celsius co-founders Shlomi Daniel Leon and Hanoch \u201cNuke\u201d Goldstein settled FTC fraud charges on July 21, 2026. Leon agreed to pay $4.1 million and Goldstein agreed to pay $2.4 million to settle allegations that Celsius...",
+    url: "https://en.cryptonomist.ch/2026/07/21/celsius-ftc-settlement/",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "Wanchain's Cardano bridge was exploited on July 21, 2026, resulting in the theft of approximately 515 million NIGHT tokens due to signature reuse attacks. The Midnight Foundation",
+    excerpt: "Wanchain's Cardano bridge was exploited on July 21, 2026, resulting in the theft of approximately 515 million NIGHT tokens due to signature reuse attacks. The Midnight Foundation clarified that the incident was isolated...",
+    url: "https://captainaltcoin.com/heres-exactly-why-cardanos-midnight-night-price-crashed-30-and-their-clarification/",
+    secsAgo: 2160,
+  },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 20, 2026, whale positions on Hyperliquid totaled $554.7 million, with long positions at $270.1 million and short positions at $284.7 million. Long positions showed an",
     excerpt: "On July 20, 2026, whale positions on Hyperliquid totaled $554.7 million, with long positions at $270.1 million and short positions at $284.7 million. Long positions showed an unrealized loss of $51.55 million, and short...",
     url: "https://cryptoslate.com/bitcoin-whale-dumps-122-million-40x-long-before-liquidation-can-strike/",
-    secsAgo: 360,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -971,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On July 20, 2026, two new whale wallets on Hyperliquid opened 20x leveraged long positions covering 12,000 ETH, with a combined notional exposure of approximately $22.4",
     excerpt: "On July 20, 2026, two new whale wallets on Hyperliquid opened 20x leveraged long positions covering 12,000 ETH, with a combined notional exposure of approximately $22.4",
     url: "https://cryptonews.net/news/bitcoin/33174377/",
-    secsAgo: 960,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -979,15 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 20, 2026, a Hyperliquid whale earned $1 million in a single day after staking 115,000 HYPE",
     excerpt: "On July 20, 2026, a Hyperliquid whale earned $1 million in a single day after staking 115,000 HYPE",
     url: "https://www.kucoin.com/news/flash/whale-adds-8m-usdc-to-btc-long-position-on-hyperliquid-total-exposure-hits-25-7m",
-    secsAgo: 1560,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 20, 2026, three whales on Hyperliquid held long positions in SK Hynix (SKHX) totaling approximately $14.036 million that became underwater following a price crash. The",
-    excerpt: "On July 20, 2026, three whales on Hyperliquid held long positions in SK Hynix (SKHX) totaling approximately $14.036 million that became underwater following a price crash. The whale starting with 0xf4b was closest to...",
-    url: "https://www.coingabbar.com/en/crypto-currency-news/hyperliquid-news-today-hip-4-testnet-outcome-markets-soon",
-    secsAgo: 2160,
+    secsAgo: 3960,
   },
   {
     walletIdx: 7,
@@ -995,30 +1019,6 @@ var REAL_EVENTS = [
     desc: "Anthony Ikenwe (29), Kevin Nwamma (25), and Hamza Bashir (23) were sentenced on July 20, 2026, for orchestrating a cryptocurrency scam that stole over \u00a34 million from eight",
     excerpt: "Anthony Ikenwe (29), Kevin Nwamma (25), and Hamza Bashir (23) were sentenced on July 20, 2026, for orchestrating a cryptocurrency scam that stole over \u00a34 million from eight victims by impersonating police officers....",
     url: "https://www.ibtimes.co.uk/three-jailed-4m-cryptocurrency-fraud-fake-police-scam-1809469",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Colin Wade Harris, 26, of Hilliard, Florida, was arrested on July 20, 2026, for orchestrating a large-scale fraud scheme involving stolen identities and forged checks, during",
-    excerpt: "Colin Wade Harris, 26, of Hilliard, Florida, was arrested on July 20, 2026, for orchestrating a large-scale fraud scheme involving stolen identities and forged checks, during which he allegedly used Bitcoin to purchase...",
-    url: "https://www.instagram.com/p/Da_LLn5iKn5/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "Three whales on Hyperliquid established long positions in SK Hynix (SKHX) totaling approximately $14.036 million on 2026-07-20, coinciding with a sharp price surge of 8.7% and a",
-    excerpt: "Three whales on Hyperliquid established long positions in SK Hynix (SKHX) totaling approximately $14.036 million on 2026-07-20, coinciding with a sharp price surge of 8.7% and a subsequent 6.7% crash. The positions...",
-    url: "https://www.kucoin.com/news/flash/sk-hynix-skhx-surges-and-plummets-on-hyperliquid-whale-positions-near-liquidation",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 9,
-    def: { label: "Copy Trade Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 20, 2026, the Ontario Securities Commission (OSC) issued an investor alert for AngelBTC (BTC North Corp), operating at angelbtc.com, stating that the entity is not",
-    excerpt: "On July 20, 2026, the Ontario Securities Commission (OSC) issued an investor alert for AngelBTC (BTC North Corp), operating at angelbtc.com, stating that the entity is not registered in Ontario to engage in the business...",
-    url: "https://www.securities-administrators.ca/investor-alerts/morizon-ltd/",
     secsAgo: 4560,
   },
 ];
