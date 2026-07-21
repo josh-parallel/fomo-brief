@@ -955,15 +955,31 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784659862227;
+var REFRESHED_AT = 1784667211968;
 var REAL_EVENTS = [
+  {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 21, 2026, the U.S. Attorney\u2019s Office for the District of Columbia announced the seizure of more than $25 million in cryptocurrency tied to international fraud schemes",
+    excerpt: "On July 21, 2026, the U.S. Attorney\u2019s Office for the District of Columbia announced the seizure of more than $25 million in cryptocurrency tied to international fraud schemes targeting residents of the United States and...",
+    url: "https://www.justice.gov/usao-dc/pr/investigations-cryptocurrency-scams-result-seizure-more-25-million",
+    secsAgo: 360,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 21, 2026, a Hyperliquid trader experienced a partial liquidation of a $7.4 million Bitcoin short position, resulting in a loss of",
+    excerpt: "On July 21, 2026, a Hyperliquid trader experienced a partial liquidation of a $7.4 million Bitcoin short position, resulting in a loss of",
+    url: "https://x.com/TedPillows/status/2079554104850891061",
+    secsAgo: 960,
+  },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 21, 2026, total liquidations on Hyperliquid aggregated to $250 million over a 24-hour period, with short positions accounting for $194 million of those",
     excerpt: "On July 21, 2026, total liquidations on Hyperliquid aggregated to $250 million over a 24-hour period, with short positions accounting for $194 million of those",
     url: "https://bitcoinke.io/2026/07/bitcoin-whale-exits-40x-leverage-on-hyperliquid/",
-    secsAgo: 360,
+    secsAgo: 1560,
   },
   {
     walletIdx: 2,
@@ -971,7 +987,15 @@ var REAL_EVENTS = [
     desc: "On July 21, 2026, Coinglass data reported that whale positions on Hyperliquid totaled $554.7 million ($284.7M shorts, $270.1M longs), with unrealized losses of $51.55M for longs",
     excerpt: "On July 21, 2026, Coinglass data reported that whale positions on Hyperliquid totaled $554.7 million ($284.7M shorts, $270.1M longs), with unrealized losses of $51.55M for longs and $39.33M for shorts. Additionally,...",
     url: "https://www.binance.com/en/square/post/346775657003633",
-    secsAgo: 960,
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 4,
+    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
+    desc: "On July 21, 2026, the CFTC issued an 'Enforcement Advisory on Self-Reporting, Cooperation, and Voluntary Disclosure Penalties' (Press Release 8940-26), providing guidelines and a",
+    excerpt: "On July 21, 2026, the CFTC issued an 'Enforcement Advisory on Self-Reporting, Cooperation, and Voluntary Disclosure Penalties' (Press Release 8940-26), providing guidelines and a framework for firms to receive civil...",
+    url: "https://www.cftc.gov/media/13761/EnfGannonKenVanDykeComplaint042326/download",
+    secsAgo: 2760,
   },
   {
     walletIdx: 7,
@@ -979,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "The U.S. SEC sued Zan Shaikh and his company, Mining Automatic (Bright Vision Distribution LLC), on July 21, 2026, for an alleged $22 million crypto mining investment fraud",
     excerpt: "The U.S. SEC sued Zan Shaikh and his company, Mining Automatic (Bright Vision Distribution LLC), on July 21, 2026, for an alleged $22 million crypto mining investment fraud targeting over 380 investors. The SEC alleges...",
     url: "https://www.kucoin.com/news/flash/sec-charges-florida-firm-over-alleged-22m-crypto-mining-investment-fraud",
-    secsAgo: 1560,
+    secsAgo: 3360,
   },
   {
     walletIdx: 7,
@@ -987,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "Celsius co-founders Shlomi Daniel Leon and Hanoch \u201cNuke\u201d Goldstein settled FTC fraud charges on July 21, 2026. Leon agreed to pay $4.1 million and Goldstein agreed to pay $2.4",
     excerpt: "Celsius co-founders Shlomi Daniel Leon and Hanoch \u201cNuke\u201d Goldstein settled FTC fraud charges on July 21, 2026. Leon agreed to pay $4.1 million and Goldstein agreed to pay $2.4 million to settle allegations that Celsius...",
     url: "https://en.cryptonomist.ch/2026/07/21/celsius-ftc-settlement/",
-    secsAgo: 2160,
+    secsAgo: 3960,
   },
   {
     walletIdx: 8,
@@ -995,30 +1019,6 @@ var REAL_EVENTS = [
     desc: "A Hyperliquid whale staked 249,243 HYPE tokens, valued at approximately $15.5 million, on",
     excerpt: "A Hyperliquid whale staked 249,243 HYPE tokens, valued at approximately $15.5 million, on",
     url: "https://bitcoinke.io/2026/07/lemfi-partners-with-bvnk/",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "Reports emerged on 2026-07-21 regarding a wash-trading debate centered on self-reported volume figures of Perp DEXs, including",
-    excerpt: "Reports emerged on 2026-07-21 regarding a wash-trading debate centered on self-reported volume figures of Perp DEXs, including",
-    url: "https://www.idgr.de/coins/aster.html",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "A whale withdrew 14.64 million USDC from Binance to open a long position on Hyperliquid on",
-    excerpt: "A whale withdrew 14.64 million USDC from Binance to open a long position on Hyperliquid on",
-    url: "https://cryptoactu.com/archives/2026/07/21/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 9,
-    def: { label: "Copy Trade Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 21, 2026, multiple law firms issued alerts regarding a securities class action lawsuit against Futu Holdings Limited (NASDAQ: FUTU) following a stock drop on May 22, 2026,",
-    excerpt: "On July 21, 2026, multiple law firms issued alerts regarding a securities class action lawsuit against Futu Holdings Limited (NASDAQ: FUTU) following a stock drop on May 22, 2026, linked to undisclosed regulatory...",
-    url: "https://www.globenewswire.com/news-release/2026/07/21/3330653/0/en/futu-shareholder-alert-futu-holdings-limited-securities-class-action-lawsuit-investors-with-losses-may-contact-suewallst.html",
     secsAgo: 4560,
   },
 ];
