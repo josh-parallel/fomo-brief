@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784736525961;
+var REFRESHED_AT = 1784743041393;
 var REAL_EVENTS = [
   {
     walletIdx: 6,
@@ -976,10 +976,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 22, 2026, Bitget News reported an analysis by Alphractal (Joao Wedson) showing significant downside risk for HYPE, with $4.8 billion in long liquidation exposure (62% of",
+    excerpt: "On July 22, 2026, Bitget News reported an analysis by Alphractal (Joao Wedson) showing significant downside risk for HYPE, with $4.8 billion in long liquidation exposure (62% of total). The largest long liquidation...",
+    url: "https://phemex.com/news/article/trader-faces-18m-loss-on-hype-long-position-94219",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 22, 2026, the Hyperliquid (HYPE) liquidation heatmap showed $1.63 million wiped out over 24 hours, with $1.26 million of that coming from long",
     excerpt: "On July 22, 2026, the Hyperliquid (HYPE) liquidation heatmap showed $1.63 million wiped out over 24 hours, with $1.26 million of that coming from long",
     url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-hype-hit-80-after-breakout",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 10,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "SecondFi, a Cardano wallet service, is shutting down after a software exploit allowed attackers to steal approximately 16.1 million ADA (roughly $2.4 million) from 374",
     excerpt: "SecondFi, a Cardano wallet service, is shutting down after a software exploit allowed attackers to steal approximately 16.1 million ADA (roughly $2.4 million) from 374",
     url: "https://www.coindesk.com/web3/2026/07/22/secondfi-to-shut-down-after-usd2-4-million-ada-wallet-theft",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 10,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "Hackers who exploited Summer Fi on July 6 have transferred the majority of the stolen 6,017,000 DAI through Tornado Cash to obscure the",
     excerpt: "Hackers who exploited Summer Fi on July 6 have transferred the majority of the stolen 6,017,000 DAI through Tornado Cash to obscure the",
     url: "https://www.coindesk.com/tech/2026/07/22/balance-stablecoin-collapses-99-after-usd1-million-exploit-drains-its-bitcoin-vaults",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 0,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 21, 2026, the U.S. Attorney\u2019s Office for the District of Columbia announced the seizure of more than $25 million in cryptocurrency tied to international fraud schemes",
     excerpt: "On July 21, 2026, the U.S. Attorney\u2019s Office for the District of Columbia announced the seizure of more than $25 million in cryptocurrency tied to international fraud schemes targeting residents of the United States and...",
     url: "https://www.justice.gov/usao-dc/pr/investigations-cryptocurrency-scams-result-seizure-more-25-million",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "On July 21, 2026, a Hyperliquid trader experienced a partial liquidation of a $7.4 million Bitcoin short position, resulting in a loss of",
     excerpt: "On July 21, 2026, a Hyperliquid trader experienced a partial liquidation of a $7.4 million Bitcoin short position, resulting in a loss of",
     url: "https://x.com/TedPillows/status/2079554104850891061",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 21, 2026, total liquidations on Hyperliquid aggregated to $250 million over a 24-hour period, with short positions accounting for $194 million of those",
-    excerpt: "On July 21, 2026, total liquidations on Hyperliquid aggregated to $250 million over a 24-hour period, with short positions accounting for $194 million of those",
-    url: "https://bitcoinke.io/2026/07/bitcoin-whale-exits-40x-leverage-on-hyperliquid/",
     secsAgo: 4560,
   },
 ];
