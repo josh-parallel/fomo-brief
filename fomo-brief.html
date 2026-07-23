@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784829552529;
+var REFRESHED_AT = 1784830911466;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -968,10 +968,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "The largest single liquidation on Hyperliquid recently reached $17.18 million, with total liquidations on the platform reaching $46.6",
+    excerpt: "The largest single liquidation on Hyperliquid recently reached $17.18 million, with total liquidations on the platform reaching $46.6",
+    url: "https://www.odaily.news/en/newsflash/503332",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 23, 2026, a whale address (0x2b6...32f6c) on Hyperliquid opened a $4.94M long position in $CXMT (ChangXin Memory) at an average price of $6.7815, which subsequently",
     excerpt: "On July 23, 2026, a whale address (0x2b6...32f6c) on Hyperliquid opened a $4.94M long position in $CXMT (ChangXin Memory) at an average price of $6.7815, which subsequently incurred an unrealized floating loss of...",
     url: "https://www.kucoin.com/news/flash/spcx-price-drops-49-6-from-high-heavy-loss-addresses-lose-1-23m",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 2,
@@ -979,7 +987,7 @@ var REAL_EVENTS = [
     desc: "On July 23, 2026, a whale address (0x3527) holding long positions in SPCX (SpaceX) on Hyperliquid with 20x leverage suffered an unrealized loss of approximately $1.23 million",
     excerpt: "On July 23, 2026, a whale address (0x3527) holding long positions in SPCX (SpaceX) on Hyperliquid with 20x leverage suffered an unrealized loss of approximately $1.23 million following a price drop of 49.6% from its...",
     url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-sellers-losing-control",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
   {
     walletIdx: 2,
@@ -987,7 +995,7 @@ var REAL_EVENTS = [
     desc: "On July 23, 2026, a significant price drop in SPCX (SpaceX) on Hyperliquid\u2014falling 49.6% from a peak of $230 to $116\u2014resulted in losses of $1.23 million for large long",
     excerpt: "On July 23, 2026, a significant price drop in SPCX (SpaceX) on Hyperliquid\u2014falling 49.6% from a peak of $230 to $116\u2014resulted in losses of $1.23 million for large long",
     url: "https://www.kucoin.com/news/flash/hyperliquid-adr-premium-for-skhy-expands-to-33-3-as-whale-continues-loss-making-arbitrage",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "On July 23, 2026, it was reported that whales unstaked over $150 million in $HYPE tokens as the price fell 15% in seven days. This included Multicoin Capital unstaking",
     excerpt: "On July 23, 2026, it was reported that whales unstaked over $150 million in $HYPE tokens as the price fell 15% in seven days. This included Multicoin Capital unstaking approximately $120 million (1.96 million HYPE) and...",
     url: "https://coincentral.com/hyperliquid-hype-price-whales-unstake-150m-as-hype-falls-15-in-seven-days/",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 23, 2026, it was reported that a wallet potentially associated with Multicoin Capital transferred 490,000 $HYPE tokens, valued at approximately $29.48 million, over two",
     excerpt: "On July 23, 2026, it was reported that a wallet potentially associated with Multicoin Capital transferred 490,000 $HYPE tokens, valued at approximately $29.48 million, over two days, with $5.48 million moved to a new...",
     url: "https://phemex.com/news/article/multicoinlinked-wallet-transfers-490000-hype-in-two-days-94304",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "On July 23, 2026, it was reported that 390,444 $HYPE tokens, valued at approximately $23.2 million, were transferred from an unknown wallet to the HyperLiquid platform, indicating",
     excerpt: "On July 23, 2026, it was reported that 390,444 $HYPE tokens, valued at approximately $23.2 million, were transferred from an unknown wallet to the HyperLiquid platform, indicating significant whale",
     url: "https://phemex.com/news/article/232-million-in-hype-tokens-transferred-to-hyperliquid-94295",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 23, 2026, it was reported that Multicoin Capital achieved over $70 million in profits from HYPE in H1 2026, having strategically bought and sold over 5.5 million",
-    excerpt: "On July 23, 2026, it was reported that Multicoin Capital achieved over $70 million in profits from HYPE in H1 2026, having strategically bought and sold over 5.5 million",
-    url: "https://supa.is/article/hyperliquid-portfolio-margin-beta-limits-increased-2026",
     secsAgo: 4560,
   },
 ];
