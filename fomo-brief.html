@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784753508789;
+var REFRESHED_AT = 1784788716540;
 var REAL_EVENTS = [
   {
     walletIdx: 6,
@@ -976,10 +976,26 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 23, 2026, it was reported that 390,444 $HYPE tokens, valued at approximately $23.2 million, were transferred from an unknown wallet to the HyperLiquid platform, indicating",
+    excerpt: "On July 23, 2026, it was reported that 390,444 $HYPE tokens, valued at approximately $23.2 million, were transferred from an unknown wallet to the HyperLiquid platform, indicating significant whale",
+    url: "https://phemex.com/news/article/232-million-in-hype-tokens-transferred-to-hyperliquid-94295",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 23, 2026, it was reported that Multicoin Capital achieved over $70 million in profits from HYPE in H1 2026, having strategically bought and sold over 5.5 million",
+    excerpt: "On July 23, 2026, it was reported that Multicoin Capital achieved over $70 million in profits from HYPE in H1 2026, having strategically bought and sold over 5.5 million",
+    url: "https://supa.is/article/hyperliquid-portfolio-margin-beta-limits-increased-2026",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 22, 2026, Bitget News reported an analysis by Alphractal (Joao Wedson) showing significant downside risk for HYPE, with $4.8 billion in long liquidation exposure (62% of",
     excerpt: "On July 22, 2026, Bitget News reported an analysis by Alphractal (Joao Wedson) showing significant downside risk for HYPE, with $4.8 billion in long liquidation exposure (62% of total). The largest long liquidation...",
     url: "https://phemex.com/news/article/trader-faces-18m-loss-on-hype-long-position-94219",
-    secsAgo: 1560,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -987,7 +1003,15 @@ var REAL_EVENTS = [
     desc: "On July 22, 2026, the Hyperliquid (HYPE) liquidation heatmap showed $1.63 million wiped out over 24 hours, with $1.26 million of that coming from long",
     excerpt: "On July 22, 2026, the Hyperliquid (HYPE) liquidation heatmap showed $1.63 million wiped out over 24 hours, with $1.26 million of that coming from long",
     url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-hype-hit-80-after-breakout",
-    secsAgo: 2160,
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 7,
+    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
+    desc: "Police in Bali, Indonesia, made multiple arrests on July 22, 2026, in connection with the theft of 189 SOL (approximately $14,000) from a tourist's cryptocurrency",
+    excerpt: "Police in Bali, Indonesia, made multiple arrests on July 22, 2026, in connection with the theft of 189 SOL (approximately $14,000) from a tourist's cryptocurrency",
+    url: "https://www.instagram.com/reel/DbF29t7MygO/",
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
@@ -995,30 +1019,6 @@ var REAL_EVENTS = [
     desc: "SecondFi, a Cardano wallet service, is shutting down after a software exploit allowed attackers to steal approximately 16.1 million ADA (roughly $2.4 million) from 374",
     excerpt: "SecondFi, a Cardano wallet service, is shutting down after a software exploit allowed attackers to steal approximately 16.1 million ADA (roughly $2.4 million) from 374",
     url: "https://www.coindesk.com/web3/2026/07/22/secondfi-to-shut-down-after-usd2-4-million-ada-wallet-theft",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "Hackers who exploited Summer Fi on July 6 have transferred the majority of the stolen 6,017,000 DAI through Tornado Cash to obscure the",
-    excerpt: "Hackers who exploited Summer Fi on July 6 have transferred the majority of the stolen 6,017,000 DAI through Tornado Cash to obscure the",
-    url: "https://www.coindesk.com/tech/2026/07/22/balance-stablecoin-collapses-99-after-usd1-million-exploit-drains-its-bitcoin-vaults",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 21, 2026, the U.S. Attorney\u2019s Office for the District of Columbia announced the seizure of more than $25 million in cryptocurrency tied to international fraud schemes",
-    excerpt: "On July 21, 2026, the U.S. Attorney\u2019s Office for the District of Columbia announced the seizure of more than $25 million in cryptocurrency tied to international fraud schemes targeting residents of the United States and...",
-    url: "https://www.justice.gov/usao-dc/pr/investigations-cryptocurrency-scams-result-seizure-more-25-million",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 21, 2026, a Hyperliquid trader experienced a partial liquidation of a $7.4 million Bitcoin short position, resulting in a loss of",
-    excerpt: "On July 21, 2026, a Hyperliquid trader experienced a partial liquidation of a $7.4 million Bitcoin short position, resulting in a loss of",
-    url: "https://x.com/TedPillows/status/2079554104850891061",
     secsAgo: 4560,
   },
 ];
