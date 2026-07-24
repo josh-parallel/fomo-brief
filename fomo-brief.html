@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784878900726;
+var REFRESHED_AT = 1784898420093;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -968,10 +968,50 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A major Hyperliquid (HYPE) whale, possibly linked to a16z, staked 2.785 million HYPE tokens worth approximately $164",
+    excerpt: "A major Hyperliquid (HYPE) whale, possibly linked to a16z, staked 2.785 million HYPE tokens worth approximately $164",
+    url: "https://www.kucoin.com/news/flash/whale-stakes-2-785m-hype-tokens-worth-164m-possibly-linked-to-a16z",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 3,
+    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
+    desc: "On July 24, 2026, a detailed analysis of the $VLAD memecoin scam (launched via the Pons launchpad on Robinhood Chain) revealed that the fraud was designed as a 'fee farming'",
+    excerpt: "On July 24, 2026, a detailed analysis of the $VLAD memecoin scam (launched via the Pons launchpad on Robinhood Chain) revealed that the fraud was designed as a 'fee farming' operation rather than a traditional rug pull....",
+    url: "https://crypto.news/vlad-scam-locked-liquidity-fee-farming/",
+    secsAgo: 1560,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "A whale staked 2.93 million HYPE tokens, worth approximately $172 million, on July 24,",
+    excerpt: "A whale staked 2.93 million HYPE tokens, worth approximately $172 million, on July 24,",
+    url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-hype-decision-zone",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 9,
+    def: { label: "Copy Trade Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 24, 2026, a class action lawsuit was filed against the crypto exchange BitMEX, alleging fraud and misappropriation. The lawsuit claims that BitMEX engineered forced",
+    excerpt: "On July 24, 2026, a class action lawsuit was filed against the crypto exchange BitMEX, alleging fraud and misappropriation. The lawsuit claims that BitMEX engineered forced liquidations to illegally retain over 622 BTC...",
+    url: "https://bitcoinfoundation.org/news/crypto-exchanges-news/bitmex-lawsuit/",
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "The exploiter of the Drift Protocol, which suffered a $295.7 million exploit in April 2026 attributed to the North Korean group UNC6862, moved approximately $44.4 million",
+    excerpt: "The exploiter of the Drift Protocol, which suffered a $295.7 million exploit in April 2026 attributed to the North Korean group UNC6862, moved approximately $44.4 million (23,095.1 ETH) into Tornado Cash on July 23 and...",
+    url: "https://www.cryptotimes.io/2026/07/24/ethereum-defi-protocol-lien-finance-hacked-for-542k-in-usdc-exploit/",
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "Two of the largest crypto funds unstaked approximately $291 million of Hyperliquid (HYPE), causing the token price to fall below",
     excerpt: "Two of the largest crypto funds unstaked approximately $291 million of Hyperliquid (HYPE), causing the token price to fall below",
     url: "https://www.kucoin.com/news/flash/whale-holds-13-58m-spcx-long-position-at-126-04-average-entry",
-    secsAgo: 960,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -979,46 +1019,6 @@ var REAL_EVENTS = [
     desc: "The largest single liquidation on Hyperliquid recently reached $17.18 million, with total liquidations on the platform reaching $46.6",
     excerpt: "The largest single liquidation on Hyperliquid recently reached $17.18 million, with total liquidations on the platform reaching $46.6",
     url: "https://www.odaily.news/en/newsflash/503332",
-    secsAgo: 1560,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 23, 2026, a whale address (0x2b6...32f6c) on Hyperliquid opened a $4.94M long position in $CXMT (ChangXin Memory) at an average price of $6.7815, which subsequently",
-    excerpt: "On July 23, 2026, a whale address (0x2b6...32f6c) on Hyperliquid opened a $4.94M long position in $CXMT (ChangXin Memory) at an average price of $6.7815, which subsequently incurred an unrealized floating loss of...",
-    url: "https://www.kucoin.com/news/flash/spcx-price-drops-49-6-from-high-heavy-loss-addresses-lose-1-23m",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 23, 2026, a whale address (0x3527) holding long positions in SPCX (SpaceX) on Hyperliquid with 20x leverage suffered an unrealized loss of approximately $1.23 million",
-    excerpt: "On July 23, 2026, a whale address (0x3527) holding long positions in SPCX (SpaceX) on Hyperliquid with 20x leverage suffered an unrealized loss of approximately $1.23 million following a price drop of 49.6% from its...",
-    url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-sellers-losing-control",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 3,
-    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
-    desc: "On July 23, 2026, the X account of Robinhood CEO Vlad Tenev was compromised by hackers to promote a fraudulent memecoin called 'Vladhood' ($VLAD), which was launched on the",
-    excerpt: "On July 23, 2026, the X account of Robinhood CEO Vlad Tenev was compromised by hackers to promote a fraudulent memecoin called 'Vladhood' ($VLAD), which was launched on the Pump.fun platform. The attackers falsely...",
-    url: "https://www.coindesk.com/business/2026/07/23/robinhood-ceo-vlad-tenev-s-x-account-hacked-to-promote-token-amid-memecoin-frenzy",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "On July 23, 2026, the CFTC moved to block Kentucky's attempt to shut down registered markets, asserting the CFTC's exclusive",
-    excerpt: "On July 23, 2026, the CFTC moved to block Kentucky's attempt to shut down registered markets, asserting the CFTC's exclusive",
-    url: "https://defirate.com/news/prophetx-players-lounge-deal-tests-cftc-rules-prediction-market-providers/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "BitMEX announced on July 23, 2026, that it will shut down all trading operations effective September 23, 2026, following a strategic business review and historical CFTC",
-    excerpt: "BitMEX announced on July 23, 2026, that it will shut down all trading operations effective September 23, 2026, following a strategic business review and historical CFTC enforcement",
-    url: "https://cryptoticker.io/en/bitmex-shutting-down-operations-september-2026",
     secsAgo: 4560,
   },
 ];
