@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784898420093;
+var REFRESHED_AT = 1784919815883;
 var REAL_EVENTS = [
   {
     walletIdx: 4,
@@ -968,10 +968,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Total liquidations on Hyperliquid for July 24, 2026, reached approximately $2.73",
+    excerpt: "Total liquidations on Hyperliquid for July 24, 2026, reached approximately $2.73",
+    url: "https://www.panewslab.com/zh/articles/019f935b-deec-74ae-86f1-997473456b9b",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "A major Hyperliquid (HYPE) whale, possibly linked to a16z, staked 2.785 million HYPE tokens worth approximately $164",
     excerpt: "A major Hyperliquid (HYPE) whale, possibly linked to a16z, staked 2.785 million HYPE tokens worth approximately $164",
     url: "https://www.kucoin.com/news/flash/whale-stakes-2-785m-hype-tokens-worth-164m-possibly-linked-to-a16z",
-    secsAgo: 960,
+    secsAgo: 1560,
   },
   {
     walletIdx: 3,
@@ -979,7 +987,15 @@ var REAL_EVENTS = [
     desc: "On July 24, 2026, a detailed analysis of the $VLAD memecoin scam (launched via the Pons launchpad on Robinhood Chain) revealed that the fraud was designed as a 'fee farming'",
     excerpt: "On July 24, 2026, a detailed analysis of the $VLAD memecoin scam (launched via the Pons launchpad on Robinhood Chain) revealed that the fraud was designed as a 'fee farming' operation rather than a traditional rug pull....",
     url: "https://crypto.news/vlad-scam-locked-liquidity-fee-farming/",
-    secsAgo: 1560,
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 4,
+    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
+    desc: "On July 24, 2026, the CLARITY Act, which aimed to divide oversight of crypto assets between the SEC and CFTC, failed to reach the 60-vote threshold in the",
+    excerpt: "On July 24, 2026, the CLARITY Act, which aimed to divide oversight of crypto assets between the SEC and CFTC, failed to reach the 60-vote threshold in the",
+    url: "https://tech-insider.org/clarity-act-2026-status/",
+    secsAgo: 2760,
   },
   {
     walletIdx: 8,
@@ -987,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "A whale staked 2.93 million HYPE tokens, worth approximately $172 million, on July 24,",
     excerpt: "A whale staked 2.93 million HYPE tokens, worth approximately $172 million, on July 24,",
     url: "https://www.coingabbar.com/en/price-prediction/hyperliquid-price-prediction-hype-decision-zone",
-    secsAgo: 2160,
+    secsAgo: 3360,
   },
   {
     walletIdx: 9,
@@ -995,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 24, 2026, a class action lawsuit was filed against the crypto exchange BitMEX, alleging fraud and misappropriation. The lawsuit claims that BitMEX engineered forced",
     excerpt: "On July 24, 2026, a class action lawsuit was filed against the crypto exchange BitMEX, alleging fraud and misappropriation. The lawsuit claims that BitMEX engineered forced liquidations to illegally retain over 622 BTC...",
     url: "https://bitcoinfoundation.org/news/crypto-exchanges-news/bitmex-lawsuit/",
-    secsAgo: 2760,
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
@@ -1003,22 +1019,6 @@ var REAL_EVENTS = [
     desc: "The exploiter of the Drift Protocol, which suffered a $295.7 million exploit in April 2026 attributed to the North Korean group UNC6862, moved approximately $44.4 million",
     excerpt: "The exploiter of the Drift Protocol, which suffered a $295.7 million exploit in April 2026 attributed to the North Korean group UNC6862, moved approximately $44.4 million (23,095.1 ETH) into Tornado Cash on July 23 and...",
     url: "https://www.cryptotimes.io/2026/07/24/ethereum-defi-protocol-lien-finance-hacked-for-542k-in-usdc-exploit/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Two of the largest crypto funds unstaked approximately $291 million of Hyperliquid (HYPE), causing the token price to fall below",
-    excerpt: "Two of the largest crypto funds unstaked approximately $291 million of Hyperliquid (HYPE), causing the token price to fall below",
-    url: "https://www.kucoin.com/news/flash/whale-holds-13-58m-spcx-long-position-at-126-04-average-entry",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "The largest single liquidation on Hyperliquid recently reached $17.18 million, with total liquidations on the platform reaching $46.6",
-    excerpt: "The largest single liquidation on Hyperliquid recently reached $17.18 million, with total liquidations on the platform reaching $46.6",
-    url: "https://www.odaily.news/en/newsflash/503332",
     secsAgo: 4560,
   },
 ];
