@@ -955,23 +955,15 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1784932961736;
+var REFRESHED_AT = 1784964555435;
 var REAL_EVENTS = [
-  {
-    walletIdx: 4,
-    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
-    desc: "The SEC and CFTC issued a landmark joint release on digital asset classification, effective July 26, 2026, which provides a framework for distinguishing digital assets that",
-    excerpt: "The SEC and CFTC issued a landmark joint release on digital asset classification, effective July 26, 2026, which provides a framework for distinguishing digital assets that function as securities from digital...",
-    url: "https://www.willkie.com/publications/2026/07/crypto-coordination-takes-shape-an-in-depth-review-of-the-landmark-sec-and-cftc-joint-release",
-    secsAgo: 360,
-  },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "Major funds withdrew $150 million in HYPE tokens on July 24, 2026, causing an 8% price drop in the",
     excerpt: "Major funds withdrew $150 million in HYPE tokens on July 24, 2026, causing an 8% price drop in the",
     url: "https://blockonomi.com/hyperliquid-hype-faces-150m-withdrawal-wave-as-major-funds-exit-staking-positions/",
-    secsAgo: 960,
+    secsAgo: 360,
   },
   {
     walletIdx: 2,
@@ -979,7 +971,7 @@ var REAL_EVENTS = [
     desc: "Total liquidations on Hyperliquid for July 24, 2026, reached approximately $2.73",
     excerpt: "Total liquidations on Hyperliquid for July 24, 2026, reached approximately $2.73",
     url: "https://www.panewslab.com/zh/articles/019f935b-deec-74ae-86f1-997473456b9b",
-    secsAgo: 1560,
+    secsAgo: 960,
   },
   {
     walletIdx: 2,
@@ -987,7 +979,7 @@ var REAL_EVENTS = [
     desc: "A major Hyperliquid (HYPE) whale, possibly linked to a16z, staked 2.785 million HYPE tokens worth approximately $164",
     excerpt: "A major Hyperliquid (HYPE) whale, possibly linked to a16z, staked 2.785 million HYPE tokens worth approximately $164",
     url: "https://www.kucoin.com/news/flash/whale-stakes-2-785m-hype-tokens-worth-164m-possibly-linked-to-a16z",
-    secsAgo: 2160,
+    secsAgo: 1560,
   },
   {
     walletIdx: 3,
@@ -995,6 +987,14 @@ var REAL_EVENTS = [
     desc: "On July 24, 2026, a detailed analysis of the $VLAD memecoin scam (launched via the Pons launchpad on Robinhood Chain) revealed that the fraud was designed as a 'fee farming'",
     excerpt: "On July 24, 2026, a detailed analysis of the $VLAD memecoin scam (launched via the Pons launchpad on Robinhood Chain) revealed that the fraud was designed as a 'fee farming' operation rather than a traditional rug pull....",
     url: "https://crypto.news/vlad-scam-locked-liquidity-fee-farming/",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 4,
+    def: { label: "DeFi Enforcement", severity: "high", sources: ["CFTC.gov"] },
+    desc: "The CFTC staff issued a no-action position (9272-26) regarding Designated Contract Market procedures on July 24,",
+    excerpt: "The CFTC staff issued a no-action position (9272-26) regarding Designated Contract Market procedures on July 24,",
+    url: "https://www.cftc.gov/LawRegulation/EnforcementActions/index.htm",
     secsAgo: 2760,
   },
   {
