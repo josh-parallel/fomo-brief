@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785220596518;
+var REFRESHED_AT = 1785231777808;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -984,10 +984,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Detailed reports on the Hyperliquid SKHX flash crash reveal that three addresses were liquidated for a total of $4.73 million, while three other wallets captured $6.96 million in",
+    excerpt: "Detailed reports on the Hyperliquid SKHX flash crash reveal that three addresses were liquidated for a total of $4.73 million, while three other wallets captured $6.96 million in profits via Auto-Deleveraging (ADL) at...",
+    url: "https://blockchain.news/flashnews/hyperliquid-skhx-adl-winners-pocket-6-96m",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "A flash crash occurred in the SK Hynix futures product on Hyperliquid on July 28, 2026, at 12:00 a.m. UTC, with the price briefly falling to $927 due to a cascade of liquidations",
     excerpt: "A flash crash occurred in the SK Hynix futures product on Hyperliquid on July 28, 2026, at 12:00 a.m. UTC, with the price briefly falling to $927 due to a cascade of liquidations in leveraged long positions triggered by...",
     url: "https://memeburn.com/crypto-derivatives-china-ai-stocks/",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 7,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "Vikas Kumar Nimar (alias Misty) was arrested on July 28, 2026, by the Enforcement Directorate (ED) in Hyderabad in connection with a US fake call centre scam. The scheme involved",
     excerpt: "Vikas Kumar Nimar (alias Misty) was arrested on July 28, 2026, by the Enforcement Directorate (ED) in Hyderabad in connection with a US fake call centre scam. The scheme involved inducing victims to pay via gift cards,...",
     url: "https://timesofindia.indiatimes.com/city/hyderabad/ed-arrests-key-accused-in-us-fake-call-centre-scam/articleshow/132670134.cms",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 8,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 28, 2026, ChainCatcher reported that Hyperliquid SKHX plummeted 17.9% due to abnormal orders from South Korea's SK Hynix, with liquidation amounts surpassing those on",
     excerpt: "On July 28, 2026, ChainCatcher reported that Hyperliquid SKHX plummeted 17.9% due to abnormal orders from South Korea's SK Hynix, with liquidation amounts surpassing those on",
     url: "https://www.chaincatcher.com/en/article/2278345",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "Hyperliquid's top nine whale addresses, each holding over $97.84 million, are collectively experiencing $48.635 million in unrealized losses as of July 27,",
     excerpt: "Hyperliquid's top nine whale addresses, each holding over $97.84 million, are collectively experiencing $48.635 million in unrealized losses as of July 27,",
     url: "https://www.kucoin.com/news/flash/hyperliquid-top-9-whale-addresses-suffer-48-6m-in-floating-losses",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Updated reports on July 27, 2026, detail that the Hyperliquid whale shorting 2.6 million CXMT contracts has a total book loss of approximately $1.533 million (including $281,000",
-    excerpt: "Updated reports on July 27, 2026, detail that the Hyperliquid whale shorting 2.6 million CXMT contracts has a total book loss of approximately $1.533 million (including $281,000 in funding fees) and has set take-profit...",
-    url: "https://www.kucoin.com/news/flash/longxin-tech-whale-suffers-1-5m-loss-as-short-position-near-halving",
     secsAgo: 4560,
   },
 ];
