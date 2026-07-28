@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785268075410;
+var REFRESHED_AT = 1785273477119;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -982,12 +982,20 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 28, 2026, a Department of Justice memo warned federal prosecutors that they should prepare for less assistance from Binance when seeking information in",
+    excerpt: "On July 28, 2026, a Department of Justice memo warned federal prosecutors that they should prepare for less assistance from Binance when seeking information in cryptocurrency-related cases, according to a report by...",
+    url: "https://www.justice.gov/usao-ndca/pr/ten-foreign-nationals-charged-international-operation-targeting-cryptocurrency-market",
+    secsAgo: 2160,
+  },
+  {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "A flash crash in the SK Hynix perpetual contract (xyz:SKHYNIX) on Hyperliquid on July 28, 2026, led to the liquidation of approximately $57.4 million to $128 million across",
     excerpt: "A flash crash in the SK Hynix perpetual contract (xyz:SKHYNIX) on Hyperliquid on July 28, 2026, led to the liquidation of approximately $57.4 million to $128 million across hundreds of long accounts. The crash was...",
     url: "https://www.cryptotimes.io/2026/07/28/a-single-trade-crashed-hyperliquids-sk-hynix-perp-18-and-wiped-out-longs/",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "A $76 million native perp long position on Hyperliquid was liquidated at a price of $50.8 on July 28, 2026, as reported by on-chain analyst",
     excerpt: "A $76 million native perp long position on Hyperliquid was liquidated at a price of $50.8 on July 28, 2026, as reported by on-chain analyst",
     url: "https://x.com/VietnamPenguin/status/2082016244379885962",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "Detailed reports on the Hyperliquid SKHX flash crash reveal that three addresses were liquidated for a total of $4.73 million, while three other wallets captured $6.96 million in",
     excerpt: "Detailed reports on the Hyperliquid SKHX flash crash reveal that three addresses were liquidated for a total of $4.73 million, while three other wallets captured $6.96 million in profits via Auto-Deleveraging (ADL) at...",
     url: "https://blockchain.news/flashnews/hyperliquid-skhx-adl-winners-pocket-6-96m",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "A flash crash occurred in the SK Hynix futures product on Hyperliquid on July 28, 2026, at 12:00 a.m. UTC, with the price briefly falling to $927 due to a cascade of liquidations",
     excerpt: "A flash crash occurred in the SK Hynix futures product on Hyperliquid on July 28, 2026, at 12:00 a.m. UTC, with the price briefly falling to $927 due to a cascade of liquidations in leveraged long positions triggered by...",
     url: "https://memeburn.com/crypto-derivatives-china-ai-stocks/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 7,
-    def: { label: "Trader Arrest", severity: "high", sources: ["The Block"] },
-    desc: "Vikas Kumar Nimar (alias Misty) was arrested on July 28, 2026, by the Enforcement Directorate (ED) in Hyderabad in connection with a US fake call centre scam. The scheme involved",
-    excerpt: "Vikas Kumar Nimar (alias Misty) was arrested on July 28, 2026, by the Enforcement Directorate (ED) in Hyderabad in connection with a US fake call centre scam. The scheme involved inducing victims to pay via gift cards,...",
-    url: "https://timesofindia.indiatimes.com/city/hyderabad/ed-arrests-key-accused-in-us-fake-call-centre-scam/articleshow/132670134.cms",
     secsAgo: 4560,
   },
 ];
