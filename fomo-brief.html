@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785345861982;
+var REFRESHED_AT = 1785353922867;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -990,12 +990,20 @@ var REAL_EVENTS = [
     secsAgo: 2160,
   },
   {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On July 29, 2026, a global law enforcement operation involving the DOJ and other agencies resulted in the arrest of 63 individuals, the suspension of 20,000 fraudulent accounts by",
+    excerpt: "On July 29, 2026, a global law enforcement operation involving the DOJ and other agencies resulted in the arrest of 63 individuals, the suspension of 20,000 fraudulent accounts by Microsoft, and the freezing of over $3...",
+    url: "https://www.facebook.com/7NewsDC/posts/federal-prosecutors-in-washington-dc-are-seeking-to-seize-more-than-25-million-i/1482194847275009/",
+    secsAgo: 2760,
+  },
+  {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 29, 2026, Hyperliquid experienced a $93.93 million liquidation 'drain' as part of a broader market event where multiple exchanges saw significant capital",
     excerpt: "On July 29, 2026, Hyperliquid experienced a $93.93 million liquidation 'drain' as part of a broader market event where multiple exchanges saw significant capital",
     url: "https://www.chaincatcher.com/en/article/2278750",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 2,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 29, 2026, a significant HYPE token unlock occurred, with approximately $817 million worth of tokens entering the circulating supply, representing a 2.8% increase in a",
     excerpt: "On July 29, 2026, a significant HYPE token unlock occurred, with approximately $817 million worth of tokens entering the circulating supply, representing a 2.8% increase in a single",
     url: "https://cryptopotato.com/trade-xyz-will-cover-losses-from-sk-hynix-liquidation-anomaly-on-hyperliquid/",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "On July 29, 2026, Selini Capital transferred approximately $26.8 million (495,473 HYPE) to OKX. This movement follows the unstaking of a 500,000 HYPE security bond required for",
     excerpt: "On July 29, 2026, Selini Capital transferred approximately $26.8 million (495,473 HYPE) to OKX. This movement follows the unstaking of a 500,000 HYPE security bond required for operating the 'Dreamcash' permissionless...",
     url: "https://bingx.com/en/flash-news/post/wallet-adds-m-usdc-margin-opens-m-x-skhx-long-on-hyperliquid-after-sk-hynix-earnings",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 29, 2026, a whale (address 0xc8b...48891) opened a $31 million 4x leveraged long position on SK Hynix (SKHX) on Hyperliquid with an entry price of $981.91, following the",
-    excerpt: "On July 29, 2026, a whale (address 0xc8b...48891) opened a $31 million 4x leveraged long position on SK Hynix (SKHX) on Hyperliquid with an entry price of $981.91, following the asset's earnings",
-    url: "https://www.cryptotimes.io/2026/07/29/trade-xyz-to-cover-sk-hynix-perp-losses-while-insisting-its-oracle-worked/",
     secsAgo: 4560,
   },
 ];
