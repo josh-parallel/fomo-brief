@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785307289178;
+var REFRESHED_AT = 1785318354634;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -982,12 +982,36 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Further details on the SK Hynix perpetual flash crash on Hyperliquid revealed that the event triggered the liquidation of approximately $57.4 million in long positions across 960",
+    excerpt: "Further details on the SK Hynix perpetual flash crash on Hyperliquid revealed that the event triggered the liquidation of approximately $57.4 million in long positions across 960 different accounts. The crash saw the SK...",
+    url: "https://www.cryptotimes.io/2026/07/29/trade-xyz-to-cover-sk-hynix-perp-losses-while-insisting-its-oracle-worked/",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Trade.xyz announced on July 29, 2026, that it will compensate users for liquidation losses caused by the SK Hynix flash crash anomaly. The company described the reimbursement as a",
+    excerpt: "Trade.xyz announced on July 29, 2026, that it will compensate users for liquidation losses caused by the SK Hynix flash crash anomaly. The company described the reimbursement as a 'one-time discretionary decision' and...",
+    url: "https://bitcoinfoundation.org/news/blockchain-news/tradexyz-cover-losses-from-60m-sk-hynix-liquidations/",
+    secsAgo: 2760,
+  },
+  {
     walletIdx: 8,
     def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 29, 2026, at 10:00, the whale position on the Hyperliquid platform was reported to be 5.098 billion USD, with a long-short position ratio of",
-    excerpt: "On July 29, 2026, at 10:00, the whale position on the Hyperliquid platform was reported to be 5.098 billion USD, with a long-short position ratio of",
+    desc: "On July 29, 2026, it was reported that Solana and Hyperliquid are competing for billions of dollars in trading volume following the SpaceX",
+    excerpt: "On July 29, 2026, it was reported that Solana and Hyperliquid are competing for billions of dollars in trading volume following the SpaceX",
     url: "https://www.chaincatcher.com/en/article/2278345",
-    secsAgo: 2160,
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "On July 29, 2026, it was reported that refund efforts are underway for the users affected by the SecondFi",
+    excerpt: "On July 29, 2026, it was reported that refund efforts are underway for the users affected by the SecondFi",
+    url: "https://phemex.com/blogs/cardano-top-20-gainer-before-fed-decision",
+    secsAgo: 3960,
   },
   {
     walletIdx: 0,
@@ -995,30 +1019,6 @@ var REAL_EVENTS = [
     desc: "On July 28, 2026, a Department of Justice memo warned federal prosecutors that they should prepare for less assistance from Binance when seeking information in",
     excerpt: "On July 28, 2026, a Department of Justice memo warned federal prosecutors that they should prepare for less assistance from Binance when seeking information in cryptocurrency-related cases, according to a report by...",
     url: "https://www.justice.gov/usao-ndca/pr/ten-foreign-nationals-charged-international-operation-targeting-cryptocurrency-market",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "A flash crash in the SK Hynix perpetual contract (xyz:SKHYNIX) on Hyperliquid on July 28, 2026, led to the liquidation of approximately $57.4 million to $128 million across",
-    excerpt: "A flash crash in the SK Hynix perpetual contract (xyz:SKHYNIX) on Hyperliquid on July 28, 2026, led to the liquidation of approximately $57.4 million to $128 million across hundreds of long accounts. The crash was...",
-    url: "https://www.cryptotimes.io/2026/07/28/a-single-trade-crashed-hyperliquids-sk-hynix-perp-18-and-wiped-out-longs/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "A $76 million native perp long position on Hyperliquid was liquidated at a price of $50.8 on July 28, 2026, as reported by on-chain analyst",
-    excerpt: "A $76 million native perp long position on Hyperliquid was liquidated at a price of $50.8 on July 28, 2026, as reported by on-chain analyst",
-    url: "https://x.com/VietnamPenguin/status/2082016244379885962",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Detailed reports on the Hyperliquid SKHX flash crash reveal that three addresses were liquidated for a total of $4.73 million, while three other wallets captured $6.96 million in",
-    excerpt: "Detailed reports on the Hyperliquid SKHX flash crash reveal that three addresses were liquidated for a total of $4.73 million, while three other wallets captured $6.96 million in profits via Auto-Deleveraging (ADL) at...",
-    url: "https://blockchain.news/flashnews/hyperliquid-skhx-adl-winners-pocket-6-96m",
     secsAgo: 4560,
   },
 ];
