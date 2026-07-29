@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785327166381;
+var REFRESHED_AT = 1785338217245;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -982,12 +982,36 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 9,
+    def: { label: "Copy Trade Fraud", severity: "high", sources: ["The Block"] },
+    desc: "The Thailand Consumers Council is pursuing a consumer lawsuit against 17 defendants, including online platforms and financial institutions, seeking over 230 million baht in",
+    excerpt: "The Thailand Consumers Council is pursuing a consumer lawsuit against 17 defendants, including online platforms and financial institutions, seeking over 230 million baht in compensation for victims of online investment...",
+    url: "https://www.nationthailand.com/news/general/40069173",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 29, 2026, Hyperliquid experienced a $93.93 million liquidation 'drain' as part of a broader market event where multiple exchanges saw significant capital",
+    excerpt: "On July 29, 2026, Hyperliquid experienced a $93.93 million liquidation 'drain' as part of a broader market event where multiple exchanges saw significant capital",
+    url: "https://www.chaincatcher.com/en/article/2278750",
+    secsAgo: 2760,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 29, 2026, a significant HYPE token unlock occurred, with approximately $817 million worth of tokens entering the circulating supply, representing a 2.8% increase in a",
+    excerpt: "On July 29, 2026, a significant HYPE token unlock occurred, with approximately $817 million worth of tokens entering the circulating supply, representing a 2.8% increase in a single",
+    url: "https://cryptopotato.com/trade-xyz-will-cover-losses-from-sk-hynix-liquidation-anomaly-on-hyperliquid/",
+    secsAgo: 3360,
+  },
+  {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "On July 29, 2026, Selini Capital transferred approximately $26.8 million (495,473 HYPE) to OKX. This movement follows the unstaking of a 500,000 HYPE security bond required for",
     excerpt: "On July 29, 2026, Selini Capital transferred approximately $26.8 million (495,473 HYPE) to OKX. This movement follows the unstaking of a 500,000 HYPE security bond required for operating the 'Dreamcash' permissionless...",
     url: "https://bingx.com/en/flash-news/post/wallet-adds-m-usdc-margin-opens-m-x-skhx-long-on-hyperliquid-after-sk-hynix-earnings",
-    secsAgo: 2160,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -995,30 +1019,6 @@ var REAL_EVENTS = [
     desc: "On July 29, 2026, a whale (address 0xc8b...48891) opened a $31 million 4x leveraged long position on SK Hynix (SKHX) on Hyperliquid with an entry price of $981.91, following the",
     excerpt: "On July 29, 2026, a whale (address 0xc8b...48891) opened a $31 million 4x leveraged long position on SK Hynix (SKHX) on Hyperliquid with an entry price of $981.91, following the asset's earnings",
     url: "https://www.cryptotimes.io/2026/07/29/trade-xyz-to-cover-sk-hynix-perp-losses-while-insisting-its-oracle-worked/",
-    secsAgo: 2760,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Trade.xyz announced on July 29, 2026, that it will compensate users for liquidation losses caused by the SK Hynix flash crash anomaly. The company described the reimbursement as a",
-    excerpt: "Trade.xyz announced on July 29, 2026, that it will compensate users for liquidation losses caused by the SK Hynix flash crash anomaly. The company described the reimbursement as a 'one-time discretionary decision' and...",
-    url: "https://bitcoinfoundation.org/news/blockchain-news/tradexyz-cover-losses-from-60m-sk-hynix-liquidations/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 8,
-    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 29, 2026, it was reported that Solana and Hyperliquid are competing for billions of dollars in trading volume following the SpaceX",
-    excerpt: "On July 29, 2026, it was reported that Solana and Hyperliquid are competing for billions of dollars in trading volume following the SpaceX",
-    url: "https://www.chaincatcher.com/en/article/2278345",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 10,
-    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "On July 29, 2026, reports indicated that crypto projects lost approximately $1.1 billion in 212 successful hacks during the first half of 2026, setting a new record for the",
-    excerpt: "On July 29, 2026, reports indicated that crypto projects lost approximately $1.1 billion in 212 successful hacks during the first half of 2026, setting a new record for the",
-    url: "https://www.elliptic.co/blog/the-fall-of-a7a5-how-sanctions-strangled-the-ruble-stablecoin",
     secsAgo: 4560,
   },
 ];
