@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785359335931;
+var REFRESHED_AT = 1785366550449;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -984,10 +984,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 6,
     def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
+    desc: "BitMEX announced that reduce-only trading will begin on August 26, 2026, with forced closes to follow, as part of its permanent shutdown on September 23,",
+    excerpt: "BitMEX announced that reduce-only trading will begin on August 26, 2026, with forced closes to follow, as part of its permanent shutdown on September 23,",
+    url: "https://www.newsfilecorp.com/release/306826/Kaplan-Fox-Alerts-Investors-of-BitGo-Holdings-Inc.-BTGO-to-a-Pending-Securities-Class-Action-Deadline-is-August-7-2026",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 6,
+    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
     desc: "A class-action lawsuit against BitGo Holdings, Inc. was reported with a lead plaintiff deadline of August 7,",
     excerpt: "A class-action lawsuit against BitGo Holdings, Inc. was reported with a lead plaintiff deadline of August 7,",
     url: "https://www.morningstar.com/news/pr-newswire/20260729ny14464/levi-korsinsky-reminds-bitgo-holdings-inc-investors-of-the-pending-class-action-lawsuit-with-a-lead-plaintiff-deadline-of-august-7-2026-btgo",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 9,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "The Thailand Consumers Council is pursuing a consumer lawsuit against 17 defendants, including online platforms and financial institutions, seeking over 230 million baht in",
     excerpt: "The Thailand Consumers Council is pursuing a consumer lawsuit against 17 defendants, including online platforms and financial institutions, seeking over 230 million baht in compensation for victims of online investment...",
     url: "https://www.nationthailand.com/news/general/40069173",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 0,
@@ -1003,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "On July 29, 2026, a global law enforcement operation involving the DOJ and other agencies resulted in the arrest of 63 individuals, the suspension of 20,000 fraudulent accounts by",
     excerpt: "On July 29, 2026, a global law enforcement operation involving the DOJ and other agencies resulted in the arrest of 63 individuals, the suspension of 20,000 fraudulent accounts by Microsoft, and the freezing of over $3...",
     url: "https://www.facebook.com/7NewsDC/posts/federal-prosecutors-in-washington-dc-are-seeking-to-seize-more-than-25-million-i/1482194847275009/",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 2,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "On July 29, 2026, Hyperliquid experienced a $93.93 million liquidation 'drain' as part of a broader market event where multiple exchanges saw significant capital",
     excerpt: "On July 29, 2026, Hyperliquid experienced a $93.93 million liquidation 'drain' as part of a broader market event where multiple exchanges saw significant capital",
     url: "https://www.chaincatcher.com/en/article/2278750",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 2,
-    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "On July 29, 2026, a significant HYPE token unlock occurred, with approximately $817 million worth of tokens entering the circulating supply, representing a 2.8% increase in a",
-    excerpt: "On July 29, 2026, a significant HYPE token unlock occurred, with approximately $817 million worth of tokens entering the circulating supply, representing a 2.8% increase in a single",
-    url: "https://cryptopotato.com/trade-xyz-will-cover-losses-from-sk-hynix-liquidation-anomaly-on-hyperliquid/",
     secsAgo: 4560,
   },
 ];
