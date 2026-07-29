@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785318354634;
+var REFRESHED_AT = 1785327166381;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -984,10 +984,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Further details on the SK Hynix perpetual flash crash on Hyperliquid revealed that the event triggered the liquidation of approximately $57.4 million in long positions across 960",
-    excerpt: "Further details on the SK Hynix perpetual flash crash on Hyperliquid revealed that the event triggered the liquidation of approximately $57.4 million in long positions across 960 different accounts. The crash saw the SK...",
-    url: "https://www.cryptotimes.io/2026/07/29/trade-xyz-to-cover-sk-hynix-perp-losses-while-insisting-its-oracle-worked/",
+    desc: "On July 29, 2026, Selini Capital transferred approximately $26.8 million (495,473 HYPE) to OKX. This movement follows the unstaking of a 500,000 HYPE security bond required for",
+    excerpt: "On July 29, 2026, Selini Capital transferred approximately $26.8 million (495,473 HYPE) to OKX. This movement follows the unstaking of a 500,000 HYPE security bond required for operating the 'Dreamcash' permissionless...",
+    url: "https://bingx.com/en/flash-news/post/wallet-adds-m-usdc-margin-opens-m-x-skhx-long-on-hyperliquid-after-sk-hynix-earnings",
     secsAgo: 2160,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "On July 29, 2026, a whale (address 0xc8b...48891) opened a $31 million 4x leveraged long position on SK Hynix (SKHX) on Hyperliquid with an entry price of $981.91, following the",
+    excerpt: "On July 29, 2026, a whale (address 0xc8b...48891) opened a $31 million 4x leveraged long position on SK Hynix (SKHX) on Hyperliquid with an entry price of $981.91, following the asset's earnings",
+    url: "https://www.cryptotimes.io/2026/07/29/trade-xyz-to-cover-sk-hynix-perp-losses-while-insisting-its-oracle-worked/",
+    secsAgo: 2760,
   },
   {
     walletIdx: 2,
@@ -995,7 +1003,7 @@ var REAL_EVENTS = [
     desc: "Trade.xyz announced on July 29, 2026, that it will compensate users for liquidation losses caused by the SK Hynix flash crash anomaly. The company described the reimbursement as a",
     excerpt: "Trade.xyz announced on July 29, 2026, that it will compensate users for liquidation losses caused by the SK Hynix flash crash anomaly. The company described the reimbursement as a 'one-time discretionary decision' and...",
     url: "https://bitcoinfoundation.org/news/blockchain-news/tradexyz-cover-losses-from-60m-sk-hynix-liquidations/",
-    secsAgo: 2760,
+    secsAgo: 3360,
   },
   {
     walletIdx: 8,
@@ -1003,22 +1011,14 @@ var REAL_EVENTS = [
     desc: "On July 29, 2026, it was reported that Solana and Hyperliquid are competing for billions of dollars in trading volume following the SpaceX",
     excerpt: "On July 29, 2026, it was reported that Solana and Hyperliquid are competing for billions of dollars in trading volume following the SpaceX",
     url: "https://www.chaincatcher.com/en/article/2278345",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 10,
     def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
-    desc: "On July 29, 2026, it was reported that refund efforts are underway for the users affected by the SecondFi",
-    excerpt: "On July 29, 2026, it was reported that refund efforts are underway for the users affected by the SecondFi",
-    url: "https://phemex.com/blogs/cardano-top-20-gainer-before-fed-decision",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 0,
-    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
-    desc: "On July 28, 2026, a Department of Justice memo warned federal prosecutors that they should prepare for less assistance from Binance when seeking information in",
-    excerpt: "On July 28, 2026, a Department of Justice memo warned federal prosecutors that they should prepare for less assistance from Binance when seeking information in cryptocurrency-related cases, according to a report by...",
-    url: "https://www.justice.gov/usao-ndca/pr/ten-foreign-nationals-charged-international-operation-targeting-cryptocurrency-market",
+    desc: "On July 29, 2026, reports indicated that crypto projects lost approximately $1.1 billion in 212 successful hacks during the first half of 2026, setting a new record for the",
+    excerpt: "On July 29, 2026, reports indicated that crypto projects lost approximately $1.1 billion in 212 successful hacks during the first half of 2026, setting a new record for the",
+    url: "https://www.elliptic.co/blog/the-fall-of-a7a5-how-sanctions-strangled-the-ruble-stablecoin",
     secsAgo: 4560,
   },
 ];
