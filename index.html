@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785436796377;
+var REFRESHED_AT = 1785442942844;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -968,18 +968,10 @@ var REAL_EVENTS = [
   {
     walletIdx: 6,
     def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
-    desc: "New details in the BitMEX class action lawsuit reveal that plaintiffs are seeking the return of 622.66 BTC, alleging that the exchange used server freezes and internal trading to",
-    excerpt: "New details in the BitMEX class action lawsuit reveal that plaintiffs are seeking the return of 622.66 BTC, alleging that the exchange used server freezes and internal trading to seize customer funds prior to its...",
-    url: "https://thepaypers.com/crypto-web3-and-cbdc/news/bitmex-to-close-crypto-exchange-by-september-2026",
-    secsAgo: 960,
-  },
-  {
-    walletIdx: 6,
-    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
     desc: "BitMEX announced that reduce-only trading will begin on August 26, 2026, with forced closes to follow, as part of its permanent shutdown on September 23,",
     excerpt: "BitMEX announced that reduce-only trading will begin on August 26, 2026, with forced closes to follow, as part of its permanent shutdown on September 23,",
     url: "https://www.newsfilecorp.com/release/306826/Kaplan-Fox-Alerts-Investors-of-BitGo-Holdings-Inc.-BTGO-to-a-Pending-Securities-Class-Action-Deadline-is-August-7-2026",
-    secsAgo: 1560,
+    secsAgo: 960,
   },
   {
     walletIdx: 6,
@@ -987,7 +979,7 @@ var REAL_EVENTS = [
     desc: "A class-action lawsuit against BitGo Holdings, Inc. was reported with a lead plaintiff deadline of August 7,",
     excerpt: "A class-action lawsuit against BitGo Holdings, Inc. was reported with a lead plaintiff deadline of August 7,",
     url: "https://www.morningstar.com/news/pr-newswire/20260729ny14464/levi-korsinsky-reminds-bitgo-holdings-inc-investors-of-the-pending-class-action-lawsuit-with-a-lead-plaintiff-deadline-of-august-7-2026-btgo",
-    secsAgo: 2160,
+    secsAgo: 1560,
   },
   {
     walletIdx: 9,
@@ -995,6 +987,14 @@ var REAL_EVENTS = [
     desc: "The Thailand Consumers Council is pursuing a consumer lawsuit against 17 defendants, including online platforms and financial institutions, seeking over 230 million baht in",
     excerpt: "The Thailand Consumers Council is pursuing a consumer lawsuit against 17 defendants, including online platforms and financial institutions, seeking over 230 million baht in compensation for victims of online investment...",
     url: "https://www.nationthailand.com/news/general/40069173",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Hyperliquid has burned a total of 46.13 million HYPE tokens, with a total burn value of approximately $2.53 billion, as reported on July 30,",
+    excerpt: "Hyperliquid has burned a total of 46.13 million HYPE tokens, with a total burn value of approximately $2.53 billion, as reported on July 30,",
+    url: "https://www.odaily.news/en/newsflash/505141",
     secsAgo: 2760,
   },
   {
@@ -1008,17 +1008,17 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "A whale opened a massive $13.22 million long position in WTI crude oil on July 30,",
-    excerpt: "A whale opened a massive $13.22 million long position in WTI crude oil on July 30,",
-    url: "https://www.odaily.news/en/newsflash/505141",
+    desc: "Five million-dollar whale addresses closed their SKHX long positions on Hyperliquid on July 30, 2026, with a combined loss of approximately $171,000. One whale (address 0x54c)",
+    excerpt: "Five million-dollar whale addresses closed their SKHX long positions on Hyperliquid on July 30, 2026, with a combined loss of approximately $171,000. One whale (address 0x54c) flipped to a short position valued at...",
+    url: "https://coinmarketcap.com/academy/article/tradexyz-sk-hynix-perpetual-liquidation-reimbursement",
     secsAgo: 3960,
   },
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
-    desc: "Five million-dollar whale addresses closed their SKHX long positions on Hyperliquid on July 30, 2026, with a combined loss of approximately $171,000. One whale (address 0x54c)",
-    excerpt: "Five million-dollar whale addresses closed their SKHX long positions on Hyperliquid on July 30, 2026, with a combined loss of approximately $171,000. One whale (address 0x54c) flipped to a short position valued at...",
-    url: "https://coinmarketcap.com/academy/article/tradexyz-sk-hynix-perpetual-liquidation-reimbursement",
+    desc: "On July 30, 2026, institutional selling of HYPE tokens continued with Multicoin Capital depositing an additional 137,100 HYPE (~$7.51 million) and Bitwise depositing 22,463 HYPE",
+    excerpt: "On July 30, 2026, institutional selling of HYPE tokens continued with Multicoin Capital depositing an additional 137,100 HYPE (~$7.51 million) and Bitwise depositing 22,463 HYPE (~$1.23 million) into Coinbase Prime,...",
+    url: "https://u.today/this-is-why-hyperliquid-hype-lost-24-of-its-price-in-last-30-days",
     secsAgo: 4560,
   },
 ];
