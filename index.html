@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1785798910491;
+var REFRESHED_AT = 1785814282436;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -982,19 +982,19 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A Forbes analysis published on August 3 examined Hyperliquid\u2019s auto-deleveraging during the October 10, 2025 crypto crash. Hyperliquid reportedly closed approximately $2.1 billion",
+    excerpt: "A Forbes analysis published on August 3 examined Hyperliquid\u2019s auto-deleveraging during the October 10, 2025 crypto crash. Hyperliquid reportedly closed approximately $2.1 billion in positions within twelve minutes. A...",
+    url: "https://www.forbes.com/sites/boazsobrado/2026/08/03/never-punished-for-winning-cryptos-fight-over-who-pays-for-a-crash/",
+    secsAgo: 2160,
+  },
+  {
     walletIdx: 9,
     def: { label: "Copy Trade Fraud", severity: "high", sources: ["The Block"] },
     desc: "The Thailand Consumers Council is pursuing a consumer lawsuit against 17 defendants, including online platforms and financial institutions, seeking over 230 million baht in",
     excerpt: "The Thailand Consumers Council is pursuing a consumer lawsuit against 17 defendants, including online platforms and financial institutions, seeking over 230 million baht in compensation for victims of online investment...",
     url: "https://www.nationthailand.com/news/general/40069173",
-    secsAgo: 2160,
-  },
-  {
-    walletIdx: 3,
-    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
-    desc: "A report published on August 2, 2026, documented findings from a 2026 Solana rug-pull study: researchers identified 76,469 candidate rug-pull tokens among 100,063 tokens issued on",
-    excerpt: "A report published on August 2, 2026, documented findings from a 2026 Solana rug-pull study: researchers identified 76,469 candidate rug-pull tokens among 100,063 tokens issued on Orca, Raydium, and Meteora during the...",
-    url: "https://deepstrike.io/blog/rug-pull-statistics",
     secsAgo: 2760,
   },
 ];
