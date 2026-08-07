@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1786118848002;
+var REFRESHED_AT = 1786125432716;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -966,19 +966,19 @@ var REAL_EVENTS = [
     secsAgo: 360,
   },
   {
-    walletIdx: 6,
-    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
-    desc: "BitMEX announced that reduce-only trading will begin on August 26, 2026, with forced closes to follow, as part of its permanent shutdown on September 23,",
-    excerpt: "BitMEX announced that reduce-only trading will begin on August 26, 2026, with forced closes to follow, as part of its permanent shutdown on September 23,",
-    url: "https://www.newsfilecorp.com/release/306826/Kaplan-Fox-Alerts-Investors-of-BitGo-Holdings-Inc.-BTGO-to-a-Pending-Securities-Class-Action-Deadline-is-August-7-2026",
-    secsAgo: 960,
-  },
-  {
     walletIdx: 0,
     def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
     desc: "On August 6, 2026, the DOJ announced that Liu Zhou, founder and primary operator of cryptocurrency market-making firm MyTrade, was sentenced to a $10,000 fine for conspiracy to",
     excerpt: "On August 6, 2026, the DOJ announced that Liu Zhou, founder and primary operator of cryptocurrency market-making firm MyTrade, was sentenced to a $10,000 fine for conspiracy to commit cryptocurrency market manipulation...",
     url: "https://www.justice.gov/usao-ma/pr/founder-cryptocurrency-financial-services-firm-mytrade-sentenced-market-manipulation-and",
+    secsAgo: 960,
+  },
+  {
+    walletIdx: 6,
+    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
+    desc: "Russia\u2019s Federal Security Service raided nine unregistered cryptocurrency exchange services in Moscow and detained more than 20 people. Authorities alleged the network laundered",
+    excerpt: "Russia\u2019s Federal Security Service raided nine unregistered cryptocurrency exchange services in Moscow and detained more than 20 people. Authorities alleged the network laundered proceeds from phone scams and other...",
+    url: "https://www.coindesk.com/policy/2026/08/07/russia-cracks-down-on-unlicensed-crypto-exchanges-it-claims-are-linked-to-ukraine",
     secsAgo: 1560,
   },
 ];
