@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1786395387732;
+var REFRESHED_AT = 1786398807405;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -982,12 +982,20 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 0,
+    def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
+    desc: "On August 10, 2026, Daryl F. Heller of Pennsylvania pleaded guilty to securities fraud in connection with an investment scheme involving ATM and cryptocurrency teller machine",
+    excerpt: "On August 10, 2026, Daryl F. Heller of Pennsylvania pleaded guilty to securities fraud in connection with an investment scheme involving ATM and cryptocurrency teller machine (BTM) businesses. Prosecutors said he...",
+    url: "https://www.justice.gov/opa/pr/chairman-prince-group-indicted-operating-cambodian-forced-labor-scam-compounds-engaged",
+    secsAgo: 2160,
+  },
+  {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "A report documented an approximately $50.75 million BTC short on Hyperliquid, representing about 780 BTC at 40x cross-margin leverage. With BTC near $65,046, the position had a",
     excerpt: "A report documented an approximately $50.75 million BTC short on Hyperliquid, representing about 780 BTC at 40x cross-margin leverage. With BTC near $65,046, the position had a liquidation price of approximately $65,454...",
     url: "https://www.cryptotimes.io/2026/08/10/a-50m-bitcoin-short-sits-400-from-liquidation-at-40x-leverage/",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
 ];
 
