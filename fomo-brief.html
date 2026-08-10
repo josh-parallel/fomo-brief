@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1786374685069;
+var REFRESHED_AT = 1786381426040;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -972,6 +972,14 @@ var REAL_EVENTS = [
     excerpt: "BitMart founder Sheldon Xia denied misappropriating user funds as customers reported delayed withdrawals during the exchange\u2019s phased shutdown. BitMart announced that trading will end on 2026-08-26 and the platform will...",
     url: "https://forklog.com/en/bitmart-founder-denies-misappropriating-user-funds/",
     secsAgo: 960,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A report documented an approximately $50.75 million BTC short on Hyperliquid, representing about 780 BTC at 40x cross-margin leverage. With BTC near $65,046, the position had a",
+    excerpt: "A report documented an approximately $50.75 million BTC short on Hyperliquid, representing about 780 BTC at 40x cross-margin leverage. With BTC near $65,046, the position had a liquidation price of approximately $65,454...",
+    url: "https://www.cryptotimes.io/2026/08/10/a-50m-bitcoin-short-sits-400-from-liquidation-at-40x-leverage/",
+    secsAgo: 1560,
   },
 ];
 
