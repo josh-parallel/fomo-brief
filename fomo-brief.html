@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1786547375896;
+var REFRESHED_AT = 1786554444599;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -982,12 +982,20 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "A report dated August 12, 2026 says four whale addresses on Hyperliquid collectively opened approximately $340 million in Bitcoin short positions near $64,000. The reported",
+    excerpt: "A report dated August 12, 2026 says four whale addresses on Hyperliquid collectively opened approximately $340 million in Bitcoin short positions near $64,000. The reported positions totaled about 5,374 BTC:...",
+    url: "https://bitcoinworld.co.in/whale-wallets-bitcoin-shorts-hyperliquid/",
+    secsAgo: 2160,
+  },
+  {
     walletIdx: 9,
     def: { label: "Copy Trade Fraud", severity: "high", sources: ["The Block"] },
     desc: "On August 11, 2026, the U.S. Commodity Futures Trading Commission filed a complaint in the Middle District of Florida against Goliath Ventures Inc. and CEO Christopher Delgado.",
     excerpt: "On August 11, 2026, the U.S. Commodity Futures Trading Commission filed a complaint in the Middle District of Florida against Goliath Ventures Inc. and CEO Christopher Delgado. The CFTC alleges they fraudulently...",
     url: "https://www.cftc.gov/PressRoom/PressReleases/9280-26",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
 ];
 
