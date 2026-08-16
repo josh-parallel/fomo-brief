@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1786887552503;
+var REFRESHED_AT = 1786889709536;
 var REAL_EVENTS = [
   {
     walletIdx: 9,
@@ -974,12 +974,20 @@ var REAL_EVENTS = [
     secsAgo: 960,
   },
   {
+    walletIdx: 5,
+    def: { label: "Chain Analytics", severity: "med", sources: ["Chainalysis"] },
+    desc: "A report published on 2026-08-16 says a breach of France\u2019s tax authority exposed records associated with approximately 678,000 people, potentially increasing risks to crypto",
+    excerpt: "A report published on 2026-08-16 says a breach of France\u2019s tax authority exposed records associated with approximately 678,000 people, potentially increasing risks to crypto holders. Citing Chainalysis, it reports 30...",
+    url: "https://en.cryptonomist.ch/2026/08/16/french-crypto-data-breach/",
+    secsAgo: 1560,
+  },
+  {
     walletIdx: 6,
     def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
     desc: "Binance announced that it will halt or restrict transaction processing involving 16 cryptocurrency platforms, including HTX, in a phased rollout. The restrictions are linked to",
     excerpt: "Binance announced that it will halt or restrict transaction processing involving 16 cryptocurrency platforms, including HTX, in a phased rollout. The restrictions are linked to regulatory and sanctions requirements,...",
     url: "https://en.cryptonomist.ch/2026/08/15/binance-sanctions-crypto-firms/",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
 ];
 
