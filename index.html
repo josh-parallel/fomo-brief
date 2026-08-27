@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1787823124987;
+var REFRESHED_AT = 1787862047944;
 var REAL_EVENTS = [
   {
     walletIdx: 7,
@@ -982,12 +982,20 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A whale opened a 20x leveraged BTC short worth approximately $38.07 million and exited after 60 hours at a $288,000 loss. It was reportedly the whale\u2019s 16th failed trade since",
+    excerpt: "A whale opened a 20x leveraged BTC short worth approximately $38.07 million and exited after 60 hours at a $288,000 loss. It was reportedly the whale\u2019s 16th failed trade since turning bearish on August 19, bringing...",
+    url: "https://www.instagram.com/p/DciObiaE5Br/",
+    secsAgo: 2160,
+  },
+  {
     walletIdx: 0,
     def: { label: "DOJ Fraud", severity: "high", sources: ["The Block"] },
     desc: "On August 26, 2026, Reuters reported that Manpreet Kohli, the former leader of cryptocurrency company Saitama, lost his UK extradition challenge and may be extradited to the",
     excerpt: "On August 26, 2026, Reuters reported that Manpreet Kohli, the former leader of cryptocurrency company Saitama, lost his UK extradition challenge and may be extradited to the United States. U.S. prosecutors allege that...",
     url: "https://www.kucoin.com/news/flash/saitama-founder-s-uk-extradition-case-loses-may-be-sent-to-us-for-trial",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
   {
     walletIdx: 3,
@@ -995,7 +1003,15 @@ var REAL_EVENTS = [
     desc: "Dolly Parton-themed memecoins launched on Pump.fun after news of her death and reportedly crashed within hours in a coordinated pump-and-dump described as a classic rug pull. The",
     excerpt: "Dolly Parton-themed memecoins launched on Pump.fun after news of her death and reportedly crashed within hours in a coordinated pump-and-dump described as a classic rug pull. The incident adds a new documented example...",
     url: "https://fortune.com/2026/08/26/crypto-traders-dolly-parton-death-memecoin-frenzy/",
-    secsAgo: 2760,
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 6,
+    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
+    desc: "Polish authorities detained Olympic Committee chief Rados\u0142aw Piesiewicz in connection with the investigation into the collapse of crypto exchange Zondacrypto. Prosecutors are",
+    excerpt: "Polish authorities detained Olympic Committee chief Rados\u0142aw Piesiewicz in connection with the investigation into the collapse of crypto exchange Zondacrypto. Prosecutors are examining alleged financial benefits linked...",
+    url: "https://notesfrompoland.com/2026/08/27/polish-olympic-committee-chief-detained-over-links-to-collapsed-crypto-firm/",
+    secsAgo: 3960,
   },
   {
     walletIdx: 6,
@@ -1003,7 +1019,7 @@ var REAL_EVENTS = [
     desc: "BitMart users reported that small withdrawal requests had effectively vanished or were unavailable shortly before the exchange halted trading. The reports deepen concerns about",
     excerpt: "BitMart users reported that small withdrawal requests had effectively vanished or were unavailable shortly before the exchange halted trading. The reports deepen concerns about access to customer funds beyond the...",
     url: "https://www.cryptotimes.io/2026/08/26/bitmart-users-say-small-withdrawals-have-vanished-hours-before-trading-halts/",
-    secsAgo: 3360,
+    secsAgo: 4560,
   },
 ];
 
