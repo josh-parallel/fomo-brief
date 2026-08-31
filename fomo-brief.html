@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1788183285127;
+var REFRESHED_AT = 1788205589885;
 var REAL_EVENTS = [
   {
     walletIdx: 7,
@@ -974,12 +974,20 @@ var REAL_EVENTS = [
     secsAgo: 960,
   },
   {
+    walletIdx: 10,
+    def: { label: "DeFi Exploit", severity: "high", sources: ["PeckShield"] },
+    desc: "Cronos restarted its network after validators rolled the chain state back to before the Tectonic lending-protocol exploit. TRM Labs reported that approximately $68.7 million",
+    excerpt: "Cronos restarted its network after validators rolled the chain state back to before the Tectonic lending-protocol exploit. TRM Labs reported that approximately $68.7 million remaining on Cronos was reversed in the...",
+    url: "https://www.cryptotimes.io/2026/08/31/cronos-restarts-network-after-tectonic-exploit-and-rollback/",
+    secsAgo: 1560,
+  },
+  {
     walletIdx: 5,
     def: { label: "Chain Analytics", severity: "med", sources: ["Chainalysis"] },
     desc: "The Chainalysis Government Solutions procurement challenge over ICE\u2019s approximately $94.6\u2013$94.7 million sole-source contract awarded to TRM Labs has advanced procedurally. Oral",
     excerpt: "The Chainalysis Government Solutions procurement challenge over ICE\u2019s approximately $94.6\u2013$94.7 million sole-source contract awarded to TRM Labs has advanced procedurally. Oral arguments are scheduled for September 2,...",
     url: "https://coinpedia.org/news/chainalysis-sues-u-s-over-94-6m-trm-labs-crypto-contract/",
-    secsAgo: 1560,
+    secsAgo: 2160,
   },
 ];
 
