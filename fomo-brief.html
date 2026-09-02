@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1788370336401;
+var REFRESHED_AT = 1788374211903;
 var REAL_EVENTS = [
   {
     walletIdx: 7,
@@ -1000,10 +1000,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "A Hyperliquid whale using the handle \u201c\u559c\u6b22\u68ad\u54c8allin.eth\u201d was liquidated on a nearly $2 million GOLD long opened with 20x isolated leverage. The liquidation resulted in total losses of",
+    excerpt: "A Hyperliquid whale using the handle \u201c\u559c\u6b22\u68ad\u54c8allin.eth\u201d was liquidated on a nearly $2 million GOLD long opened with 20x isolated leverage. The liquidation resulted in total losses of approximately $1.27 million; the...",
+    url: "https://www.lookonchain.com/feeds/71043",
+    secsAgo: 3360,
+  },
+  {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "A Hyperliquid whale\u2019s 45,000 ETH long, opened around $2,486.37 with liquidation near $2,252.68, was reported to be carrying an unrealized loss of approximately $4.1 million as ETH",
     excerpt: "A Hyperliquid whale\u2019s 45,000 ETH long, opened around $2,486.37 with liquidation near $2,252.68, was reported to be carrying an unrealized loss of approximately $4.1 million as ETH traded below",
     url: "https://blockchain.news/flashnews/eth-hyperliquid-whale-down-4-1m-45k-long",
-    secsAgo: 3360,
+    secsAgo: 3960,
   },
   {
     walletIdx: 6,
@@ -1011,14 +1019,6 @@ var REAL_EVENTS = [
     desc: "A material update to the previously reported Tether lawsuit identifies the plaintiffs as Nutthawat Rukthammachalern and Natthawat Kasamvilas and the defendants as four Tether",
     excerpt: "A material update to the previously reported Tether lawsuit identifies the plaintiffs as Nutthawat Rukthammachalern and Natthawat Kasamvilas and the defendants as four Tether entities. The complaint was filed on August...",
     url: "https://www.cryptotimes.io/2026/09/02/tether-sued-by-thai-businessmen-over-alleged-illegal-freeze-burning-of-42-4m-usdt/",
-    secsAgo: 3960,
-  },
-  {
-    walletIdx: 6,
-    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
-    desc: "WECT reported on September 1 that Caleb Hobbs and Hobbs Electric LLC are leading a proposed class-action lawsuit against Quantum Blocks Capital, its managers, and related parties",
-    excerpt: "WECT reported on September 1 that Caleb Hobbs and Hobbs Electric LLC are leading a proposed class-action lawsuit against Quantum Blocks Capital, its managers, and related parties over alleged cryptocurrency fraud. The...",
-    url: "https://www.wect.com/2026/09/01/wilmington-businessman-leads-lawsuit-over-alleged-60m-crypto-fraud/",
     secsAgo: 4560,
   },
 ];
