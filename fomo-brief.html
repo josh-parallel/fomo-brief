@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1788359004696;
+var REFRESHED_AT = 1788370336401;
 var REAL_EVENTS = [
   {
     walletIdx: 7,
@@ -982,12 +982,28 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 3,
+    def: { label: "Memecoin Rug Pull", severity: "high", sources: ["PeckShield"] },
+    desc: "New reporting on the Pump.fun litigation states that the Southern District of New York held Pump.fun memecoins were not securities under the Howey test, but allowed users\u2019 RICO",
+    excerpt: "New reporting on the Pump.fun litigation states that the Southern District of New York held Pump.fun memecoins were not securities under the Howey test, but allowed users\u2019 RICO and unlicensed-money-transmission claims...",
+    url: "https://sigmalawgroup.com/blog/2026-09-02-pump-fun-howey-rico-money-transmission",
+    secsAgo: 2160,
+  },
+  {
+    walletIdx: 8,
+    def: { label: "Hyperliquid Alert", severity: "high", sources: ["Twitter/X"] },
+    desc: "A whale reportedly bought approximately $3.36 million of HYPE on Coinbase. The purchase is a new large-token accumulation alert associated with Hyperliquid, but the available",
+    excerpt: "A whale reportedly bought approximately $3.36 million of HYPE on Coinbase. The purchase is a new large-token accumulation alert associated with Hyperliquid, but the available report provides no evidence that the...",
+    url: "https://www.threads.com/@whaleagent/post/Dcx4DGOE4WT",
+    secsAgo: 2760,
+  },
+  {
     walletIdx: 2,
     def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
     desc: "A Hyperliquid whale\u2019s 45,000 ETH long, opened around $2,486.37 with liquidation near $2,252.68, was reported to be carrying an unrealized loss of approximately $4.1 million as ETH",
     excerpt: "A Hyperliquid whale\u2019s 45,000 ETH long, opened around $2,486.37 with liquidation near $2,252.68, was reported to be carrying an unrealized loss of approximately $4.1 million as ETH traded below",
     url: "https://blockchain.news/flashnews/eth-hyperliquid-whale-down-4-1m-45k-long",
-    secsAgo: 2160,
+    secsAgo: 3360,
   },
   {
     walletIdx: 6,
@@ -995,7 +1011,7 @@ var REAL_EVENTS = [
     desc: "A material update to the previously reported Tether lawsuit identifies the plaintiffs as Nutthawat Rukthammachalern and Natthawat Kasamvilas and the defendants as four Tether",
     excerpt: "A material update to the previously reported Tether lawsuit identifies the plaintiffs as Nutthawat Rukthammachalern and Natthawat Kasamvilas and the defendants as four Tether entities. The complaint was filed on August...",
     url: "https://www.cryptotimes.io/2026/09/02/tether-sued-by-thai-businessmen-over-alleged-illegal-freeze-burning-of-42-4m-usdt/",
-    secsAgo: 2760,
+    secsAgo: 3960,
   },
   {
     walletIdx: 6,
@@ -1003,15 +1019,7 @@ var REAL_EVENTS = [
     desc: "WECT reported on September 1 that Caleb Hobbs and Hobbs Electric LLC are leading a proposed class-action lawsuit against Quantum Blocks Capital, its managers, and related parties",
     excerpt: "WECT reported on September 1 that Caleb Hobbs and Hobbs Electric LLC are leading a proposed class-action lawsuit against Quantum Blocks Capital, its managers, and related parties over alleged cryptocurrency fraud. The...",
     url: "https://www.wect.com/2026/09/01/wilmington-businessman-leads-lawsuit-over-alleged-60m-crypto-fraud/",
-    secsAgo: 3360,
-  },
-  {
-    walletIdx: 6,
-    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
-    desc: "A September 1 report says BitMart users still cannot access or withdraw some crypto funds after the exchange\u2019s August 26 trading halt. Named X users, including @Szymansk_ii,",
-    excerpt: "A September 1 report says BitMart users still cannot access or withdraw some crypto funds after the exchange\u2019s August 26 trading halt. Named X users, including @Szymansk_ii, @DesoulDrew, and @Pramod64120307, publicly...",
-    url: "https://www.cryptotimes.io/2026/09/01/bitmart-users-still-report-frozen-crypto-withdrawals-while-exchange-remains-silent/",
-    secsAgo: 3960,
+    secsAgo: 4560,
   },
 ];
 
