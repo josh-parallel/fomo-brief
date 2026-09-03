@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1788394032401;
+var REFRESHED_AT = 1788414131734;
 var REAL_EVENTS = [
   {
     walletIdx: 7,
@@ -1008,10 +1008,18 @@ var REAL_EVENTS = [
   {
     walletIdx: 6,
     def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
+    desc: "WazirX reportedly rejected rumors that users\u2019 INR would be unfrozen on September 14, 2026. The exchange\u2019s help information continues to state that 34% of balances remain frozen in",
+    excerpt: "WazirX reportedly rejected rumors that users\u2019 INR would be unfrozen on September 14, 2026. The exchange\u2019s help information continues to state that 34% of balances remain frozen in connection with law-enforcement...",
+    url: "https://www.cryptotimes.io/2026/09/02/wazirx-ama-shatters-sept-14-inr-unfreeze-rumors-still-no-date-for-34-locked-balances/",
+    secsAgo: 3960,
+  },
+  {
+    walletIdx: 6,
+    def: { label: "Exchange Suspension", severity: "med", sources: ["The Block"] },
     desc: "A material update to the previously reported Tether lawsuit identifies the plaintiffs as Nutthawat Rukthammachalern and Natthawat Kasamvilas and the defendants as four Tether",
     excerpt: "A material update to the previously reported Tether lawsuit identifies the plaintiffs as Nutthawat Rukthammachalern and Natthawat Kasamvilas and the defendants as four Tether entities. The complaint was filed on August...",
     url: "https://www.cryptotimes.io/2026/09/02/tether-sued-by-thai-businessmen-over-alleged-illegal-freeze-burning-of-42-4m-usdt/",
-    secsAgo: 3960,
+    secsAgo: 4560,
   },
 ];
 
