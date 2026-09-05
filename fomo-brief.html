@@ -955,7 +955,7 @@ function addEvent(w, def, isNew, sourceUrl, excerpt) {
 })();
 
 // Real events — auto-refreshed from Parallel monitors (last 48h, highest confidence first)
-var REFRESHED_AT = 1788634752427;
+var REFRESHED_AT = 1788642545001;
 var REAL_EVENTS = [
   {
     walletIdx: 7,
@@ -982,12 +982,20 @@ var REAL_EVENTS = [
     secsAgo: 1560,
   },
   {
+    walletIdx: 2,
+    def: { label: "Whale Liquidation", severity: "high", sources: ["Twitter/X"] },
+    desc: "Updated report: Hyperliquid trader loracle.hl continued adding to a PONS perpetual short after reportedly realizing a $70 million loss on a HYPE position. The trader held 17.79",
+    excerpt: "Updated report: Hyperliquid trader loracle.hl continued adding to a PONS perpetual short after reportedly realizing a $70 million loss on a HYPE position. The trader held 17.79 million PONS worth approximately $16.31...",
+    url: "https://www.odaily.news/en/newsflash/515745",
+    secsAgo: 2160,
+  },
+  {
     walletIdx: 5,
     def: { label: "Chain Analytics", severity: "med", sources: ["Chainalysis"] },
     desc: "A September 4, 2026 analysis reported that DeFi protocols and the wider crypto sector had lost at least $1.3 billion to hacks during 2026. It cited TRM Labs as estimating DeFi",
     excerpt: "A September 4, 2026 analysis reported that DeFi protocols and the wider crypto sector had lost at least $1.3 billion to hacks during 2026. It cited TRM Labs as estimating DeFi losses at just below $1 billion and...",
     url: "https://crypto.news/defi-hacks-2026-billion-lost-same-attack-keeps-working/",
-    secsAgo: 2160,
+    secsAgo: 2760,
   },
 ];
 
